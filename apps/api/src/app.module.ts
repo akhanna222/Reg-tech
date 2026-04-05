@@ -49,6 +49,7 @@ import { EventStoreModule } from './modules/event-store/event-store.module';
     AnalyticsModule,
     TransmissionModule,
     StorageModule,
+    CryptoModule,
     EventStoreModule,
   ],
 })
