@@ -11,6 +11,7 @@ import { TaxAuthorityModule } from './modules/tax-authority/tax-authority.module
 import { AnalyticsModule } from './modules/analytics/analytics.module';
 import { TransmissionModule } from './modules/transmission/transmission.module';
 import { StorageModule } from './modules/storage/storage.module';
+import { CryptoModule } from './modules/crypto/crypto.module';
 import { EventStoreModule } from './modules/event-store/event-store.module';
 
 @Module({
