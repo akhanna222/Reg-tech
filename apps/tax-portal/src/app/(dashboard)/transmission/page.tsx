@@ -13,7 +13,7 @@ import {
   DataTable,
 } from "@reg-tech/ui";
 import type { ColumnDef } from "@reg-tech/ui";
-import { Send, RefreshCw, CheckCircle2, Clock, XCircle } from "lucide-react";
+import { Send, RefreshCw, CheckCircle2, Clock, XCircle, Layers } from "lucide-react";
 
 type TransmissionStatus = "QUEUED" | "IN_PROGRESS" | "COMPLETED" | "FAILED";
 
@@ -27,12 +27,29 @@ interface Transmission {
   [key: string]: unknown;
 }
 
+interface BatchTransmission {
+  id: string;
+  timestamp: string;
+  filingCount: number;
+  destination: string;
+  dispatched: number;
+  errors: number;
+  [key: string]: unknown;
+}
+
 const mockTransmissions: Transmission[] = [
   { id: "TXN-001", destination: "IRS (United States)", submissionCount: 45, status: "COMPLETED", initiatedAt: "2026-03-28 10:00", completedAt: "2026-03-28 10:12" },
   { id: "TXN-002", destination: "HMRC (United Kingdom)", submissionCount: 32, status: "COMPLETED", initiatedAt: "2026-03-28 11:00", completedAt: "2026-03-28 11:08" },
   { id: "TXN-003", destination: "BZSt (Germany)", submissionCount: 18, status: "IN_PROGRESS", initiatedAt: "2026-04-05 09:00", completedAt: null },
   { id: "TXN-004", destination: "IRAS (Singapore)", submissionCount: 8, status: "QUEUED", initiatedAt: "2026-04-05 09:15", completedAt: null },
   { id: "TXN-005", destination: "ATO (Australia)", submissionCount: 12, status: "FAILED", initiatedAt: "2026-04-04 14:00", completedAt: null },
+];
+
+const mockBatchTransmissions: BatchTransmission[] = [
+  { id: "BATCH-001", timestamp: "2026-04-05 09:15", filingCount: 12, destination: "GB", dispatched: 12, errors: 0 },
+  { id: "BATCH-002", timestamp: "2026-04-04 14:30", filingCount: 8, destination: "US", dispatched: 6, errors: 2 },
+  { id: "BATCH-003", timestamp: "2026-04-03 11:00", filingCount: 25, destination: "DE", dispatched: 25, errors: 0 },
+  { id: "BATCH-004", timestamp: "2026-04-02 16:45", filingCount: 5, destination: "SG", dispatched: 3, errors: 2 },
 ];
 
 const statusIcon: Record<TransmissionStatus, typeof Clock> = {
@@ -51,6 +68,7 @@ const statusVariant: Record<TransmissionStatus, "secondary" | "default" | "succe
 
 export default function TransmissionPage() {
   const [transmissions] = useState(mockTransmissions);
+  const [batchTransmissions] = useState(mockBatchTransmissions);
 
   const columns: ColumnDef<Transmission>[] = [
     { key: "id", header: "Transmission ID", sortable: true },
@@ -69,7 +87,29 @@ export default function TransmissionPage() {
     {
       key: "completedAt",
       header: "Completed",
-      render: (value) => (value as string) || "—",
+      render: (value) => (value as string) || "\u2014",
+    },
+  ];
+
+  const batchColumns: ColumnDef<BatchTransmission>[] = [
+    { key: "id", header: "Batch ID", sortable: true },
+    { key: "timestamp", header: "Timestamp", sortable: true },
+    { key: "filingCount", header: "Filings", sortable: true },
+    { key: "destination", header: "Destination", sortable: true },
+    {
+      key: "dispatched",
+      header: "Status Summary",
+      render: (_value, row) => {
+        if (!row) return null;
+        return (
+          <div className="flex items-center gap-2">
+            <Badge variant="success">{row.dispatched} dispatched</Badge>
+            {row.errors > 0 && (
+              <Badge variant="destructive">{row.errors} error{row.errors !== 1 ? "s" : ""}</Badge>
+            )}
+          </div>
+        );
+      },
     },
   ];
 
@@ -108,6 +148,29 @@ export default function TransmissionPage() {
           </Card>
         ))}
       </div>
+
+      {/* Batch Transmissions Section */}
+      <Card className="border-navy-700 bg-navy-900">
+        <CardHeader>
+          <div className="flex items-center gap-2">
+            <Layers className="h-5 w-5 text-primary-400" />
+            <CardTitle className="text-lg text-white">
+              Batch Transmissions
+            </CardTitle>
+          </div>
+          <CardDescription className="text-slate-400">
+            Recent batch transmission operations and their results
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <DataTable
+            columns={batchColumns}
+            data={batchTransmissions}
+            emptyMessage="No batch transmissions found."
+            className="border-navy-700"
+          />
+        </CardContent>
+      </Card>
 
       <Card className="border-navy-700 bg-navy-900">
         <CardHeader>

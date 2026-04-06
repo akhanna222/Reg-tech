@@ -10,6 +10,7 @@ import { EncryptionService } from '../../crypto/encryption.service';
 import { KeyManagementService } from '../../crypto/key-management.service';
 import { XsdValidatorService } from '../../validation/services/xsd-validator.service';
 import { RawStorageService } from '../../storage/raw-storage.service';
+import { StatusResponseService } from './status-response.service';
 
 @Injectable()
 export class ReturnDataProcessorService {
@@ -23,6 +24,7 @@ export class ReturnDataProcessorService {
     private readonly keyManagement: KeyManagementService,
     private readonly xsdValidator: XsdValidatorService,
     private readonly rawStorage: RawStorageService,
+    private readonly statusResponse: StatusResponseService,
   ) {}
 
   /**
@@ -50,6 +52,19 @@ export class ReturnDataProcessorService {
       this.logger.warn(
         `Signature verification failed for inbound package from ${jurisdiction}`,
       );
+
+      // Send NACK response for signature failure (best-effort, don't block throw)
+      this.statusResponse
+        .sendNackResponse('signature-failure', jurisdiction, [
+          {
+            code: 'SIGNATURE_INVALID',
+            message: `Signature verification failed for package from ${jurisdiction}`,
+          },
+        ])
+        .catch((err) =>
+          this.logger.error('Failed to send NACK for signature failure', err),
+        );
+
       throw new BadRequestException(
         `Signature verification failed for package from ${jurisdiction}`,
       );
@@ -74,6 +89,19 @@ export class ReturnDataProcessorService {
       this.logger.warn(
         `XSD validation failed for inbound package from ${jurisdiction}: ${xsdResult.errors.length} errors`,
       );
+
+      // Send NACK response with validation errors
+      const validationErrors = xsdResult.errors.map((err, idx) => ({
+        code: `XSD_VALIDATION_${idx + 1}`,
+        message: typeof err === 'string' ? err : String(err),
+      }));
+
+      this.statusResponse
+        .sendNackResponse('xsd-failure', jurisdiction, validationErrors)
+        .catch((nackErr) =>
+          this.logger.error('Failed to send NACK for XSD validation failure', nackErr),
+        );
+
       throw new BadRequestException(
         `Inbound package from ${jurisdiction} failed XSD validation`,
       );
@@ -100,6 +128,16 @@ export class ReturnDataProcessorService {
     });
 
     const saved = await this.transmissionRepository.save(transmission);
+
+    // Send ACK response to source jurisdiction after successful processing
+    this.statusResponse
+      .sendAckResponse(saved.id, jurisdiction)
+      .catch((ackErr) =>
+        this.logger.error(
+          `Failed to send ACK for transmission ${saved.id} to ${jurisdiction}`,
+          ackErr,
+        ),
+      );
 
     this.logger.log(
       `Inbound package processed: transmission=${saved.id}, source=${jurisdiction}`,

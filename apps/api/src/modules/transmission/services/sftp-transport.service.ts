@@ -191,6 +191,33 @@ export class SftpTransportService {
   }
 
   /**
+   * Test SFTP connectivity to a jurisdiction's CTS endpoint.
+   * Returns reachability status and latency.
+   */
+  async checkHealth(
+    jurisdiction: string,
+  ): Promise<{ reachable: boolean; latencyMs: number; error?: string }> {
+    const start = Date.now();
+    let client: SftpClient | null = null;
+    try {
+      client = await this.connect(jurisdiction);
+      const latencyMs = Date.now() - start;
+      return { reachable: true, latencyMs };
+    } catch (error) {
+      const latencyMs = Date.now() - start;
+      return {
+        reachable: false,
+        latencyMs,
+        error: error instanceof Error ? error.message : String(error),
+      };
+    } finally {
+      if (client) {
+        await client.end().catch(() => {});
+      }
+    }
+  }
+
+  /**
    * Resolve SFTP connection configuration for a jurisdiction.
    * Jurisdiction-specific env vars take precedence over defaults.
    */

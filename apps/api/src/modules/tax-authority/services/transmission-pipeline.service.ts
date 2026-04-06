@@ -5,7 +5,9 @@ import {
   BadRequestException,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
+import { InjectQueue } from '@nestjs/bull';
 import { Repository } from 'typeorm';
+import { Queue } from 'bull';
 import { Filing, FilingStatus } from '../../database/entities/filing.entity';
 import {
   TransmissionPackage,
@@ -16,6 +18,7 @@ import { RawStorageService } from '../../storage/raw-storage.service';
 import { EncryptionService } from '../../crypto/encryption.service';
 import { SigningService } from '../../crypto/signing.service';
 import { KeyManagementService } from '../../crypto/key-management.service';
+import { CtsDispatchJobData } from '../../transmission/processors/cts-dispatch.processor';
 
 export interface TransmissionStep {
   step: string;
@@ -35,6 +38,8 @@ export class TransmissionPipelineService {
     private readonly transmissionRepository: Repository<TransmissionPackage>,
     @InjectRepository(FilingDocument)
     private readonly filingDocumentRepository: Repository<FilingDocument>,
+    @InjectQueue('cts-dispatch')
+    private readonly ctsDispatchQueue: Queue<CtsDispatchJobData>,
     private readonly rawStorage: RawStorageService,
     private readonly encryptionService: EncryptionService,
     private readonly signingService: SigningService,
@@ -195,27 +200,54 @@ export class TransmissionPipelineService {
         details: 'Package signed with XMLDSig',
       });
 
-      // Step 6: Upload encrypted package and create transmission record
+      // Step 6: Upload encrypted package and create transmission record (PENDING until SFTP dispatch)
       const packageKey = `transmissions/${filingId}/${Date.now()}.enc`;
       await this.rawStorage.upload(packageKey, encryptedData, 'application/octet-stream');
 
+      const messageRefId = `${jurisdiction}-${filingId}-${Date.now()}`;
       const transmission = this.transmissionRepository.create({
         filingId,
         destination: jurisdiction,
         packageKey,
         signature: signatureValue,
-        status: TransmissionStatus.DISPATCHED,
-        dispatchedAt: new Date(),
+        status: TransmissionStatus.PENDING,
       });
       const saved = await this.transmissionRepository.save(transmission);
       steps.push({
-        step: 'CTS_DISPATCH',
+        step: 'PACKAGE_STORED',
         status: 'SUCCESS',
         timestamp: new Date(),
-        details: `Transmission ${saved.id} dispatched to ${jurisdiction}`,
+        details: `Transmission ${saved.id} package stored in MinIO`,
       });
 
-      // Step 7: ACK polling will be handled by the inbound processor
+      // Step 7: Queue SFTP dispatch job — actual CTS transfer happens asynchronously
+      await this.ctsDispatchQueue.add(
+        'dispatch',
+        {
+          transmissionPackageId: saved.id,
+          destinationJurisdiction: jurisdiction,
+          packageKey,
+          senderJurisdiction: filing.organization.jurisdiction,
+          messageRefId,
+        } as CtsDispatchJobData,
+        {
+          attempts: 3,
+          backoff: {
+            type: 'exponential',
+            delay: 2000,
+          },
+          removeOnComplete: true,
+          removeOnFail: false,
+        },
+      );
+      steps.push({
+        step: 'CTS_DISPATCH_QUEUED',
+        status: 'SUCCESS',
+        timestamp: new Date(),
+        details: `SFTP dispatch job queued for transmission ${saved.id} to ${jurisdiction}`,
+      });
+
+      // Step 8: ACK polling will be handled by the inbound processor
       steps.push({
         step: 'ACK_POLLING_SETUP',
         status: 'SUCCESS',

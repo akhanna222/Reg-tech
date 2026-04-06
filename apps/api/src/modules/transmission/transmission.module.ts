@@ -1,39 +1,55 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { BullModule } from '@nestjs/bull';
+import { ScheduleModule } from '@nestjs/schedule';
 import { TransmissionPackage } from '../database/entities/transmission-package.entity';
+import { InboundTransmission } from '../database/entities/inbound-transmission.entity';
 import { Filing } from '../database/entities/filing.entity';
 import { User } from '../database/entities/user.entity';
 import { StorageModule } from '../storage/storage.module';
 import { CryptoModule } from '../crypto/crypto.module';
 import { ValidationModule } from '../validation/validation.module';
 import { FiPortalModule } from '../fi-portal/fi-portal.module';
+import { EventStoreModule } from '../event-store/event-store.module';
 import { CtsInboundController } from './controllers/cts-inbound.controller';
 import { AckNackHandlerService } from './services/ack-nack-handler.service';
 import { ReturnDataProcessorService } from './services/return-data-processor.service';
 import { ResultDistributorService } from './services/result-distributor.service';
+import { SftpTransportService } from './services/sftp-transport.service';
+import { CtsPollingService } from './services/cts-polling.service';
 import { InboundTransmissionProcessor } from './processors/inbound-transmission.processor';
 
 @Module({
   imports: [
-    TypeOrmModule.forFeature([TransmissionPackage, Filing, User]),
+    TypeOrmModule.forFeature([
+      TransmissionPackage,
+      InboundTransmission,
+      Filing,
+      User,
+    ]),
     BullModule.registerQueue({ name: 'inbound-transmission' }),
+    ScheduleModule.forRoot(),
     StorageModule,
     CryptoModule,
     ValidationModule,
     FiPortalModule,
+    EventStoreModule,
   ],
   controllers: [CtsInboundController],
   providers: [
     AckNackHandlerService,
     ReturnDataProcessorService,
     ResultDistributorService,
+    SftpTransportService,
+    CtsPollingService,
     InboundTransmissionProcessor,
   ],
   exports: [
     AckNackHandlerService,
     ReturnDataProcessorService,
     ResultDistributorService,
+    SftpTransportService,
+    CtsPollingService,
   ],
 })
 export class TransmissionModule {}

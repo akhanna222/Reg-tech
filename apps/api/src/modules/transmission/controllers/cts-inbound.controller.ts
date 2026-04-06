@@ -26,6 +26,8 @@ import { JwtAuthGuard } from '../../../common/guards/jwt-auth.guard';
 import { RolesGuard } from '../../../common/guards/roles.guard';
 import { Roles } from '../../../common/decorators/roles.decorator';
 import { AckNackHandlerService } from '../services/ack-nack-handler.service';
+import { CtsPollingService } from '../services/cts-polling.service';
+import { SftpTransportService } from '../services/sftp-transport.service';
 import {
   TransmissionPackage,
   TransmissionStatus,
@@ -76,6 +78,8 @@ export class CtsInboundController {
     @InjectRepository(TransmissionPackage)
     private readonly transmissionRepository: Repository<TransmissionPackage>,
     private readonly ackNackHandler: AckNackHandlerService,
+    private readonly ctsPolling: CtsPollingService,
+    private readonly sftpTransport: SftpTransportService,
   ) {}
 
   @Post('cts/inbound')
@@ -194,5 +198,114 @@ export class CtsInboundController {
       dispatchedAt: transmission.dispatchedAt,
       ackReceivedAt: transmission.ackReceivedAt,
     };
+  }
+
+  // ────────────────────────────────────────────
+  // CTS Polling Endpoints
+  // ────────────────────────────────────────────
+
+  @Post('cts/poll')
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles('TA_ADMIN', 'SYSTEM_ADMIN')
+  @HttpCode(HttpStatus.OK)
+  @ApiOperation({
+    summary: 'Manually trigger CTS inbox poll for all configured jurisdictions',
+  })
+  @ApiResponse({
+    status: 200,
+    description: 'Poll results for all jurisdictions',
+  })
+  async pollAll() {
+    const results = await this.ctsPolling.pollAllJurisdictions();
+    const totalNew = results.reduce((sum, r) => sum + r.newPackages, 0);
+    const errors = results
+      .filter((r) => r.error)
+      .map((r) => `${r.jurisdiction}: ${r.error}`);
+
+    return {
+      jurisdictions: results,
+      totalNewPackages: totalNew,
+      ...(errors.length > 0 ? { errors } : {}),
+    };
+  }
+
+  @Post('cts/poll/:jurisdiction')
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles('TA_ADMIN', 'SYSTEM_ADMIN')
+  @HttpCode(HttpStatus.OK)
+  @ApiOperation({
+    summary: 'Manually trigger CTS inbox poll for a specific jurisdiction',
+  })
+  @ApiResponse({
+    status: 200,
+    description: 'Poll result for the specified jurisdiction',
+  })
+  async pollJurisdiction(@Param('jurisdiction') jurisdiction: string) {
+    const result = await this.ctsPolling.pollSingleJurisdiction(jurisdiction);
+    return {
+      jurisdiction: result.jurisdiction,
+      newPackages: result.newPackages,
+      ...(result.error ? { errors: [result.error] } : {}),
+    };
+  }
+
+  @Get('cts/poll/status')
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles('TA_ADMIN', 'SYSTEM_ADMIN')
+  @ApiOperation({ summary: 'Get CTS polling status' })
+  @ApiResponse({ status: 200, description: 'Current polling status' })
+  async getPollStatus() {
+    return {
+      enabled: this.ctsPolling.isPollingEnabled(),
+      jurisdictions: this.ctsPolling.getConfiguredJurisdictions(),
+      lastPollTimestamp: this.ctsPolling.getLastPollTimestamp(),
+      cronExpression:
+        process.env.CTS_POLLING_INTERVAL_CRON || '0 */4 * * *',
+    };
+  }
+
+  // ────────────────────────────────────────────
+  // CTS Health Check Endpoints
+  // ────────────────────────────────────────────
+
+  @Get('cts/health/:jurisdiction')
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles('TA_ADMIN', 'SYSTEM_ADMIN')
+  @ApiOperation({
+    summary: 'Test SFTP connectivity to a jurisdiction CTS endpoint',
+  })
+  @ApiResponse({ status: 200, description: 'Health check result' })
+  async checkHealth(@Param('jurisdiction') jurisdiction: string) {
+    const result = await this.sftpTransport.checkHealth(jurisdiction);
+    return {
+      jurisdiction: jurisdiction.toUpperCase(),
+      reachable: result.reachable,
+      latencyMs: result.latencyMs,
+      ...(result.error ? { error: result.error } : {}),
+    };
+  }
+
+  @Get('cts/health')
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles('TA_ADMIN', 'SYSTEM_ADMIN')
+  @ApiOperation({
+    summary:
+      'Test SFTP connectivity to all configured jurisdiction CTS endpoints',
+  })
+  @ApiResponse({ status: 200, description: 'Health check results' })
+  async checkAllHealth() {
+    const jurisdictions = this.ctsPolling.getConfiguredJurisdictions();
+    const results = await Promise.all(
+      jurisdictions.map(async (jur) => {
+        const result = await this.sftpTransport.checkHealth(jur);
+        return {
+          jurisdiction: jur,
+          reachable: result.reachable,
+          latencyMs: result.latencyMs,
+          ...(result.error ? { error: result.error } : {}),
+        };
+      }),
+    );
+    return { jurisdictions: results };
   }
 }
