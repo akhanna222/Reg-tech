@@ -1,0 +1,69 @@
+### Reg-Tech API — Transmission & Inbound Endpoints (Layer 5)
+
+@baseUrl = http://localhost:3000/api
+@token = <paste-ta-jwt-here>
+
+### ─── Check Outbound Transmission Status ───
+GET {{baseUrl}}/transmission/00000000-0000-4000-a000-000000000201/status
+Authorization: Bearer {{token}}
+
+###
+
+### ─── List Inbound Transmissions ───
+GET {{baseUrl}}/inbound?page=1&limit=20
+Authorization: Bearer {{token}}
+
+###
+
+### ─── Receive Inbound Package (CTS Webhook) ───
+POST {{baseUrl}}/cts/inbound
+Content-Type: application/json
+X-CTS-Signature: sha256=abcdef1234567890
+
+{
+  "sourceJurisdiction": "DE",
+  "messageRefId": "DE2024CRS-INBOUND-001",
+  "packageUrl": "https://cts.oecd.org/packages/DE2024CRS-INBOUND-001.enc",
+  "timestamp": "2024-12-20T14:30:00Z",
+  "metadata": {
+    "sendingCountry": "DE",
+    "receivingCountry": "IE",
+    "messageType": "CRS",
+    "reportingPeriod": "2024"
+  }
+}
+
+###
+
+### ─── Process ACK for Outbound Transmission ───
+POST {{baseUrl}}/cts/inbound
+Content-Type: application/json
+
+{
+  "type": "ACK",
+  "originalMessageRefId": "IE2024CRS001",
+  "sourceJurisdiction": "DE",
+  "timestamp": "2024-12-16T09:00:00Z",
+  "status": "ACCEPTED"
+}
+
+###
+
+### ─── Process NACK for Outbound Transmission ───
+POST {{baseUrl}}/cts/inbound
+Content-Type: application/json
+
+{
+  "type": "NACK",
+  "originalMessageRefId": "IE2024CRS-FAIL",
+  "sourceJurisdiction": "DE",
+  "timestamp": "2024-12-16T09:00:00Z",
+  "status": "REJECTED",
+  "errors": [
+    {
+      "code": "CRS_ERR_001",
+      "message": "Invalid MessageRefId format",
+      "severity": "ERROR"
+    }
+  ]
+}

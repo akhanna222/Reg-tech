@@ -1,0 +1,44 @@
+### Reg-Tech API — Analytics & Insights Endpoints (Layer 4)
+
+@baseUrl = http://localhost:3000/api
+@token = <paste-ta-jwt-here>
+
+### ─── Dashboard Metrics ───
+GET {{baseUrl}}/analytics/dashboard?jurisdiction=IE&from=2024-01-01&to=2024-12-31
+Authorization: Bearer {{token}}
+
+###
+
+### ─── Country Comparison ───
+GET {{baseUrl}}/analytics/countries?countries=IE,GB,DE&reportingPeriod=2024
+Authorization: Bearer {{token}}
+
+###
+
+### ─── Anomaly Detection ───
+GET {{baseUrl}}/analytics/anomalies?jurisdiction=IE&severity=HIGH
+Authorization: Bearer {{token}}
+
+###
+
+### ─── Full-Text Search ───
+POST {{baseUrl}}/analytics/search
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "query": "Schneider GmbH",
+  "filters": {
+    "filingType": "CRS",
+    "reportingPeriod": "2024",
+    "jurisdiction": "DE"
+  },
+  "page": 1,
+  "limit": 25
+}
+
+###
+
+### ─── FI Performance Metrics ───
+GET {{baseUrl}}/analytics/dashboard?organizationId=00000000-0000-4000-a000-000000000004
+Authorization: Bearer {{token}}

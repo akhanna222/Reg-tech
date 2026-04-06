@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  INVALID CRS XML - Stage 3 Cross-Record Validation Failures:
+  This file contains duplicate accounts that should trigger cross-record validation errors:
+  1. Duplicate: Same TIN (12345678901) + same name (Hans Mueller) appearing twice with different balances
+  2. Duplicate: Same DocRefId used for two different account reports
+-->
+<crs:CrsBody
+  xmlns:crs="urn:oecd:ties:crs:v2"
+  xmlns:stf="urn:oecd:ties:crsstf:v5"
+  xmlns:iso="urn:oecd:ties:isocrstypes:v1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="urn:oecd:ties:crs:v2 CrsXML_v2.0.xsd"
+  version="2.0">
+
+  <crs:MessageSpec>
+    <crs:SendingCompanyIN>A1B2C3.00000.IE.001</crs:SendingCompanyIN>
+    <crs:TransmittingCountry>IE</crs:TransmittingCountry>
+    <crs:ReceivingCountry>DE</crs:ReceivingCountry>
+    <crs:MessageType>CRS</crs:MessageType>
+    <crs:Warning>Test data with duplicate record violations.</crs:Warning>
+    <crs:Contact>CRS Compliance Department, Celtic Financial Services</crs:Contact>
+    <crs:MessageRefId>IE2024CRS005</crs:MessageRefId>
+    <crs:MessageTypeIndic>CRS701</crs:MessageTypeIndic>
+    <crs:ReportingPeriod>2024-12-31</crs:ReportingPeriod>
+    <crs:Timestamp>2025-01-31T11:00:00</crs:Timestamp>
+  </crs:MessageSpec>
+
+  <crs:Body>
+    <crs:ReportingFI>
+      <crs:ResCountryCode>IE</crs:ResCountryCode>
+      <crs:IN INType="GIIN">A1B2C3.00000.IE.001</crs:IN>
+      <crs:Name>Celtic Financial Services</crs:Name>
+      <crs:Address>
+        <crs:CountryCode>IE</crs:CountryCode>
+        <crs:AddressFree>42 Grafton Street, Dublin 2, D02 HW94, Ireland</crs:AddressFree>
+      </crs:Address>
+      <crs:DocSpec>
+        <stf:DocTypeIndic>OECD1</stf:DocTypeIndic>
+        <stf:DocRefId>IE2024CRS005FI001</stf:DocRefId>
+      </crs:DocSpec>
+    </crs:ReportingFI>
+
+    <crs:ReportingGroup>
+      <!-- DUPLICATE Record 1: Hans Mueller, TIN 12345678901, Balance EUR 125,430.50 -->
+      <crs:AccountReport>
+        <crs:DocSpec>
+          <stf:DocTypeIndic>OECD1</stf:DocTypeIndic>
+          <!-- CROSS-RECORD ERROR: This DocRefId is duplicated below -->
+          <stf:DocRefId>IE2024CRS005AR001</stf:DocRefId>
+        </crs:DocSpec>
+        <crs:AccountNumber AcctNumberType="OECD601">IE29AIBK93115212345678</crs:AccountNumber>
+        <crs:AccountHolder>
+          <crs:Individual>
+            <crs:ResCountryCode>DE</crs:ResCountryCode>
+            <crs:TIN issuedBy="DE">12345678901</crs:TIN>
+            <crs:Name>
+              <crs:FirstName>Hans</crs:FirstName>
+              <crs:LastName>Mueller</crs:LastName>
+            </crs:Name>
+            <crs:Address>
+              <crs:CountryCode>DE</crs:CountryCode>
+              <crs:AddressFree>Hauptstrasse 27, 10115 Berlin, Germany</crs:AddressFree>
+            </crs:Address>
+            <crs:BirthInfo>
+              <crs:BirthDate>1975-03-15</crs:BirthDate>
+              <crs:City>Munich</crs:City>
+              <crs:CountryInfo>
+                <crs:CountryCode>DE</crs:CountryCode>
+              </crs:CountryInfo>
+            </crs:BirthInfo>
+          </crs:Individual>
+        </crs:AccountHolder>
+        <crs:AccountBalance currCode="EUR">125430.50</crs:AccountBalance>
+        <crs:Payment>
+          <crs:Type>CRS501</crs:Type>
+          <crs:PaymentAmnt currCode="EUR">3210.75</crs:PaymentAmnt>
+        </crs:Payment>
+      </crs:AccountReport>
+
+      <!-- DUPLICATE Record 2: Same person (Hans Mueller, same TIN) with different balance -->
+      <crs:AccountReport>
+        <crs:DocSpec>
+          <stf:DocTypeIndic>OECD1</stf:DocTypeIndic>
+          <!-- CROSS-RECORD ERROR: Duplicate DocRefId - same as above -->
+          <stf:DocRefId>IE2024CRS005AR001</stf:DocRefId>
+        </crs:DocSpec>
+        <crs:AccountNumber AcctNumberType="OECD601">IE64IRCE92050112345690</crs:AccountNumber>
+        <crs:AccountHolder>
+          <crs:Individual>
+            <crs:ResCountryCode>DE</crs:ResCountryCode>
+            <!-- CROSS-RECORD ERROR: Same TIN + Name as Account 1 -->
+            <crs:TIN issuedBy="DE">12345678901</crs:TIN>
+            <crs:Name>
+              <crs:FirstName>Hans</crs:FirstName>
+              <crs:LastName>Mueller</crs:LastName>
+            </crs:Name>
+            <crs:Address>
+              <crs:CountryCode>DE</crs:CountryCode>
+              <crs:AddressFree>Hauptstrasse 27, 10115 Berlin, Germany</crs:AddressFree>
+            </crs:Address>
+            <crs:BirthInfo>
+              <crs:BirthDate>1975-03-15</crs:BirthDate>
+              <crs:City>Munich</crs:City>
+              <crs:CountryInfo>
+                <crs:CountryCode>DE</crs:CountryCode>
+              </crs:CountryInfo>
+            </crs:BirthInfo>
+          </crs:Individual>
+        </crs:AccountHolder>
+        <!-- Different balance from Record 1 - inconsistent data for same account holder -->
+        <crs:AccountBalance currCode="EUR">250000.00</crs:AccountBalance>
+        <crs:Payment>
+          <crs:Type>CRS501</crs:Type>
+          <crs:PaymentAmnt currCode="EUR">6500.00</crs:PaymentAmnt>
+        </crs:Payment>
+      </crs:AccountReport>
+
+      <!-- A valid non-duplicate record for comparison -->
+      <crs:AccountReport>
+        <crs:DocSpec>
+          <stf:DocTypeIndic>OECD1</stf:DocTypeIndic>
+          <stf:DocRefId>IE2024CRS005AR003</stf:DocRefId>
+        </crs:DocSpec>
+        <crs:AccountNumber AcctNumberType="OECD601">IE15BOFI90001712345680</crs:AccountNumber>
+        <crs:AccountHolder>
+          <crs:Individual>
+            <crs:ResCountryCode>DE</crs:ResCountryCode>
+            <crs:TIN issuedBy="DE">55667788990</crs:TIN>
+            <crs:Name>
+              <crs:FirstName>Petra</crs:FirstName>
+              <crs:LastName>Fischer</crs:LastName>
+            </crs:Name>
+            <crs:Address>
+              <crs:CountryCode>DE</crs:CountryCode>
+              <crs:AddressFree>Leopoldstrasse 42, 80802 Munich, Germany</crs:AddressFree>
+            </crs:Address>
+            <crs:BirthInfo>
+              <crs:BirthDate>1991-08-25</crs:BirthDate>
+              <crs:City>Stuttgart</crs:City>
+              <crs:CountryInfo>
+                <crs:CountryCode>DE</crs:CountryCode>
+              </crs:CountryInfo>
+            </crs:BirthInfo>
+          </crs:Individual>
+        </crs:AccountHolder>
+        <crs:AccountBalance currCode="EUR">67500.00</crs:AccountBalance>
+      </crs:AccountReport>
+    </crs:ReportingGroup>
+  </crs:Body>
+</crs:CrsBody>

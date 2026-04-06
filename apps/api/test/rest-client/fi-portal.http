@@ -1,0 +1,90 @@
+### Reg-Tech API — FI Portal Endpoints
+### Login first using auth.http to get a token
+
+@baseUrl = http://localhost:3000/api
+@token = <paste-jwt-here>
+
+### ─── Submit FI Enrolment ───
+# @name enrol
+POST {{baseUrl}}/fi/enrol
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "organizationName": "New Dublin Finance Ltd",
+  "jurisdiction": "IE",
+  "giin": "X1Y2Z3.00000.IE.099",
+  "contactEmail": "compliance@newdublin.ie",
+  "contactName": "Sean Murphy",
+  "contactPhone": "+353-1-555-0123"
+}
+
+###
+
+### ─── Check Enrolment Status ───
+GET {{baseUrl}}/fi/enrolment/{{enrol.response.body.id}}/status
+Authorization: Bearer {{token}}
+
+###
+
+### ─── Create Filing (Manual Entry) ───
+# @name createFiling
+POST {{baseUrl}}/fi/filings
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "reportingPeriod": "2024",
+  "filingType": "CRS"
+}
+
+###
+
+### ─── Upload XML Filing ───
+POST {{baseUrl}}/fi/filings/upload
+Authorization: Bearer {{token}}
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="filingId"
+
+{{createFiling.response.body.id}}
+--boundary
+Content-Disposition: form-data; name="file"; filename="crs-report-2024.xml"
+Content-Type: application/xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<CrsBody>
+  <!-- Paste CRS XML content here or use test fixture files -->
+</CrsBody>
+--boundary--
+
+###
+
+### ─── List My Filings ───
+GET {{baseUrl}}/fi/filings?status=DRAFT&page=1&limit=20
+Authorization: Bearer {{token}}
+
+###
+
+### ─── Get Filing Detail ───
+GET {{baseUrl}}/fi/filings/{{createFiling.response.body.id}}
+Authorization: Bearer {{token}}
+
+###
+
+### ─── Submit Filing for Validation ───
+POST {{baseUrl}}/fi/filings/{{createFiling.response.body.id}}/submit
+Authorization: Bearer {{token}}
+
+###
+
+### ─── Get Notifications ───
+GET {{baseUrl}}/fi/notifications?unreadOnly=true
+Authorization: Bearer {{token}}
+
+###
+
+### ─── Mark Notification as Read ───
+PATCH {{baseUrl}}/fi/notifications/00000000-0000-4000-a000-000000000099/read
+Authorization: Bearer {{token}}

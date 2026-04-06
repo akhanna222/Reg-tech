@@ -1,0 +1,75 @@
+### Reg-Tech API — Authentication Endpoints
+### Requires VS Code REST Client extension (humao.rest-client)
+
+@baseUrl = http://localhost:3000/api
+@token = {{login.response.body.accessToken}}
+
+### ─── Register a new user ───
+# @name register
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+  "email": "newuser@celticfs.ie",
+  "password": "RegTech2024!Secure",
+  "firstName": "Patrick",
+  "lastName": "O'Brien",
+  "organizationId": "00000000-0000-4000-a000-000000000004"
+}
+
+###
+
+### ─── Login ───
+# @name login
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "compliance@celticfs.ie",
+  "password": "RegTech2024!"
+}
+
+###
+
+### ─── Login with 2FA ───
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "compliance@celticfs.ie",
+  "password": "RegTech2024!",
+  "totpCode": "123456"
+}
+
+###
+
+### ─── Refresh Token ───
+POST {{baseUrl}}/auth/refresh
+Content-Type: application/json
+
+{
+  "refreshToken": "{{login.response.body.refreshToken}}"
+}
+
+###
+
+### ─── Setup 2FA ───
+POST {{baseUrl}}/auth/2fa/setup
+Authorization: Bearer {{token}}
+
+###
+
+### ─── Verify 2FA ───
+POST {{baseUrl}}/auth/2fa/verify
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "code": "123456"
+}
+
+###
+
+### ─── Logout ───
+POST {{baseUrl}}/auth/logout
+Authorization: Bearer {{token}}

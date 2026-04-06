@@ -1,8 +1,10 @@
-import { Module } from '@nestjs/common';
+import { Module, MiddlewareConsumer, NestModule } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import * as Joi from 'joi';
 import { databaseConfig } from './config/database.config';
+import { CorrelationIdMiddleware } from './common/middleware/correlation-id.middleware';
+import { RateLimitMiddleware } from './common/middleware/rate-limit.middleware';
 import { HealthModule } from './modules/health/health.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { FiPortalModule } from './modules/fi-portal/fi-portal.module';
@@ -53,4 +55,10 @@ import { EventStoreModule } from './modules/event-store/event-store.module';
     EventStoreModule,
   ],
 })
-export class AppModule {}
+export class AppModule implements NestModule {
+  configure(consumer: MiddlewareConsumer): void {
+    consumer
+      .apply(CorrelationIdMiddleware, RateLimitMiddleware)
+      .forRoutes('*');
+  }
+}

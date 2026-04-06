@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  INVALID CRS XML - Stage 1 XSD Validation Failures:
+  1. Missing required MessageRefId element
+  2. Invalid country code "XX" (not an ISO 3166-1 alpha-2 code)
+  3. Malformed date "2024-13-45" (month 13, day 45 are invalid)
+  4. Missing required LastName in Individual Name
+-->
+<crs:CrsBody
+  xmlns:crs="urn:oecd:ties:crs:v2"
+  xmlns:stf="urn:oecd:ties:crsstf:v5"
+  xmlns:iso="urn:oecd:ties:isocrstypes:v1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="urn:oecd:ties:crs:v2 CrsXML_v2.0.xsd"
+  version="2.0">
+
+  <crs:MessageSpec>
+    <crs:SendingCompanyIN>A1B2C3.00000.IE.001</crs:SendingCompanyIN>
+    <crs:TransmittingCountry>IE</crs:TransmittingCountry>
+    <crs:ReceivingCountry>XX</crs:ReceivingCountry>
+    <crs:MessageType>CRS</crs:MessageType>
+    <!-- ERROR: MessageRefId is missing (required element) -->
+    <crs:MessageTypeIndic>CRS701</crs:MessageTypeIndic>
+    <crs:ReportingPeriod>2024-13-45</crs:ReportingPeriod>
+    <crs:Timestamp>2025-01-31T10:30:00</crs:Timestamp>
+  </crs:MessageSpec>
+
+  <crs:Body>
+    <crs:ReportingFI>
+      <crs:ResCountryCode>IE</crs:ResCountryCode>
+      <crs:IN INType="GIIN">A1B2C3.00000.IE.001</crs:IN>
+      <crs:Name>Celtic Financial Services</crs:Name>
+      <crs:Address>
+        <crs:CountryCode>IE</crs:CountryCode>
+        <crs:AddressFree>42 Grafton Street, Dublin 2, Ireland</crs:AddressFree>
+      </crs:Address>
+      <crs:DocSpec>
+        <stf:DocTypeIndic>OECD1</stf:DocTypeIndic>
+        <stf:DocRefId>IE2024CRSINVFI001</stf:DocRefId>
+      </crs:DocSpec>
+    </crs:ReportingFI>
+
+    <crs:ReportingGroup>
+      <crs:AccountReport>
+        <crs:DocSpec>
+          <stf:DocTypeIndic>OECD1</stf:DocTypeIndic>
+          <stf:DocRefId>IE2024CRSINVAR001</stf:DocRefId>
+        </crs:DocSpec>
+        <crs:AccountNumber AcctNumberType="OECD601">IE29AIBK93115212345678</crs:AccountNumber>
+        <crs:AccountHolder>
+          <crs:Individual>
+            <crs:ResCountryCode>XX</crs:ResCountryCode>
+            <crs:TIN issuedBy="XX">12345678901</crs:TIN>
+            <crs:Name>
+              <crs:FirstName>Hans</crs:FirstName>
+              <!-- ERROR: Missing required LastName element -->
+            </crs:Name>
+            <crs:Address>
+              <crs:CountryCode>XX</crs:CountryCode>
+              <crs:AddressFree>Invalid Address, Nowhere</crs:AddressFree>
+            </crs:Address>
+            <crs:BirthInfo>
+              <crs:BirthDate>2024-13-45</crs:BirthDate>
+              <crs:City>Munich</crs:City>
+              <crs:CountryInfo>
+                <crs:CountryCode>DE</crs:CountryCode>
+              </crs:CountryInfo>
+            </crs:BirthInfo>
+          </crs:Individual>
+        </crs:AccountHolder>
+        <crs:AccountBalance currCode="EUR">125430.50</crs:AccountBalance>
+      </crs:AccountReport>
+    </crs:ReportingGroup>
+  </crs:Body>
+</crs:CrsBody>

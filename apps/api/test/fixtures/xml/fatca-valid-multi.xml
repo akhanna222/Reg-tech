@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ftc:FATCA_OECD
+  xmlns:ftc="urn:oecd:ties:fatca:v2"
+  xmlns:sfa="urn:oecd:ties:stffatcatypes:v2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="urn:oecd:ties:fatca:v2 FatcaXML_v2.0.xsd"
+  version="2.0">
+
+  <ftc:MessageSpec>
+    <sfa:SendingCompanyIN>B2C3D4.00000.GB.001</sfa:SendingCompanyIN>
+    <sfa:TransmittingCountry>GB</sfa:TransmittingCountry>
+    <sfa:ReceivingCountry>US</sfa:ReceivingCountry>
+    <sfa:MessageType>FATCA</sfa:MessageType>
+    <sfa:Warning>This is test data only. Not for production use.</sfa:Warning>
+    <sfa:Contact>FATCA Compliance Team, Thames Capital Ltd</sfa:Contact>
+    <sfa:MessageRefId>GB2024FATCA002</sfa:MessageRefId>
+    <sfa:MessageTypeIndic>FATCA1</sfa:MessageTypeIndic>
+    <sfa:ReportingPeriod>2024-12-31</sfa:ReportingPeriod>
+    <sfa:Timestamp>2025-03-15T09:30:00</sfa:Timestamp>
+  </ftc:MessageSpec>
+
+  <ftc:FATCA>
+    <ftc:ReportingFI>
+      <sfa:ResCountryCode>GB</sfa:ResCountryCode>
+      <sfa:TIN>B2C3D4.00000.GB.001</sfa:TIN>
+      <sfa:Name>Thames Capital Ltd</sfa:Name>
+      <sfa:Address>
+        <sfa:CountryCode>GB</sfa:CountryCode>
+        <sfa:AddressFree>25 Canary Wharf, London E14 5AB, United Kingdom</sfa:AddressFree>
+      </sfa:Address>
+      <ftc:DocSpec>
+        <ftc:DocTypeIndic>FATCA1</ftc:DocTypeIndic>
+        <ftc:DocRefId>GB2024FATCA002FI001</ftc:DocRefId>
+      </ftc:DocSpec>
+    </ftc:ReportingFI>
+
+    <ftc:ReportingGroup>
+      <!-- Account 1: John Smith, Individual, Depository -->
+      <ftc:AccountReport>
+        <ftc:DocSpec>
+          <ftc:DocTypeIndic>FATCA1</ftc:DocTypeIndic>
+          <ftc:DocRefId>GB2024FATCA002AR001</ftc:DocRefId>
+        </ftc:DocSpec>
+        <ftc:AccountNumber>GB82WEST12345698765432</ftc:AccountNumber>
+        <ftc:AccountHolder>
+          <ftc:Individual>
+            <sfa:ResCountryCode>US</sfa:ResCountryCode>
+            <sfa:TIN>123-45-6789</sfa:TIN>
+            <sfa:Name>
+              <sfa:FirstName>John</sfa:FirstName>
+              <sfa:LastName>Smith</sfa:LastName>
+            </sfa:Name>
+            <sfa:Address>
+              <sfa:CountryCode>US</sfa:CountryCode>
+              <sfa:AddressFree>742 Evergreen Terrace, Springfield, IL 62704, United States</sfa:AddressFree>
+            </sfa:Address>
+            <sfa:BirthInfo>
+              <sfa:BirthDate>1980-07-22</sfa:BirthDate>
+              <sfa:City>Chicago</sfa:City>
+              <sfa:CountryInfo>
+                <sfa:CountryCode>US</sfa:CountryCode>
+              </sfa:CountryInfo>
+            </sfa:BirthInfo>
+          </ftc:Individual>
+        </ftc:AccountHolder>
+        <ftc:AccountBalance currCode="USD">250000.00</ftc:AccountBalance>
+        <ftc:Payment>
+          <ftc:Type>FATCA502</ftc:Type>
+          <ftc:PaymentAmnt currCode="USD">12500.00</ftc:PaymentAmnt>
+        </ftc:Payment>
+        <ftc:Payment>
+          <ftc:Type>FATCA501</ftc:Type>
+          <ftc:PaymentAmnt currCode="USD">3200.00</ftc:PaymentAmnt>
+        </ftc:Payment>
+      </ftc:AccountReport>
+
+      <!-- Account 2: Jane Williams, Individual, Custodial -->
+      <ftc:AccountReport>
+        <ftc:DocSpec>
+          <ftc:DocTypeIndic>FATCA1</ftc:DocTypeIndic>
+          <ftc:DocRefId>GB2024FATCA002AR002</ftc:DocRefId>
+        </ftc:DocSpec>
+        <ftc:AccountNumber>GB29NWBK60161331926819</ftc:AccountNumber>
+        <ftc:AccountHolder>
+          <ftc:Individual>
+            <sfa:ResCountryCode>US</sfa:ResCountryCode>
+            <sfa:TIN>234-56-7890</sfa:TIN>
+            <sfa:Name>
+              <sfa:FirstName>Jane</sfa:FirstName>
+              <sfa:LastName>Williams</sfa:LastName>
+            </sfa:Name>
+            <sfa:Address>
+              <sfa:CountryCode>US</sfa:CountryCode>
+              <sfa:AddressFree>1600 Pennsylvania Avenue NW, Washington, DC 20500, United States</sfa:AddressFree>
+            </sfa:Address>
+            <sfa:BirthInfo>
+              <sfa:BirthDate>1972-04-10</sfa:BirthDate>
+              <sfa:City>New York</sfa:City>
+              <sfa:CountryInfo>
+                <sfa:CountryCode>US</sfa:CountryCode>
+              </sfa:CountryInfo>
+            </sfa:BirthInfo>
+          </ftc:Individual>
+        </ftc:AccountHolder>
+        <ftc:AccountBalance currCode="USD">1200000.00</ftc:AccountBalance>
+        <ftc:Payment>
+          <ftc:Type>FATCA504</ftc:Type>
+          <ftc:PaymentAmnt currCode="USD">85000.00</ftc:PaymentAmnt>
+        </ftc:Payment>
+      </ftc:AccountReport>
+
+      <!-- Account 3: American Trading Corp, Entity, Custodial -->
+      <ftc:AccountReport>
+        <ftc:DocSpec>
+          <ftc:DocTypeIndic>FATCA1</ftc:DocTypeIndic>
+          <ftc:DocRefId>GB2024FATCA002AR003</ftc:DocRefId>
+        </ftc:DocSpec>
+        <ftc:AccountNumber>GB76RBOS16173012345678</ftc:AccountNumber>
+        <ftc:AccountHolder>
+          <ftc:Organisation>
+            <sfa:ResCountryCode>US</sfa:ResCountryCode>
+            <sfa:TIN>84-1234567</sfa:TIN>
+            <sfa:Name>American Trading Corp</sfa:Name>
+            <sfa:Address>
+              <sfa:CountryCode>US</sfa:CountryCode>
+              <sfa:AddressFree>350 Fifth Avenue, Suite 3300, New York, NY 10118, United States</sfa:AddressFree>
+            </sfa:Address>
+          </ftc:Organisation>
+        </ftc:AccountHolder>
+        <ftc:AccountBalance currCode="USD">5500000.00</ftc:AccountBalance>
+      </ftc:AccountReport>
+
+      <!-- Account 4: Robert Johnson, Individual, Depository -->
+      <ftc:AccountReport>
+        <ftc:DocSpec>
+          <ftc:DocTypeIndic>FATCA1</ftc:DocTypeIndic>
+          <ftc:DocRefId>GB2024FATCA002AR004</ftc:DocRefId>
+        </ftc:DocSpec>
+        <ftc:AccountNumber>GB33BUKB20201555555555</ftc:AccountNumber>
+        <ftc:AccountHolder>
+          <ftc:Individual>
+            <sfa:ResCountryCode>US</sfa:ResCountryCode>
+            <sfa:TIN>345-67-8901</sfa:TIN>
+            <sfa:Name>
+              <sfa:FirstName>Robert</sfa:FirstName>
+              <sfa:LastName>Johnson</sfa:LastName>
+            </sfa:Name>
+            <sfa:Address>
+              <sfa:CountryCode>US</sfa:CountryCode>
+              <sfa:AddressFree>221 Baker Street, Boston, MA 02101, United States</sfa:AddressFree>
+            </sfa:Address>
+            <sfa:BirthInfo>
+              <sfa:BirthDate>1995-12-01</sfa:BirthDate>
+              <sfa:City>Boston</sfa:City>
+              <sfa:CountryInfo>
+                <sfa:CountryCode>US</sfa:CountryCode>
+              </sfa:CountryInfo>
+            </sfa:BirthInfo>
+          </ftc:Individual>
+        </ftc:AccountHolder>
+        <ftc:AccountBalance currCode="USD">78500.00</ftc:AccountBalance>
+        <ftc:Payment>
+          <ftc:Type>FATCA501</ftc:Type>
+          <ftc:PaymentAmnt currCode="USD">2100.00</ftc:PaymentAmnt>
+        </ftc:Payment>
+      </ftc:AccountReport>
+    </ftc:ReportingGroup>
+  </ftc:FATCA>
+</ftc:FATCA_OECD>
