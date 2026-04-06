@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  INVALID FATCA XML - Business Rule Failure:
+  The US person account holder has no TIN provided.
+  Under FATCA regulations, US persons must have a TIN (SSN or EIN) reported.
+  This should trigger a business rule validation failure.
+-->
+<ftc:FATCA_OECD
+  xmlns:ftc="urn:oecd:ties:fatca:v2"
+  xmlns:sfa="urn:oecd:ties:stffatcatypes:v2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="urn:oecd:ties:fatca:v2 FatcaXML_v2.0.xsd"
+  version="2.0">
+
+  <ftc:MessageSpec>
+    <sfa:SendingCompanyIN>B2C3D4.00000.GB.001</sfa:SendingCompanyIN>
+    <sfa:TransmittingCountry>GB</sfa:TransmittingCountry>
+    <sfa:ReceivingCountry>US</sfa:ReceivingCountry>
+    <sfa:MessageType>FATCA</sfa:MessageType>
+    <sfa:Warning>Test data with missing TIN violation.</sfa:Warning>
+    <sfa:Contact>FATCA Compliance Team, Thames Capital Ltd</sfa:Contact>
+    <sfa:MessageRefId>GB2024FATCA003</sfa:MessageRefId>
+    <sfa:MessageTypeIndic>FATCA1</sfa:MessageTypeIndic>
+    <sfa:ReportingPeriod>2024-12-31</sfa:ReportingPeriod>
+    <sfa:Timestamp>2025-03-15T10:00:00</sfa:Timestamp>
+  </ftc:MessageSpec>
+
+  <ftc:FATCA>
+    <ftc:ReportingFI>
+      <sfa:ResCountryCode>GB</sfa:ResCountryCode>
+      <sfa:TIN>B2C3D4.00000.GB.001</sfa:TIN>
+      <sfa:Name>Thames Capital Ltd</sfa:Name>
+      <sfa:Address>
+        <sfa:CountryCode>GB</sfa:CountryCode>
+        <sfa:AddressFree>25 Canary Wharf, London E14 5AB, United Kingdom</sfa:AddressFree>
+      </sfa:Address>
+      <ftc:DocSpec>
+        <ftc:DocTypeIndic>FATCA1</ftc:DocTypeIndic>
+        <ftc:DocRefId>GB2024FATCA003FI001</ftc:DocRefId>
+      </ftc:DocSpec>
+    </ftc:ReportingFI>
+
+    <ftc:ReportingGroup>
+      <!-- Account with missing TIN for US person -->
+      <ftc:AccountReport>
+        <ftc:DocSpec>
+          <ftc:DocTypeIndic>FATCA1</ftc:DocTypeIndic>
+          <ftc:DocRefId>GB2024FATCA003AR001</ftc:DocRefId>
+        </ftc:DocSpec>
+        <ftc:AccountNumber>GB55NWBK60233012345678</ftc:AccountNumber>
+        <ftc:AccountHolder>
+          <ftc:Individual>
+            <sfa:ResCountryCode>US</sfa:ResCountryCode>
+            <!-- BUSINESS RULE ERROR: TIN is missing for a US person -->
+            <!-- Under FATCA, all US persons must have their TIN (SSN/ITIN) reported -->
+            <sfa:Name>
+              <sfa:FirstName>Michael</sfa:FirstName>
+              <sfa:LastName>Davis</sfa:LastName>
+            </sfa:Name>
+            <sfa:Address>
+              <sfa:CountryCode>US</sfa:CountryCode>
+              <sfa:AddressFree>500 Market Street, San Francisco, CA 94105, United States</sfa:AddressFree>
+            </sfa:Address>
+            <sfa:BirthInfo>
+              <sfa:BirthDate>1985-03-10</sfa:BirthDate>
+              <sfa:City>San Francisco</sfa:City>
+              <sfa:CountryInfo>
+                <sfa:CountryCode>US</sfa:CountryCode>
+              </sfa:CountryInfo>
+            </sfa:BirthInfo>
+          </ftc:Individual>
+        </ftc:AccountHolder>
+        <ftc:AccountBalance currCode="USD">185000.00</ftc:AccountBalance>
+        <ftc:Payment>
+          <ftc:Type>FATCA501</ftc:Type>
+          <ftc:PaymentAmnt currCode="USD">4750.00</ftc:PaymentAmnt>
+        </ftc:Payment>
+      </ftc:AccountReport>
+
+      <!-- Second account also missing TIN -->
+      <ftc:AccountReport>
+        <ftc:DocSpec>
+          <ftc:DocTypeIndic>FATCA1</ftc:DocTypeIndic>
+          <ftc:DocRefId>GB2024FATCA003AR002</ftc:DocRefId>
+        </ftc:DocSpec>
+        <ftc:AccountNumber>GB44LOYD30963512345679</ftc:AccountNumber>
+        <ftc:AccountHolder>
+          <ftc:Individual>
+            <sfa:ResCountryCode>US</sfa:ResCountryCode>
+            <!-- BUSINESS RULE ERROR: TIN is missing for a US person -->
+            <sfa:Name>
+              <sfa:FirstName>Sarah</sfa:FirstName>
+              <sfa:LastName>Thompson</sfa:LastName>
+            </sfa:Name>
+            <sfa:Address>
+              <sfa:CountryCode>US</sfa:CountryCode>
+              <sfa:AddressFree>1234 Ocean Drive, Miami, FL 33139, United States</sfa:AddressFree>
+            </sfa:Address>
+            <sfa:BirthInfo>
+              <sfa:BirthDate>1992-11-28</sfa:BirthDate>
+              <sfa:City>Miami</sfa:City>
+              <sfa:CountryInfo>
+                <sfa:CountryCode>US</sfa:CountryCode>
+              </sfa:CountryInfo>
+            </sfa:BirthInfo>
+          </ftc:Individual>
+        </ftc:AccountHolder>
+        <ftc:AccountBalance currCode="USD">92300.00</ftc:AccountBalance>
+        <ftc:Payment>
+          <ftc:Type>FATCA502</ftc:Type>
+          <ftc:PaymentAmnt currCode="USD">3100.00</ftc:PaymentAmnt>
+        </ftc:Payment>
+      </ftc:AccountReport>
+    </ftc:ReportingGroup>
+  </ftc:FATCA>
+</ftc:FATCA_OECD>

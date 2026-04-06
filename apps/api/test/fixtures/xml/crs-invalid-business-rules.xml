@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  INVALID CRS XML - Stage 2 Business Rule Failures:
+  This file is structurally valid XML that would pass XSD validation,
+  but contains the following business rule violations:
+  1. Invalid TIN format for Germany: "12345" (only 5 digits; German TINs are 11 digits)
+  2. Implausible date of birth: 1850-01-15 (person would be 174+ years old)
+  3. Negative account balance: -50000.00 (not permitted for depository accounts)
+  4. Mismatched ResCountryCode: FI reports IE but account holder TIN issued by DE with ResCountryCode FR
+-->
+<crs:CrsBody
+  xmlns:crs="urn:oecd:ties:crs:v2"
+  xmlns:stf="urn:oecd:ties:crsstf:v5"
+  xmlns:iso="urn:oecd:ties:isocrstypes:v1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="urn:oecd:ties:crs:v2 CrsXML_v2.0.xsd"
+  version="2.0">
+
+  <crs:MessageSpec>
+    <crs:SendingCompanyIN>A1B2C3.00000.IE.001</crs:SendingCompanyIN>
+    <crs:TransmittingCountry>IE</crs:TransmittingCountry>
+    <crs:ReceivingCountry>DE</crs:ReceivingCountry>
+    <crs:MessageType>CRS</crs:MessageType>
+    <crs:Warning>Test data with business rule violations.</crs:Warning>
+    <crs:Contact>CRS Compliance Department, Celtic Financial Services</crs:Contact>
+    <crs:MessageRefId>IE2024CRS004</crs:MessageRefId>
+    <crs:MessageTypeIndic>CRS701</crs:MessageTypeIndic>
+    <crs:ReportingPeriod>2024-12-31</crs:ReportingPeriod>
+    <crs:Timestamp>2025-01-31T10:30:00</crs:Timestamp>
+  </crs:MessageSpec>
+
+  <crs:Body>
+    <crs:ReportingFI>
+      <crs:ResCountryCode>IE</crs:ResCountryCode>
+      <crs:IN INType="GIIN">A1B2C3.00000.IE.001</crs:IN>
+      <crs:Name>Celtic Financial Services</crs:Name>
+      <crs:Address>
+        <crs:CountryCode>IE</crs:CountryCode>
+        <crs:AddressFree>42 Grafton Street, Dublin 2, D02 HW94, Ireland</crs:AddressFree>
+      </crs:Address>
+      <crs:DocSpec>
+        <stf:DocTypeIndic>OECD1</stf:DocTypeIndic>
+        <stf:DocRefId>IE2024CRS004FI001</stf:DocRefId>
+      </crs:DocSpec>
+    </crs:ReportingFI>
+
+    <crs:ReportingGroup>
+      <!-- Account with invalid TIN, implausible DOB, and negative balance -->
+      <crs:AccountReport>
+        <crs:DocSpec>
+          <stf:DocTypeIndic>OECD1</stf:DocTypeIndic>
+          <stf:DocRefId>IE2024CRS004AR001</stf:DocRefId>
+        </crs:DocSpec>
+        <crs:AccountNumber AcctNumberType="OECD601">IE29AIBK93115212345678</crs:AccountNumber>
+        <crs:AccountHolder>
+          <crs:Individual>
+            <crs:ResCountryCode>DE</crs:ResCountryCode>
+            <!-- BUSINESS RULE ERROR: German TIN must be 11 digits, this is only 5 -->
+            <crs:TIN issuedBy="DE">12345</crs:TIN>
+            <crs:Name>
+              <crs:FirstName>Klaus</crs:FirstName>
+              <crs:LastName>Weber</crs:LastName>
+            </crs:Name>
+            <crs:Address>
+              <crs:CountryCode>DE</crs:CountryCode>
+              <crs:AddressFree>Berliner Strasse 10, 10115 Berlin, Germany</crs:AddressFree>
+            </crs:Address>
+            <crs:BirthInfo>
+              <!-- BUSINESS RULE ERROR: Implausible DOB, person would be 174+ years old -->
+              <crs:BirthDate>1850-01-15</crs:BirthDate>
+              <crs:City>Berlin</crs:City>
+              <crs:CountryInfo>
+                <crs:CountryCode>DE</crs:CountryCode>
+              </crs:CountryInfo>
+            </crs:BirthInfo>
+          </crs:Individual>
+        </crs:AccountHolder>
+        <!-- BUSINESS RULE ERROR: Negative account balance -->
+        <crs:AccountBalance currCode="EUR">-50000.00</crs:AccountBalance>
+        <crs:Payment>
+          <crs:Type>CRS501</crs:Type>
+          <crs:PaymentAmnt currCode="EUR">1200.00</crs:PaymentAmnt>
+        </crs:Payment>
+      </crs:AccountReport>
+
+      <!-- Account with mismatched residence country and TIN issuer -->
+      <crs:AccountReport>
+        <crs:DocSpec>
+          <stf:DocTypeIndic>OECD1</stf:DocTypeIndic>
+          <stf:DocRefId>IE2024CRS004AR002</stf:DocRefId>
+        </crs:DocSpec>
+        <crs:AccountNumber AcctNumberType="OECD601">IE64IRCE92050112345699</crs:AccountNumber>
+        <crs:AccountHolder>
+          <crs:Individual>
+            <!-- BUSINESS RULE ERROR: ResCountryCode FR but TIN issued by DE -->
+            <crs:ResCountryCode>FR</crs:ResCountryCode>
+            <crs:TIN issuedBy="DE">99887766554</crs:TIN>
+            <crs:Name>
+              <crs:FirstName>Sophie</crs:FirstName>
+              <crs:LastName>Richter</crs:LastName>
+            </crs:Name>
+            <crs:Address>
+              <crs:CountryCode>FR</crs:CountryCode>
+              <crs:AddressFree>22 Boulevard Saint-Germain, 75005 Paris, France</crs:AddressFree>
+            </crs:Address>
+            <crs:BirthInfo>
+              <crs:BirthDate>1988-05-20</crs:BirthDate>
+              <crs:City>Frankfurt</crs:City>
+              <crs:CountryInfo>
+                <crs:CountryCode>DE</crs:CountryCode>
+              </crs:CountryInfo>
+            </crs:BirthInfo>
+          </crs:Individual>
+        </crs:AccountHolder>
+        <crs:AccountBalance currCode="EUR">75000.00</crs:AccountBalance>
+      </crs:AccountReport>
+    </crs:ReportingGroup>
+  </crs:Body>
+</crs:CrsBody>

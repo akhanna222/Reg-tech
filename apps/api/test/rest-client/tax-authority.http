@@ -1,0 +1,77 @@
+### Reg-Tech API — Tax Authority Endpoints
+### Login as TA user first using auth.http
+
+@baseUrl = http://localhost:3000/api
+@token = <paste-ta-jwt-here>
+
+### ─── Browse All Submissions ───
+GET {{baseUrl}}/ta/submissions?page=1&limit=20
+Authorization: Bearer {{token}}
+
+###
+
+### ─── Filter by Status ───
+GET {{baseUrl}}/ta/submissions?status=VALIDATED&jurisdiction=IE&page=1&limit=20
+Authorization: Bearer {{token}}
+
+###
+
+### ─── Filter by FI ───
+GET {{baseUrl}}/ta/submissions?organizationId=00000000-0000-4000-a000-000000000004&page=1
+Authorization: Bearer {{token}}
+
+###
+
+### ─── Get Submission Detail ───
+GET {{baseUrl}}/ta/submissions/00000000-0000-4000-a000-000000000101
+Authorization: Bearer {{token}}
+
+###
+
+### ─── Validation Dashboard ───
+GET {{baseUrl}}/ta/validation/dashboard?jurisdiction=IE
+Authorization: Bearer {{token}}
+
+###
+
+### ─── Approve Submission ───
+POST {{baseUrl}}/ta/submissions/00000000-0000-4000-a000-000000000101/approve
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "comments": "All validation checks passed. Approved for transmission to Germany."
+}
+
+###
+
+### ─── Reject Submission ───
+POST {{baseUrl}}/ta/submissions/00000000-0000-4000-a000-000000000102/reject
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "comments": "Multiple TIN format errors. Please correct and resubmit."
+}
+
+###
+
+### ─── Approve FI Enrolment ───
+POST {{baseUrl}}/ta/enrolments/00000000-0000-4000-a000-000000000009/approve
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "comments": "Documentation verified. GIIN confirmed."
+}
+
+###
+
+### ─── Trigger Transmission ───
+POST {{baseUrl}}/ta/submissions/00000000-0000-4000-a000-000000000101/transmit
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "destination": "DE"
+}

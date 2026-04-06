@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<crs:CrsBody
+  xmlns:crs="urn:oecd:ties:crs:v2"
+  xmlns:stf="urn:oecd:ties:crsstf:v5"
+  xmlns:iso="urn:oecd:ties:isocrstypes:v1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="urn:oecd:ties:crs:v2 CrsXML_v2.0.xsd"
+  version="2.0">
+
+  <crs:MessageSpec>
+    <crs:SendingCompanyIN>A1B2C3.00000.IE.001</crs:SendingCompanyIN>
+    <crs:TransmittingCountry>IE</crs:TransmittingCountry>
+    <crs:ReceivingCountry>DE</crs:ReceivingCountry>
+    <crs:MessageType>CRS</crs:MessageType>
+    <crs:Warning>Correction to previously submitted report IE2024CRS002.</crs:Warning>
+    <crs:Contact>CRS Compliance Department, Celtic Financial Services</crs:Contact>
+    <crs:MessageRefId>IE2024CRS003</crs:MessageRefId>
+    <crs:CorrMessageRefId>IE2024CRS002</crs:CorrMessageRefId>
+    <crs:MessageTypeIndic>CRS702</crs:MessageTypeIndic>
+    <crs:ReportingPeriod>2024-12-31</crs:ReportingPeriod>
+    <crs:Timestamp>2025-02-15T09:20:00</crs:Timestamp>
+  </crs:MessageSpec>
+
+  <crs:Body>
+    <crs:ReportingFI>
+      <crs:ResCountryCode>IE</crs:ResCountryCode>
+      <crs:IN INType="GIIN">A1B2C3.00000.IE.001</crs:IN>
+      <crs:Name>Celtic Financial Services</crs:Name>
+      <crs:Address>
+        <crs:CountryCode>IE</crs:CountryCode>
+        <crs:AddressFree>42 Grafton Street, Dublin 2, D02 HW94, Ireland</crs:AddressFree>
+      </crs:Address>
+      <crs:DocSpec>
+        <stf:DocTypeIndic>OECD2</stf:DocTypeIndic>
+        <stf:DocRefId>IE2024CRS003FI001</stf:DocRefId>
+        <stf:CorrDocRefId>IE2024CRS002FI001</stf:CorrDocRefId>
+      </crs:DocSpec>
+    </crs:ReportingFI>
+
+    <crs:ReportingGroup>
+      <!-- Corrected Account 1: Hans Mueller, updated balance -->
+      <crs:AccountReport>
+        <crs:DocSpec>
+          <stf:DocTypeIndic>OECD2</stf:DocTypeIndic>
+          <stf:DocRefId>IE2024CRS003AR001</stf:DocRefId>
+          <stf:CorrDocRefId>IE2024CRS002AR001</stf:CorrDocRefId>
+        </crs:DocSpec>
+        <crs:AccountNumber AcctNumberType="OECD601">IE29AIBK93115212345678</crs:AccountNumber>
+        <crs:AccountHolder>
+          <crs:Individual>
+            <crs:ResCountryCode>DE</crs:ResCountryCode>
+            <crs:TIN issuedBy="DE">12345678901</crs:TIN>
+            <crs:Name>
+              <crs:FirstName>Hans</crs:FirstName>
+              <crs:LastName>Mueller</crs:LastName>
+            </crs:Name>
+            <crs:Address>
+              <crs:CountryCode>DE</crs:CountryCode>
+              <crs:AddressFree>Hauptstrasse 27, 10115 Berlin, Germany</crs:AddressFree>
+            </crs:Address>
+            <crs:BirthInfo>
+              <crs:BirthDate>1975-03-15</crs:BirthDate>
+              <crs:City>Munich</crs:City>
+              <crs:CountryInfo>
+                <crs:CountryCode>DE</crs:CountryCode>
+              </crs:CountryInfo>
+            </crs:BirthInfo>
+          </crs:Individual>
+        </crs:AccountHolder>
+        <crs:AccountBalance currCode="EUR">130500.00</crs:AccountBalance>
+        <crs:Payment>
+          <crs:Type>CRS501</crs:Type>
+          <crs:PaymentAmnt currCode="EUR">3210.75</crs:PaymentAmnt>
+        </crs:Payment>
+      </crs:AccountReport>
+    </crs:ReportingGroup>
+  </crs:Body>
+</crs:CrsBody>

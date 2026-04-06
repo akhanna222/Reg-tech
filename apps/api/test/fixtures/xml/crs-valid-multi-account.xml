@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<crs:CrsBody
+  xmlns:crs="urn:oecd:ties:crs:v2"
+  xmlns:stf="urn:oecd:ties:crsstf:v5"
+  xmlns:iso="urn:oecd:ties:isocrstypes:v1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="urn:oecd:ties:crs:v2 CrsXML_v2.0.xsd"
+  version="2.0">
+
+  <crs:MessageSpec>
+    <crs:SendingCompanyIN>A1B2C3.00000.IE.001</crs:SendingCompanyIN>
+    <crs:TransmittingCountry>IE</crs:TransmittingCountry>
+    <crs:ReceivingCountry>DE</crs:ReceivingCountry>
+    <crs:MessageType>CRS</crs:MessageType>
+    <crs:Warning>This is test data only. Not for production use.</crs:Warning>
+    <crs:Contact>CRS Compliance Department, Celtic Financial Services</crs:Contact>
+    <crs:MessageRefId>IE2024CRS002</crs:MessageRefId>
+    <crs:MessageTypeIndic>CRS701</crs:MessageTypeIndic>
+    <crs:ReportingPeriod>2024-12-31</crs:ReportingPeriod>
+    <crs:Timestamp>2025-01-31T14:45:00</crs:Timestamp>
+  </crs:MessageSpec>
+
+  <crs:Body>
+    <crs:ReportingFI>
+      <crs:ResCountryCode>IE</crs:ResCountryCode>
+      <crs:IN INType="GIIN">A1B2C3.00000.IE.001</crs:IN>
+      <crs:Name>Celtic Financial Services</crs:Name>
+      <crs:Address>
+        <crs:CountryCode>IE</crs:CountryCode>
+        <crs:AddressFree>42 Grafton Street, Dublin 2, D02 HW94, Ireland</crs:AddressFree>
+      </crs:Address>
+      <crs:DocSpec>
+        <stf:DocTypeIndic>OECD1</stf:DocTypeIndic>
+        <stf:DocRefId>IE2024CRS002FI001</stf:DocRefId>
+      </crs:DocSpec>
+    </crs:ReportingFI>
+
+    <crs:ReportingGroup>
+      <!-- Account 1: Hans Mueller, Individual, Depository -->
+      <crs:AccountReport>
+        <crs:DocSpec>
+          <stf:DocTypeIndic>OECD1</stf:DocTypeIndic>
+          <stf:DocRefId>IE2024CRS002AR001</stf:DocRefId>
+        </crs:DocSpec>
+        <crs:AccountNumber AcctNumberType="OECD601">IE29AIBK93115212345678</crs:AccountNumber>
+        <crs:AccountHolder>
+          <crs:Individual>
+            <crs:ResCountryCode>DE</crs:ResCountryCode>
+            <crs:TIN issuedBy="DE">12345678901</crs:TIN>
+            <crs:Name>
+              <crs:FirstName>Hans</crs:FirstName>
+              <crs:LastName>Mueller</crs:LastName>
+            </crs:Name>
+            <crs:Address>
+              <crs:CountryCode>DE</crs:CountryCode>
+              <crs:AddressFree>Hauptstrasse 27, 10115 Berlin, Germany</crs:AddressFree>
+            </crs:Address>
+            <crs:BirthInfo>
+              <crs:BirthDate>1975-03-15</crs:BirthDate>
+              <crs:City>Munich</crs:City>
+              <crs:CountryInfo>
+                <crs:CountryCode>DE</crs:CountryCode>
+              </crs:CountryInfo>
+            </crs:BirthInfo>
+          </crs:Individual>
+        </crs:AccountHolder>
+        <crs:AccountBalance currCode="EUR">125430.50</crs:AccountBalance>
+        <crs:Payment>
+          <crs:Type>CRS501</crs:Type>
+          <crs:PaymentAmnt currCode="EUR">3210.75</crs:PaymentAmnt>
+        </crs:Payment>
+      </crs:AccountReport>
+
+      <!-- Account 2: Marie Dupont, Individual, Custodial -->
+      <crs:AccountReport>
+        <crs:DocSpec>
+          <stf:DocTypeIndic>OECD1</stf:DocTypeIndic>
+          <stf:DocRefId>IE2024CRS002AR002</stf:DocRefId>
+        </crs:DocSpec>
+        <crs:AccountNumber AcctNumberType="OECD601">IE64IRCE92050112345679</crs:AccountNumber>
+        <crs:AccountHolder>
+          <crs:Individual>
+            <crs:ResCountryCode>FR</crs:ResCountryCode>
+            <crs:TIN issuedBy="FR">1234567890123</crs:TIN>
+            <crs:Name>
+              <crs:FirstName>Marie</crs:FirstName>
+              <crs:LastName>Dupont</crs:LastName>
+            </crs:Name>
+            <crs:Address>
+              <crs:CountryCode>FR</crs:CountryCode>
+              <crs:AddressFree>15 Rue de Rivoli, 75001 Paris, France</crs:AddressFree>
+            </crs:Address>
+            <crs:BirthInfo>
+              <crs:BirthDate>1982-11-03</crs:BirthDate>
+              <crs:City>Lyon</crs:City>
+              <crs:CountryInfo>
+                <crs:CountryCode>FR</crs:CountryCode>
+              </crs:CountryInfo>
+            </crs:BirthInfo>
+          </crs:Individual>
+        </crs:AccountHolder>
+        <crs:AccountBalance currCode="EUR">89200.00</crs:AccountBalance>
+        <crs:Payment>
+          <crs:Type>CRS502</crs:Type>
+          <crs:PaymentAmnt currCode="EUR">4500.00</crs:PaymentAmnt>
+        </crs:Payment>
+      </crs:AccountReport>
+
+      <!-- Account 3: Schneider GmbH, Entity, Custodial -->
+      <crs:AccountReport>
+        <crs:DocSpec>
+          <stf:DocTypeIndic>OECD1</stf:DocTypeIndic>
+          <stf:DocRefId>IE2024CRS002AR003</stf:DocRefId>
+        </crs:DocSpec>
+        <crs:AccountNumber AcctNumberType="OECD601">IE15BOFI90001712345680</crs:AccountNumber>
+        <crs:AccountHolder>
+          <crs:Organisation>
+            <crs:ResCountryCode>DE</crs:ResCountryCode>
+            <crs:IN INType="TIN" issuedBy="DE">DE123456789</crs:IN>
+            <crs:Name>Schneider GmbH</crs:Name>
+            <crs:Address>
+              <crs:CountryCode>DE</crs:CountryCode>
+              <crs:AddressFree>Friedrichstrasse 100, 10117 Berlin, Germany</crs:AddressFree>
+            </crs:Address>
+          </crs:Organisation>
+          <crs:AcctHolderType>CRS101</crs:AcctHolderType>
+        </crs:AccountHolder>
+        <crs:AccountBalance currCode="EUR">2450000.00</crs:AccountBalance>
+        <crs:Payment>
+          <crs:Type>CRS504</crs:Type>
+          <crs:PaymentAmnt currCode="EUR">156000.00</crs:PaymentAmnt>
+        </crs:Payment>
+      </crs:AccountReport>
+
+      <!-- Account 4: Pierre Martin, Individual, Depository -->
+      <crs:AccountReport>
+        <crs:DocSpec>
+          <stf:DocTypeIndic>OECD1</stf:DocTypeIndic>
+          <stf:DocRefId>IE2024CRS002AR004</stf:DocRefId>
+        </crs:DocSpec>
+        <crs:AccountNumber AcctNumberType="OECD601">IE22AIBK93115212345681</crs:AccountNumber>
+        <crs:AccountHolder>
+          <crs:Individual>
+            <crs:ResCountryCode>FR</crs:ResCountryCode>
+            <crs:TIN issuedBy="FR">2345678901234</crs:TIN>
+            <crs:Name>
+              <crs:FirstName>Pierre</crs:FirstName>
+              <crs:LastName>Martin</crs:LastName>
+            </crs:Name>
+            <crs:Address>
+              <crs:CountryCode>FR</crs:CountryCode>
+              <crs:AddressFree>8 Avenue des Champs-Elysees, 75008 Paris, France</crs:AddressFree>
+            </crs:Address>
+            <crs:BirthInfo>
+              <crs:BirthDate>1990-06-28</crs:BirthDate>
+              <crs:City>Marseille</crs:City>
+              <crs:CountryInfo>
+                <crs:CountryCode>FR</crs:CountryCode>
+              </crs:CountryInfo>
+            </crs:BirthInfo>
+          </crs:Individual>
+        </crs:AccountHolder>
+        <crs:AccountBalance currCode="EUR">45100.25</crs:AccountBalance>
+        <crs:Payment>
+          <crs:Type>CRS501</crs:Type>
+          <crs:PaymentAmnt currCode="EUR">890.50</crs:PaymentAmnt>
+        </crs:Payment>
+      </crs:AccountReport>
+
+      <!-- Account 5: Anna Schmidt, Individual, Equity Interest -->
+      <crs:AccountReport>
+        <crs:DocSpec>
+          <stf:DocTypeIndic>OECD1</stf:DocTypeIndic>
+          <stf:DocRefId>IE2024CRS002AR005</stf:DocRefId>
+        </crs:DocSpec>
+        <crs:AccountNumber AcctNumberType="OECD601">IE33BOFI90001712345682</crs:AccountNumber>
+        <crs:AccountHolder>
+          <crs:Individual>
+            <crs:ResCountryCode>DE</crs:ResCountryCode>
+            <crs:TIN issuedBy="DE">98765432109</crs:TIN>
+            <crs:Name>
+              <crs:FirstName>Anna</crs:FirstName>
+              <crs:LastName>Schmidt</crs:LastName>
+            </crs:Name>
+            <crs:Address>
+              <crs:CountryCode>DE</crs:CountryCode>
+              <crs:AddressFree>Marienplatz 5, 80331 Munich, Germany</crs:AddressFree>
+            </crs:Address>
+            <crs:BirthInfo>
+              <crs:BirthDate>1968-09-12</crs:BirthDate>
+              <crs:City>Hamburg</crs:City>
+              <crs:CountryInfo>
+                <crs:CountryCode>DE</crs:CountryCode>
+              </crs:CountryInfo>
+            </crs:BirthInfo>
+          </crs:Individual>
+        </crs:AccountHolder>
+        <crs:AccountBalance currCode="EUR">312000.00</crs:AccountBalance>
+        <crs:Payment>
+          <crs:Type>CRS502</crs:Type>
+          <crs:PaymentAmnt currCode="EUR">18500.00</crs:PaymentAmnt>
+        </crs:Payment>
+      </crs:AccountReport>
+    </crs:ReportingGroup>
+  </crs:Body>
+</crs:CrsBody>
