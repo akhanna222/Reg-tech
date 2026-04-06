@@ -27,10 +27,14 @@ import { CtsDispatchProcessor } from './processors/cts-dispatch.processor';
     TypeOrmModule.forFeature([
       TransmissionPackage,
       InboundTransmission,
+      AuditEvent,
       Filing,
       User,
     ]),
-    BullModule.registerQueue({ name: 'inbound-transmission' }),
+    BullModule.registerQueue(
+      { name: 'inbound-transmission' },
+      { name: 'cts-dispatch' },
+    ),
     ScheduleModule.forRoot(),
     StorageModule,
     CryptoModule,
@@ -44,8 +48,10 @@ import { CtsDispatchProcessor } from './processors/cts-dispatch.processor';
     ReturnDataProcessorService,
     ResultDistributorService,
     SftpTransportService,
+    StatusResponseService,
     CtsPollingService,
     InboundTransmissionProcessor,
+    CtsDispatchProcessor,
   ],
   exports: [
     AckNackHandlerService,
