@@ -42,6 +42,59 @@ export class TransmissionPipelineService {
   ) {}
 
   /**
+   * Batch transmit multiple filings. Validates each filing individually
+   * and transmits all valid ones, collecting errors for invalid ones.
+   */
+  async transmitBatch(
+    filingIds: string[],
+    destination: string,
+    userId: string,
+  ): Promise<{ queued: number; errors: Array<{ filingId: string; error: string }> }> {
+    const errors: Array<{ filingId: string; error: string }> = [];
+    let queued = 0;
+
+    // Load all filings up front to validate status
+    const filings = await this.filingRepository.findByIds(filingIds, {
+      relations: ['organization'],
+    });
+
+    const filingMap = new Map(filings.map((f) => [f.id, f]));
+
+    for (const filingId of filingIds) {
+      const filing = filingMap.get(filingId);
+
+      if (!filing) {
+        errors.push({ filingId, error: 'Filing not found' });
+        continue;
+      }
+
+      if (filing.status !== FilingStatus.VALIDATED) {
+        errors.push({
+          filingId,
+          error: `Filing must be in VALIDATED status. Current: ${filing.status}`,
+        });
+        continue;
+      }
+
+      try {
+        await this.transmit(filingId, userId);
+        queued++;
+      } catch (err) {
+        const message = err instanceof Error ? err.message : String(err);
+        errors.push({ filingId, error: message });
+      }
+    }
+
+    this.logger.log(
+      `Batch transmission complete: user=${userId}, destination=${destination}, ` +
+        `total=${filingIds.length}, queued=${queued}, errors=${errors.length}, ` +
+        `filingIds=${JSON.stringify(filingIds)}`,
+    );
+
+    return { queued, errors };
+  }
+
+  /**
    * Orchestrate the 7-step transmission pipeline:
    * 1. Final validation check
    * 2. Dataset lock

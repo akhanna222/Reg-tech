@@ -2,6 +2,7 @@ import {
   Controller,
   Post,
   Get,
+  Body,
   Param,
   Query,
   ParseUUIDPipe,
@@ -27,6 +28,7 @@ import {
   TransmissionPackage,
   TransmissionStatus,
 } from '../../database/entities/transmission-package.entity';
+import { BatchTransmitDto } from '../dto/batch-transmit.dto';
 
 @ApiTags('Tax Authority - Transmission')
 @ApiBearerAuth()
@@ -51,6 +53,39 @@ export class TransmissionController {
     @Request() req: { user: { id: string } },
   ) {
     return this.transmissionPipeline.transmit(id, req.user.id);
+  }
+
+  @Post('submissions/batch/transmit')
+  @HttpCode(HttpStatus.OK)
+  @ApiOperation({ summary: 'Batch transmit multiple filings' })
+  @ApiResponse({
+    status: 200,
+    description: 'Batch transmission results',
+    schema: {
+      properties: {
+        queued: { type: 'number' },
+        errors: {
+          type: 'array',
+          items: {
+            properties: {
+              filingId: { type: 'string' },
+              error: { type: 'string' },
+            },
+          },
+        },
+      },
+    },
+  })
+  @ApiResponse({ status: 400, description: 'Invalid request body' })
+  async batchTransmit(
+    @Body() dto: BatchTransmitDto,
+    @Request() req: { user: { id: string } },
+  ) {
+    return this.transmissionPipeline.transmitBatch(
+      dto.filingIds,
+      dto.destination,
+      req.user.id,
+    );
   }
 
   @Get('transmissions')
