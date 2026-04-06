@@ -62,6 +62,62 @@ function cronToNextRun(cron: string): string {
 }
 
 export default function InboundPage() {
+  const [pollStatus, setPollStatus] = useState<PollStatus | null>(null);
+  const [healthResults, setHealthResults] = useState<HealthResult[]>([]);
+  const [polling, setPolling] = useState(false);
+  const [checkingHealth, setCheckingHealth] = useState(false);
+
+  const fetchPollStatus = useCallback(async () => {
+    try {
+      const res = await fetch("/api/cts/poll/status", {
+        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setPollStatus(data);
+      }
+    } catch {
+      // Silently fail — status card will show "unavailable"
+    }
+  }, []);
+
+  const fetchHealth = useCallback(async () => {
+    setCheckingHealth(true);
+    try {
+      const res = await fetch("/api/cts/health", {
+        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setHealthResults(data.jurisdictions ?? []);
+      }
+    } catch {
+      // Silently fail
+    } finally {
+      setCheckingHealth(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    fetchPollStatus();
+    fetchHealth();
+  }, [fetchPollStatus, fetchHealth]);
+
+  const handlePollNow = async () => {
+    setPolling(true);
+    try {
+      await fetch("/api/cts/poll", {
+        method: "POST",
+        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+      });
+      await fetchPollStatus();
+    } catch {
+      // Error handled by UI
+    } finally {
+      setPolling(false);
+    }
+  };
+
   const columns: ColumnDef<InboundTransmission>[] = [
     { key: "id", header: "ID", sortable: true },
     { key: "sourceJurisdiction", header: "Source Jurisdiction", sortable: true },
