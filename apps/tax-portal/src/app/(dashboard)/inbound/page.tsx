@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect, useCallback } from "react";
 import {
   Card,
   CardHeader,
@@ -10,7 +11,7 @@ import {
   Badge,
 } from "@reg-tech/ui";
 import type { ColumnDef } from "@reg-tech/ui";
-import { Inbox } from "lucide-react";
+import { Inbox, RefreshCw, Activity, CheckCircle, XCircle } from "lucide-react";
 
 type InboundStatus = "RECEIVED" | "PROCESSING" | "IMPORTED" | "ERROR";
 
@@ -38,6 +39,27 @@ const statusVariant: Record<InboundStatus, "secondary" | "default" | "success" |
   IMPORTED: "success",
   ERROR: "destructive",
 };
+
+interface PollStatus {
+  enabled: boolean;
+  jurisdictions: string[];
+  lastPollTimestamp: string | null;
+  cronExpression: string;
+}
+
+interface HealthResult {
+  jurisdiction: string;
+  reachable: boolean;
+  latencyMs: number;
+  error?: string;
+}
+
+function cronToNextRun(cron: string): string {
+  // Simple human-readable display for common cron patterns
+  if (cron === "0 */4 * * *") return "Every 4 hours";
+  if (cron === "0 */1 * * *") return "Every hour";
+  return cron;
+}
 
 export default function InboundPage() {
   const columns: ColumnDef<InboundTransmission>[] = [
