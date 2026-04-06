@@ -58,6 +58,7 @@ import { CtsDispatchProcessor } from './processors/cts-dispatch.processor';
     ReturnDataProcessorService,
     ResultDistributorService,
     SftpTransportService,
+    StatusResponseService,
     CtsPollingService,
   ],
 })

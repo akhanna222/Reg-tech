@@ -148,6 +148,99 @@ export default function InboundPage() {
         </p>
       </div>
 
+      {/* Poll Status & CTS Health */}
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <Card className="border-navy-700 bg-navy-900">
+          <CardHeader className="pb-3">
+            <CardTitle className="flex items-center gap-2 text-lg text-white">
+              <RefreshCw className="h-5 w-5 text-blue-400" />
+              Poll Status
+            </CardTitle>
+            <CardDescription className="text-slate-400">
+              Scheduled CTS inbox polling
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-2 text-sm">
+              <div className="flex justify-between">
+                <span className="text-slate-400">Status</span>
+                <Badge variant={pollStatus?.enabled ? "success" : "secondary"}>
+                  {pollStatus?.enabled ? "Enabled" : "Disabled"}
+                </Badge>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-slate-400">Schedule</span>
+                <span className="text-white">
+                  {pollStatus ? cronToNextRun(pollStatus.cronExpression) : "--"}
+                </span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-slate-400">Last Poll</span>
+                <span className="text-white">
+                  {pollStatus?.lastPollTimestamp
+                    ? new Date(pollStatus.lastPollTimestamp).toLocaleString()
+                    : "Never"}
+                </span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-slate-400">Jurisdictions</span>
+                <span className="text-white">
+                  {pollStatus?.jurisdictions?.join(", ") || "--"}
+                </span>
+              </div>
+              <button
+                onClick={handlePollNow}
+                disabled={polling}
+                className="mt-3 w-full rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 disabled:opacity-50"
+              >
+                {polling ? "Polling..." : "Poll Now"}
+              </button>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="border-navy-700 bg-navy-900">
+          <CardHeader className="pb-3">
+            <CardTitle className="flex items-center gap-2 text-lg text-white">
+              <Activity className="h-5 w-5 text-emerald-400" />
+              CTS Health
+            </CardTitle>
+            <CardDescription className="text-slate-400">
+              SFTP connectivity per jurisdiction
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-2 text-sm">
+              {healthResults.length === 0 && (
+                <p className="text-slate-500">No jurisdictions configured</p>
+              )}
+              {healthResults.map((h) => (
+                <div key={h.jurisdiction} className="flex items-center justify-between">
+                  <span className="text-white">{h.jurisdiction}</span>
+                  <div className="flex items-center gap-2">
+                    {h.reachable ? (
+                      <CheckCircle className="h-4 w-4 text-emerald-400" />
+                    ) : (
+                      <XCircle className="h-4 w-4 text-red-400" />
+                    )}
+                    <span className={h.reachable ? "text-emerald-400" : "text-red-400"}>
+                      {h.reachable ? `${h.latencyMs}ms` : h.error || "Unreachable"}
+                    </span>
+                  </div>
+                </div>
+              ))}
+              <button
+                onClick={fetchHealth}
+                disabled={checkingHealth}
+                className="mt-3 w-full rounded-md bg-slate-700 px-4 py-2 text-sm font-medium text-white hover:bg-slate-600 disabled:opacity-50"
+              >
+                {checkingHealth ? "Checking..." : "Check All"}
+              </button>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <Card className="border-navy-700 bg-navy-900">
           <CardContent className="pt-6">
