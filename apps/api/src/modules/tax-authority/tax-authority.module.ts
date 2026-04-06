@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { BullModule } from '@nestjs/bull';
 import { Filing } from '../database/entities/filing.entity';
 import { FilingDocument } from '../database/entities/filing-document.entity';
 import { Organization } from '../database/entities/organization.entity';
@@ -23,6 +24,7 @@ import { TransmissionPipelineService } from './services/transmission-pipeline.se
       ApprovalAction,
       TransmissionPackage,
     ]),
+    BullModule.registerQueue({ name: 'cts-dispatch' }),
     StorageModule,
     CryptoModule,
   ],
