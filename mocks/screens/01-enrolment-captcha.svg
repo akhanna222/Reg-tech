@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.1"/>
+    </filter>
+    <filter id="shadow-sm" x="-1%" y="-1%" width="102%" height="102%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#f8fafc"/>
+
+  <!-- Header Bar -->
+  <rect width="1200" height="64" fill="#1a365d"/>
+  <text x="40" y="38" font-family="Inter, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#ffffff">Bermuda Tax Information Reporting Portal</text>
+  <text x="40" y="54" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#94a3b8">Ministry of Finance</text>
+
+  <!-- Coat of Arms placeholder -->
+  <circle cx="1140" cy="32" r="18" fill="none" stroke="#4a7ab5" stroke-width="1.5"/>
+  <text x="1140" y="36" font-family="Inter, -apple-system, sans-serif" font-size="9" fill="#4a7ab5" text-anchor="middle">GOV</text>
+
+  <!-- Main Content Card -->
+  <rect x="350" y="200" width="500" height="380" rx="12" fill="#ffffff" filter="url(#shadow)"/>
+
+  <!-- Card Header -->
+  <text x="600" y="260" font-family="Inter, -apple-system, sans-serif" font-size="24" font-weight="600" fill="#1a365d" text-anchor="middle">Security Verification</text>
+  <text x="600" y="290" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#64748b" text-anchor="middle">Please complete the verification below to continue</text>
+
+  <!-- Divider -->
+  <line x1="390" y1="310" x2="810" y2="310" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- reCAPTCHA Box -->
+  <rect x="420" y="340" width="360" height="80" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+
+  <!-- Checkbox -->
+  <rect x="445" y="367" width="24" height="24" rx="3" fill="#ffffff" stroke="#c4c4c4" stroke-width="2"/>
+
+  <!-- "I'm not a robot" text -->
+  <text x="485" y="384" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">I'm not a robot</text>
+
+  <!-- reCAPTCHA logo area -->
+  <rect x="700" y="350" width="60" height="60" rx="4" fill="none"/>
+  <path d="M720 370 L740 370 L740 390 L720 390 Z" fill="none" stroke="#4285f4" stroke-width="2"/>
+  <path d="M730 375 L735 380 L725 390" fill="none" stroke="#4285f4" stroke-width="2"/>
+  <text x="730" y="405" font-family="Inter, -apple-system, sans-serif" font-size="8" fill="#9ca3af" text-anchor="middle">reCAPTCHA</text>
+  <text x="730" y="413" font-family="Inter, -apple-system, sans-serif" font-size="7" fill="#bdbdbd" text-anchor="middle">Privacy - Terms</text>
+
+  <!-- Next Button (disabled state) -->
+  <rect x="450" y="460" width="300" height="48" rx="8" fill="#93b4e8" opacity="0.7"/>
+  <text x="600" y="490" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="500" fill="#ffffff" text-anchor="middle">Next</text>
+
+  <!-- Helper text -->
+  <text x="600" y="535" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Complete the CAPTCHA to proceed to enrolment</text>
+
+  <!-- Footer -->
+  <rect x="0" y="740" width="1200" height="60" fill="#f1f5f9"/>
+  <line x1="0" y1="740" x2="1200" y2="740" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="600" y="770" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">Ministry of Finance, Bermuda</text>
+  <text x="600" y="788" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Government of Bermuda - Tax Information Reporting</text>
+</svg>

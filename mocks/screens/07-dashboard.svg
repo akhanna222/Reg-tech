@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <style>
+      text { font-family: Inter, -apple-system, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#f8fafc"/>
+
+  <!-- Header Bar -->
+  <rect width="1200" height="56" fill="#1a365d"/>
+
+  <!-- Logo/Title -->
+  <text x="24" y="35" fill="#ffffff" font-size="15" font-weight="600">Bermuda Tax Information Reporting Portal</text>
+
+  <!-- Navigation Tabs -->
+  <rect x="420" y="16" width="70" height="28" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <text x="455" y="35" fill="#ffffff" font-size="13" font-weight="500" text-anchor="middle">Filings</text>
+  <rect x="420" y="52" width="70" height="4" fill="#60a5fa"/>
+
+  <text x="535" y="35" fill="rgba(255,255,255,0.7)" font-size="13" font-weight="500">Administration</text>
+
+  <!-- Notification Bell -->
+  <circle cx="1080" cy="28" r="14" fill="rgba(255,255,255,0.1)"/>
+  <path d="M1074 26c0-3.3 2.7-6 6-6s6 2.7 6 6v4l2 2h-16l2-2v-4zm3 8h6c0 1.7-1.3 3-3 3s-3-1.3-3-3z" fill="#ffffff" opacity="0.9"/>
+  <circle cx="1088" cy="20" r="7" fill="#ef4444"/>
+  <text x="1088" y="23.5" fill="#ffffff" font-size="9" font-weight="700" text-anchor="middle">2</text>
+
+  <!-- User Menu -->
+  <text x="1120" y="35" fill="rgba(255,255,255,0.9)" font-size="12" text-anchor="end">compliance@celticfs.bm &#9662;</text>
+
+  <!-- Entity Selector Bar -->
+  <rect y="56" width="1200" height="44" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="40" y="83" fill="#64748b" font-size="12">Reporting Entity:</text>
+  <rect x="155" y="67" width="280" height="30" rx="4" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1"/>
+  <text x="170" y="87" fill="#1e293b" font-size="13">Celtic Financial Services Ltd</text>
+  <path d="M415 80l5 5 5-5" fill="none" stroke="#64748b" stroke-width="1.5"/>
+
+  <!-- Main Content Area -->
+  <rect x="40" y="120" width="1120" height="640" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Section Header -->
+  <text x="72" y="160" fill="#1e293b" font-size="18" font-weight="600">Draft Filings</text>
+
+  <!-- Create Filing Button -->
+  <rect x="980" y="138" width="140" height="36" rx="6" fill="#2563eb"/>
+  <text x="1050" y="161" fill="#ffffff" font-size="13" font-weight="500" text-anchor="middle">+ Create Filing</text>
+
+  <!-- Table Header -->
+  <rect x="72" y="185" width="1056" height="40" rx="4" fill="#f1f5f9"/>
+  <text x="92" y="210" fill="#475569" font-size="12" font-weight="600">Filing Name</text>
+  <text x="360" y="210" fill="#475569" font-size="12" font-weight="600">Type</text>
+  <text x="480" y="210" fill="#475569" font-size="12" font-weight="600">Period</text>
+  <text x="640" y="210" fill="#475569" font-size="12" font-weight="600">Created</text>
+  <text x="820" y="210" fill="#475569" font-size="12" font-weight="600">Actions</text>
+
+  <!-- Table Row 1 -->
+  <rect x="72" y="225" width="1056" height="50" fill="#ffffff"/>
+  <line x1="72" y1="275" x2="1128" y2="275" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="92" y="255" fill="#1e293b" font-size="13" font-weight="500">CRS Annual 2025</text>
+  <rect x="350" y="240" width="42" height="22" rx="11" fill="#dbeafe"/>
+  <text x="371" y="255" fill="#1d4ed8" font-size="11" font-weight="500" text-anchor="middle">CRS</text>
+  <text x="480" y="255" fill="#475569" font-size="13">31 Dec 2025</text>
+  <text x="640" y="255" fill="#475569" font-size="13">10 Mar 2026</text>
+  <rect x="810" y="238" width="50" height="28" rx="4" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1"/>
+  <text x="835" y="257" fill="#2563eb" font-size="12" font-weight="500" text-anchor="middle">Edit</text>
+  <rect x="870" y="238" width="60" height="28" rx="4" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1"/>
+  <text x="900" y="257" fill="#ef4444" font-size="12" font-weight="500" text-anchor="middle">Delete</text>
+
+  <!-- Table Row 2 -->
+  <rect x="72" y="275" width="1056" height="50" fill="#f9fafb"/>
+  <line x1="72" y1="325" x2="1128" y2="325" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="92" y="305" fill="#1e293b" font-size="13" font-weight="500">CbC Report FY2025</text>
+  <rect x="350" y="290" width="42" height="22" rx="11" fill="#fef3c7"/>
+  <text x="371" y="305" fill="#92400e" font-size="11" font-weight="500" text-anchor="middle">CbC</text>
+  <text x="480" y="305" fill="#475569" font-size="13">31 Dec 2025</text>
+  <text x="640" y="305" fill="#475569" font-size="13">12 Mar 2026</text>
+  <rect x="810" y="288" width="50" height="28" rx="4" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1"/>
+  <text x="835" y="307" fill="#2563eb" font-size="12" font-weight="500" text-anchor="middle">Edit</text>
+  <rect x="870" y="288" width="60" height="28" rx="4" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1"/>
+  <text x="900" y="307" fill="#ef4444" font-size="12" font-weight="500" text-anchor="middle">Delete</text>
+
+  <!-- Empty State hint -->
+  <rect x="72" y="360" width="1056" height="1" fill="#e2e8f0"/>
+
+  <!-- Footer info -->
+  <text x="92" y="390" fill="#94a3b8" font-size="12">Showing 2 draft filings</text>
+
+  <!-- Recent Activity Section -->
+  <text x="72" y="450" fill="#1e293b" font-size="16" font-weight="600">Recent Activity</text>
+  <rect x="72" y="465" width="1056" height="1" fill="#e2e8f0"/>
+
+  <circle cx="92" cy="500" r="4" fill="#10b981"/>
+  <text x="110" y="505" fill="#475569" font-size="13">CRS Annual 2024 — Submitted successfully — 12 Feb 2025</text>
+
+  <circle cx="92" cy="535" r="4" fill="#10b981"/>
+  <text x="110" y="540" fill="#475569" font-size="13">CbC Report FY2024 — Submitted successfully — 28 Jan 2025</text>
+
+  <circle cx="92" cy="570" r="4" fill="#f59e0b"/>
+  <text x="110" y="575" fill="#475569" font-size="13">System Notification — CRS schema updated to v2.0 — 01 Jan 2026</text>
+</svg>
