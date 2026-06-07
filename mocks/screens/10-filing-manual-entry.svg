@@ -10,7 +10,7 @@
 
   <!-- Header Bar -->
   <rect width="1200" height="56" fill="#1a365d"/>
-  <text x="24" y="35" fill="#ffffff" font-size="15" font-weight="600">Bermuda Tax Information Reporting Portal</text>
+  <text x="24" y="35" fill="#ffffff" font-size="15" font-weight="600">OECD AEOI Tax Information Reporting Portal</text>
 
   <!-- Navigation Tabs -->
   <rect x="420" y="16" width="70" height="28" rx="4" fill="rgba(255,255,255,0.15)"/>
@@ -41,7 +41,7 @@
   <rect x="40" y="210" width="1120" height="290" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
 
   <!-- Section Header with collapse toggle -->
-  <text x="80" y="248" fill="#1e293b" font-size="16" font-weight="600">Reporting Financial Institution</text>
+  <text x="80" y="248" fill="#1e293b" font-size="16" font-weight="600">OECD CRS Reporting FI</text>
   <path d="M1120 240l6 8-6 8" fill="none" stroke="#64748b" stroke-width="1.5" transform="rotate(90, 1120, 244)"/>
 
   <!-- FI Name -->
@@ -78,7 +78,7 @@
   <rect x="40" y="520" width="1120" height="420" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
 
   <!-- Section Header -->
-  <text x="80" y="560" fill="#1e293b" font-size="16" font-weight="600">Account Reports</text>
+  <text x="80" y="560" fill="#1e293b" font-size="16" font-weight="600">OECD CRS Account Reports</text>
   <text x="245" y="560" fill="#64748b" font-size="13">(2 accounts)</text>
 
   <!-- Add Account Button -->

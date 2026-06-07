@@ -13,8 +13,8 @@
 
   <!-- Header Bar -->
   <rect width="1200" height="64" fill="#1a365d"/>
-  <text x="40" y="38" font-family="Inter, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#ffffff">Bermuda Tax Information Reporting Portal</text>
-  <text x="40" y="54" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#94a3b8">Ministry of Finance</text>
+  <text x="40" y="38" font-family="Inter, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#ffffff">OECD AEOI Tax Information Reporting Portal</text>
+  <text x="40" y="54" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#94a3b8">OECD Common Reporting Standard (CRS) · Common Transmission System (CTS)</text>
 
   <!-- Coat of Arms placeholder -->
   <circle cx="1140" cy="32" r="18" fill="none" stroke="#4a7ab5" stroke-width="1.5"/>
@@ -56,6 +56,6 @@
   <!-- Footer -->
   <rect x="0" y="740" width="1200" height="60" fill="#f1f5f9"/>
   <line x1="0" y1="740" x2="1200" y2="740" stroke="#e2e8f0" stroke-width="1"/>
-  <text x="600" y="770" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">Ministry of Finance, Bermuda</text>
-  <text x="600" y="788" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Government of Bermuda - Tax Information Reporting</text>
+  <text x="600" y="770" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">OECD Automatic Exchange of Information (AEOI) | CRS · CbC · FATCA</text>
+  <text x="600" y="788" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Powered by OECD Common Transmission System (CTS)</text>
 </svg>

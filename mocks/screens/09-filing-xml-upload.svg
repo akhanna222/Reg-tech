@@ -10,7 +10,7 @@
 
   <!-- Header Bar -->
   <rect width="1200" height="56" fill="#1a365d"/>
-  <text x="24" y="35" fill="#ffffff" font-size="15" font-weight="600">Bermuda Tax Information Reporting Portal</text>
+  <text x="24" y="35" fill="#ffffff" font-size="15" font-weight="600">OECD AEOI Tax Information Reporting Portal</text>
 
   <!-- Navigation Tabs -->
   <rect x="420" y="16" width="70" height="28" rx="4" fill="rgba(255,255,255,0.15)"/>
@@ -52,8 +52,8 @@
   </g>
 
   <!-- Upload Text -->
-  <text x="600" y="380" fill="#1e293b" font-size="15" font-weight="500" text-anchor="middle">Drag and drop your CRS XML file here, or click to browse</text>
-  <text x="600" y="410" fill="#94a3b8" font-size="12" text-anchor="middle">.xml (OECD CRS XML v2.0, max 50MB)</text>
+  <text x="600" y="380" fill="#1e293b" font-size="15" font-weight="500" text-anchor="middle">Drag and drop your OECD CRS XML file here, or click to browse</text>
+  <text x="600" y="410" fill="#94a3b8" font-size="12" text-anchor="middle">OECD CRS XML Schema v2.0 (.xml, max 50MB)</text>
 
   <!-- Previously Uploaded File -->
   <rect x="100" y="510" width="1000" height="50" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>

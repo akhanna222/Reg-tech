@@ -10,7 +10,7 @@
 
   <!-- Header -->
   <rect width="1200" height="64" fill="#1a365d"/>
-  <text x="40" y="38" fill="white" font-size="18" font-weight="700">Bermuda Tax Information Reporting Portal</text>
+  <text x="40" y="38" fill="white" font-size="18" font-weight="700">OECD AEOI Tax Information Reporting Portal</text>
   <!-- Nav -->
   <rect x="520" y="18" width="80" height="30" rx="4" fill="#2d4a7a"/>
   <text x="540" y="38" fill="white" font-size="13" font-weight="500">Filings</text>
@@ -18,7 +18,7 @@
   <text x="622" y="38" fill="#94a3b8" font-size="13" font-weight="500">Administration</text>
 
   <!-- Page Title -->
-  <text x="40" y="110" fill="#1e293b" font-size="22" font-weight="700">Transmission Status — CRS Annual 2025</text>
+  <text x="40" y="110" fill="#1e293b" font-size="22" font-weight="700">OECD CTS Error Notification — CRS Annual 2025</text>
 
   <!-- Status Timeline -->
   <rect x="40" y="130" width="1120" height="70" rx="8" fill="white" stroke="#e2e8f0" stroke-width="1"/>
@@ -45,7 +45,7 @@
   <!-- Error Notification Card -->
   <rect x="40" y="220" width="1120" height="90" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
   <rect x="40" y="220" width="5" height="90" fill="#dc2626"/>
-  <text x="70" y="252" fill="#991b1b" font-size="15" font-weight="700">3 record errors received from Germany (DE) on 16 March 2026</text>
+  <text x="70" y="252" fill="#991b1b" font-size="15" font-weight="700">Errors received via OECD Common Transmission System: 3 record errors from Germany (DE) on 16 March 2026</text>
   <text x="70" y="278" fill="#991b1b" font-size="13">You must submit a correction within 60 days (by 15 May 2026)</text>
   <!-- Urgency badge -->
   <rect x="70" y="286" width="90" height="20" rx="10" fill="#dc2626"/>

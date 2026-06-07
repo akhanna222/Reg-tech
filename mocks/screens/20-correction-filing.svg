@@ -10,7 +10,7 @@
 
   <!-- Header -->
   <rect width="1200" height="64" fill="#1a365d"/>
-  <text x="40" y="38" fill="white" font-size="18" font-weight="700">Bermuda Tax Information Reporting Portal</text>
+  <text x="40" y="38" fill="white" font-size="18" font-weight="700">OECD AEOI Tax Information Reporting Portal</text>
   <rect x="520" y="18" width="80" height="30" rx="4" fill="#2d4a7a"/>
   <text x="540" y="38" fill="white" font-size="13" font-weight="500">Filings</text>
   <rect x="610" y="18" width="120" height="30" rx="4" fill="transparent"/>
@@ -30,7 +30,7 @@
   <!-- Message Type -->
   <text x="70" y="230" fill="#374151" font-size="13" font-weight="600">Message Type</text>
   <rect x="70" y="238" width="400" height="38" rx="4" fill="#f1f5f9" stroke="#d1d5db" stroke-width="1"/>
-  <text x="85" y="262" fill="#6b7280" font-size="13">Corrected Data (CRS702)</text>
+  <text x="85" y="262" fill="#6b7280" font-size="13">OECD CRS Correction (CRS702)</text>
   <rect x="420" y="244" width="40" height="26" rx="3" fill="#e5e7eb"/>
   <text x="428" y="262" fill="#6b7280" font-size="10">READ</text>
 

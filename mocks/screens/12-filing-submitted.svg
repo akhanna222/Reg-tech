@@ -10,7 +10,7 @@
 
   <!-- Header Bar -->
   <rect width="1200" height="56" fill="#1a365d"/>
-  <text x="24" y="35" fill="#ffffff" font-size="15" font-weight="600">Bermuda Tax Information Reporting Portal</text>
+  <text x="24" y="35" fill="#ffffff" font-size="15" font-weight="600">OECD AEOI Tax Information Reporting Portal</text>
 
   <!-- Navigation Tabs -->
   <rect x="420" y="16" width="70" height="28" rx="4" fill="rgba(255,255,255,0.15)"/>
@@ -49,7 +49,7 @@
 
   <!-- Confirmation email notice -->
   <rect x="380" y="430" width="440" height="36" rx="6" fill="#f0fdf4"/>
-  <text x="600" y="453" fill="#166534" font-size="12" text-anchor="middle">A confirmation email has been sent to compliance@celticfs.bm</text>
+  <text x="600" y="453" fill="#166534" font-size="12" text-anchor="middle">Filing will be validated against OECD CRS XML Schema v2.0. Confirmation sent to compliance@celticfs.bm</text>
 
   <!-- Action Buttons -->
   <rect x="400" y="490" width="200" height="40" rx="6" fill="#2563eb"/>

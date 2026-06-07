@@ -24,7 +24,7 @@
 
   <!-- Header -->
   <rect width="1200" height="56" fill="#1a365d"/>
-  <text x="24" y="34" class="header-text">Bermuda Tax Information Reporting Portal — Administration</text>
+  <text x="24" y="34" class="header-text">OECD AEOI Tax Information Reporting Portal — Administration</text>
 
   <!-- Navigation -->
   <rect x="0" y="56" width="1200" height="40" fill="#1e3a5f"/>
@@ -49,7 +49,7 @@
 
   <!-- Module dropdown -->
   <rect x="266" y="110" width="90" height="30" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
-  <text x="276" y="129" class="filter-text">CRS ▾</text>
+  <text x="276" y="129" class="filter-text">OECD CRS ▾</text>
   <text x="266" y="106" class="label">Module</text>
 
   <!-- Period dropdown -->

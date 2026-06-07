@@ -24,7 +24,7 @@
 
   <!-- Header -->
   <rect width="1200" height="56" fill="#1a365d"/>
-  <text x="24" y="34" class="header-text">Bermuda Tax Information Reporting Portal — Administration</text>
+  <text x="24" y="34" class="header-text">OECD AEOI Tax Information Reporting Portal — Administration</text>
 
   <!-- Navigation -->
   <rect x="0" y="56" width="1200" height="40" fill="#1e3a5f"/>

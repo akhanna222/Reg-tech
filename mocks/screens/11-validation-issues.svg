@@ -10,7 +10,7 @@
 
   <!-- Header Bar -->
   <rect width="1200" height="56" fill="#1a365d"/>
-  <text x="24" y="35" fill="#ffffff" font-size="15" font-weight="600">Bermuda Tax Information Reporting Portal</text>
+  <text x="24" y="35" fill="#ffffff" font-size="15" font-weight="600">OECD AEOI Tax Information Reporting Portal</text>
 
   <!-- Navigation Tabs -->
   <rect x="420" y="16" width="70" height="28" rx="4" fill="rgba(255,255,255,0.15)"/>
@@ -34,7 +34,7 @@
   <text x="80" y="177" fill="#64748b" font-size="13" font-weight="500">Upload XML</text>
   <text x="200" y="177" fill="#64748b" font-size="13" font-weight="500">Manual Entry</text>
   <!-- Active tab: Validation Issues -->
-  <text x="340" y="177" fill="#2563eb" font-size="13" font-weight="600">Validation Issues</text>
+  <text x="340" y="177" fill="#2563eb" font-size="13" font-weight="600">OECD CRS Schema Validation</text>
   <!-- Issue count badge -->
   <rect x="460" y="165" width="22" height="18" rx="9" fill="#ef4444"/>
   <text x="471" y="178" fill="#ffffff" font-size="10" font-weight="700" text-anchor="middle">3</text>

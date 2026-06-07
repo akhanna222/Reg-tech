@@ -25,7 +25,7 @@
 
   <!-- Header -->
   <rect width="1200" height="56" fill="#1a365d"/>
-  <text x="24" y="34" class="header-text">Bermuda Tax Information Reporting Portal — Administration</text>
+  <text x="24" y="34" class="header-text">OECD AEOI Tax Information Reporting Portal — Administration</text>
 
   <!-- Navigation -->
   <rect x="0" y="56" width="1200" height="40" fill="#1e3a5f"/>
@@ -80,22 +80,22 @@
   <!-- Stage 1 -->
   <rect x="624" y="322" width="22" height="22" rx="11" fill="#d1fae5"/>
   <text x="630" y="338" fill="#059669" font-size="13" font-weight="bold" font-family="Inter, -apple-system, sans-serif">✓</text>
-  <text x="656" y="338" class="value">Stage 1 — XSD Schema Validation</text>
+  <text x="656" y="338" class="value">Stage 1 ✓ OECD XSD Schema</text>
 
   <!-- Stage 2 -->
   <rect x="624" y="352" width="22" height="22" rx="11" fill="#d1fae5"/>
   <text x="630" y="368" fill="#059669" font-size="13" font-weight="bold" font-family="Inter, -apple-system, sans-serif">✓</text>
-  <text x="656" y="368" class="value">Stage 2 — Business Rules</text>
+  <text x="656" y="368" class="value">Stage 2 ✓ CRS Business Rules</text>
 
   <!-- Stage 3 -->
   <rect x="624" y="382" width="22" height="22" rx="11" fill="#d1fae5"/>
   <text x="630" y="398" fill="#059669" font-size="13" font-weight="bold" font-family="Inter, -apple-system, sans-serif">✓</text>
-  <text x="656" y="398" class="value">Stage 3 — Cross-Record Checks</text>
+  <text x="656" y="398" class="value">Stage 3 ✓ Cross-Record</text>
 
   <!-- Stage 4 -->
   <rect x="624" y="412" width="22" height="22" rx="11" fill="#d1fae5"/>
   <text x="630" y="428" fill="#059669" font-size="13" font-weight="bold" font-family="Inter, -apple-system, sans-serif">✓</text>
-  <text x="656" y="428" class="value">Stage 4 — Jurisdiction Validation</text>
+  <text x="656" y="428" class="value">Stage 4 ✓ Jurisdiction</text>
 
   <!-- Actions Section -->
   <rect x="40" y="450" width="1120" height="180" rx="8" fill="#ffffff" filter="url(#card-shadow)"/>

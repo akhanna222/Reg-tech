@@ -23,7 +23,7 @@
 
   <!-- Header (behind overlay) -->
   <rect width="1200" height="56" fill="#1a365d"/>
-  <text x="24" y="34" class="header-text">Bermuda Tax Information Reporting Portal — Administration</text>
+  <text x="24" y="34" class="header-text">OECD AEOI Tax Information Reporting Portal — Administration</text>
 
   <!-- Navigation -->
   <rect x="0" y="56" width="1200" height="40" fill="#1e3a5f"/>
@@ -35,11 +35,14 @@
   <rect x="250" y="60" width="700" height="580" rx="12" fill="#ffffff" filter="url(#modal-shadow)"/>
 
   <!-- Modal Title -->
-  <text x="290" y="104" class="modal-title">Confirm Transmission</text>
+  <text x="290" y="104" class="modal-title">Confirm OECD CTS Transmission</text>
   <line x1="290" y1="118" x2="910" y2="118" stroke="#e2e8f0" stroke-width="1"/>
 
+  <!-- Subtitle -->
+  <text x="290" y="138" class="modal-text">Data will be transmitted via the OECD Common Transmission System</text>
+
   <!-- Description -->
-  <text x="290" y="148" class="modal-text">You are about to transmit 2 filings to partner jurisdictions:</text>
+  <text x="290" y="158" class="modal-text">You are about to transmit 2 filings to partner jurisdictions:</text>
 
   <!-- Filing Table -->
   <rect x="290" y="165" width="620" height="30" fill="#f1f5f9" rx="4"/>
@@ -90,7 +93,7 @@
   <!-- Step 6 -->
   <circle cx="321" cy="488" r="10" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>
   <text x="318" y="492" fill="#94a3b8" font-size="9" font-family="Inter, -apple-system, sans-serif">6</text>
-  <text x="342" y="492" class="step-pending">SFTP to CTS</text>
+  <text x="342" y="492" class="step-pending">SFTP to OECD CTS</text>
 
   <!-- Step 7 -->
   <circle cx="321" cy="520" r="10" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>

@@ -13,8 +13,8 @@
 
   <!-- Header Bar -->
   <rect width="1200" height="64" fill="#1a365d"/>
-  <text x="40" y="38" font-family="Inter, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#ffffff">Bermuda Tax Information Reporting Portal</text>
-  <text x="40" y="54" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#94a3b8">Ministry of Finance</text>
+  <text x="40" y="38" font-family="Inter, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#ffffff">OECD AEOI Tax Information Reporting Portal</text>
+  <text x="40" y="54" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#94a3b8">OECD Automatic Exchange of Information</text>
   <circle cx="1140" cy="32" r="18" fill="none" stroke="#4a7ab5" stroke-width="1.5"/>
   <text x="1140" y="36" font-family="Inter, -apple-system, sans-serif" font-size="9" fill="#4a7ab5" text-anchor="middle">GOV</text>
 
@@ -29,7 +29,7 @@
 
   <!-- Sign In Heading -->
   <text x="600" y="270" font-family="Inter, -apple-system, sans-serif" font-size="22" font-weight="600" fill="#1a365d" text-anchor="middle">Sign In</text>
-  <text x="600" y="295" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#64748b" text-anchor="middle">Access your tax reporting account</text>
+  <text x="600" y="295" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#64748b" text-anchor="middle">OECD Common Reporting Standard Portal</text>
 
   <!-- Email Field -->
   <text x="440" y="335" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#374151">Email Address</text>
@@ -62,5 +62,5 @@
   <!-- Footer -->
   <rect x="0" y="650" width="1200" height="50" fill="#f1f5f9"/>
   <line x1="0" y1="650" x2="1200" y2="650" stroke="#e2e8f0" stroke-width="1"/>
-  <text x="600" y="680" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">Ministry of Finance, Bermuda</text>
+  <text x="600" y="680" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">OECD Automatic Exchange of Information (AEOI)</text>
 </svg>
