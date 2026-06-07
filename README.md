@@ -6,6 +6,79 @@ A multi-jurisdiction regulatory technology platform enabling Financial Instituti
 
 ---
 
+## What Are We Trying to Solve?
+
+### The Problem
+
+Country A has a bank account held by a citizen of Country B. Country B's tax authority needs to know about that account to ensure taxes are paid. Without automatic data exchange, tax evaders can hide money offshore with little risk of detection.
+
+The OECD created a framework (CRS/FATCA/CbC) where countries **automatically share financial account data** with each other every year. This platform is the software that makes that exchange happen — securely, compliantly, and at scale.
+
+### The Three Actors
+
+```
+┌─────────────────────┐         ┌─────────────────────┐         ┌─────────────────────┐
+│  FINANCIAL          │         │  TAX AUTHORITY       │         │  PARTNER            │
+│  INSTITUTIONS       │ ──────► │  (Government)        │ ──────► │  JURISDICTIONS      │
+│                     │ reports │                      │transmits│                     │
+│  Banks, brokers,    │         │  Bermuda MoF or      │  via    │  Germany, France,   │
+│  insurers, trusts   │         │  Bahamas Competent   │  OECD   │  UK, US, etc.       │
+│                     │         │  Authority           │  CTS    │                     │
+└─────────────────────┘         └─────────────────────┘         └─────────────────────┘
+        Has the data                 Validates & sends               Receives & acts
+```
+
+### How It Works (Real-World Example)
+
+1. **Celtic Financial Services** (Bermuda bank) has a German customer **Hans Mueller** with EUR 125,000 in his account
+2. Celtic uploads this to Bermuda's portal as an **OECD CRS XML file**
+3. Bermuda's tax authority **validates** it (checks TIN format, XSD structure, no duplicates)
+4. Bermuda **encrypts** the package with Germany's public key, **digitally signs** it, and **sends via OECD CTS**
+5. Germany's tax authority **receives** it, decrypts, validates, sends back an **ACK** (acknowledgement)
+6. Germany now knows Hans has EUR 125,000 in Bermuda and can check if he declared it on his German tax return
+
+**That's the entire lifecycle this platform automates.**
+
+### What Each Module Does
+
+| Module | Purpose | Who Uses It |
+|--------|---------|-------------|
+| **Enrolment** | Banks register themselves with the tax authority as reporting entities | FI |
+| **Authentication** | Secure login with password + authenticator app (2FA) | All |
+| **Filing** | Banks report account holder data (names, TINs, balances, payments) via XML upload or manual entry | FI |
+| **Validation** | System checks data is correct — XSD structure, TIN formats, duplicates, jurisdiction rules | Automated |
+| **TA Review** | Government staff review submissions, approve for transmission or send back | TA |
+| **Transmission** | 7-step secure pipeline: validate → lock → package → encrypt → sign → SFTP to CTS → await ACK | Automated |
+| **Inbound (Data Back)** | Receive data FROM other countries — decrypt, verify signature, validate, ingest | Automated |
+| **Error Correction** | When partner rejects records, bank has 60 days to submit corrected filing | FI |
+| **Analytics** | Tax authority intelligence — trends, anomalies, cross-country comparisons | TA |
+| **Admin** | User management, entity lifecycle (deactivation, primary user changes) | FI Primary User |
+
+### The OECD Standards
+
+| Standard | What It Is |
+|----------|-----------|
+| **CRS** | Common Reporting Standard — "Banks, tell us about foreign residents' accounts" |
+| **FATCA** | US version of CRS — "Foreign banks, tell the IRS about American accounts" |
+| **CbC** | Country-by-Country Reporting — "Multinationals, tell us where your profits and taxes are" |
+| **CTS** | Common Transmission System — the secure mailbox between countries |
+| **DocRefID** | Unique ID for each reported record (so corrections can reference it) |
+| **MessageRefID** | Unique ID for each filing package sent |
+| **ACK/NACK** | "Received successfully" / "Rejected, here's why" |
+| **XMLDSig** | Digital signature proving the package genuinely came from the sender |
+
+### The Transmission Pipeline (The Critical Path)
+
+```
+Bank uploads    Tax Authority     Package      Encrypt with     Sign with      Send via      Partner
+account data ──► validates ──► OECD XML ──► recipient's ──► our private ──► OECD CTS ──► receives
+(CRS XML)       (4 stages)    bundle        public key       key (XMLDSig)   (SFTP)       & ACKs
+```
+
+If the partner sends back a **NACK** (rejection with OECD error codes like 80001 "DocRefID format invalid"), the bank must submit a correction filing (CRS702) within 60 days referencing the original record.
+
+---
+
 ## Jurisdictions
 
 | Jurisdiction | Reporting Regimes | Tax Authority |
