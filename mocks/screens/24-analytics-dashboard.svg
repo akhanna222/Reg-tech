@@ -1,0 +1,126 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-opacity="0.04"/>
+    </filter>
+  </defs>
+
+  <!-- Page Background -->
+  <rect width="1200" height="800" fill="#fafafa"/>
+
+  <!-- Header -->
+  <rect width="1200" height="56" fill="#ffffff"/>
+  <line x1="0" y1="56" x2="1200" y2="56" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Logo -->
+  <text x="40" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="17" font-weight="700" fill="#1d1d1f">OECD AEOI</text>
+  <circle cx="120" cy="30" r="3.5" fill="#0071e3"/>
+
+  <!-- Nav -->
+  <text x="180" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#6e6e73">Dashboard</text>
+  <text x="270" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#6e6e73">Enrolments</text>
+  <text x="370" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#6e6e73">Filings</text>
+  <text x="440" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#6e6e73">History</text>
+  <text x="510" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="600" fill="#0071e3">Analytics</text>
+
+  <!-- Title + Date Range -->
+  <text x="40" y="112" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="28" font-weight="700" fill="#1d1d1f">Analytics</text>
+  <rect x="1020" y="88" width="140" height="34" rx="10" fill="#f5f5f7"/>
+  <text x="1040" y="110" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#1d1d1f">Last 12 months ▾</text>
+
+  <!-- Metric Cards Row -->
+  <!-- Card 1: Total Filings -->
+  <rect x="40" y="140" width="260" height="108" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+  <text x="72" y="180" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="36" font-weight="700" fill="#1d1d1f">142</text>
+  <text x="72" y="204" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#6e6e73">Total Filings</text>
+  <text x="72" y="228" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" font-weight="500" fill="#1a7f37">↑ +12%</text>
+
+  <!-- Card 2: Validated -->
+  <rect x="320" y="140" width="260" height="108" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+  <text x="352" y="180" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="36" font-weight="700" fill="#1a7f37">128</text>
+  <text x="352" y="204" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#6e6e73">Validated</text>
+
+  <!-- Card 3: Rejected -->
+  <rect x="600" y="140" width="260" height="108" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+  <text x="632" y="180" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="36" font-weight="700" fill="#cf222e">8</text>
+  <text x="632" y="204" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#6e6e73">Rejected</text>
+
+  <!-- Card 4: Pass Rate -->
+  <rect x="880" y="140" width="280" height="108" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+  <text x="912" y="180" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="36" font-weight="700" fill="#1a7f37">96%</text>
+  <text x="912" y="204" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#6e6e73">Pass Rate</text>
+
+  <!-- Charts Section -->
+  <!-- Left Chart: Monthly Submissions -->
+  <rect x="40" y="272" width="560" height="260" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+  <text x="72" y="308" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="15" font-weight="600" fill="#1d1d1f">Monthly Submissions</text>
+
+  <!-- Bar chart -->
+  <!-- Oct -->
+  <rect x="100" y="380" width="50" height="100" rx="6" fill="#0071e3" opacity="0.85"/>
+  <text x="117" y="500" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="11" fill="#86868b">Oct</text>
+  <!-- Nov -->
+  <rect x="175" y="360" width="50" height="120" rx="6" fill="#0071e3" opacity="0.85"/>
+  <text x="192" y="500" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="11" fill="#86868b">Nov</text>
+  <!-- Dec -->
+  <rect x="250" y="400" width="50" height="80" rx="6" fill="#0071e3" opacity="0.85"/>
+  <text x="267" y="500" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="11" fill="#86868b">Dec</text>
+  <!-- Jan -->
+  <rect x="325" y="350" width="50" height="130" rx="6" fill="#0071e3" opacity="0.85"/>
+  <text x="342" y="500" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="11" fill="#86868b">Jan</text>
+  <!-- Feb -->
+  <rect x="400" y="370" width="50" height="110" rx="6" fill="#0071e3" opacity="0.85"/>
+  <text x="417" y="500" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="11" fill="#86868b">Feb</text>
+  <!-- Mar -->
+  <rect x="475" y="330" width="50" height="150" rx="6" fill="#0071e3"/>
+  <text x="492" y="500" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="11" fill="#86868b">Mar</text>
+
+  <!-- Right Chart: By Jurisdiction -->
+  <rect x="620" y="272" width="540" height="260" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+  <text x="652" y="308" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="15" font-weight="600" fill="#1d1d1f">By Jurisdiction</text>
+
+  <!-- DE bar -->
+  <text x="652" y="352" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#1d1d1f">DE</text>
+  <text x="680" y="352" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#6e6e73">45</text>
+  <rect x="720" y="338" width="360" height="20" rx="6" fill="#f5f5f7"/>
+  <rect x="720" y="338" width="360" height="20" rx="6" fill="#0071e3" opacity="0.8"/>
+
+  <!-- FR bar -->
+  <text x="652" y="392" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#1d1d1f">FR</text>
+  <text x="680" y="392" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#6e6e73">32</text>
+  <rect x="720" y="378" width="360" height="20" rx="6" fill="#f5f5f7"/>
+  <rect x="720" y="378" width="256" height="20" rx="6" fill="#0071e3" opacity="0.65"/>
+
+  <!-- GB bar -->
+  <text x="652" y="432" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#1d1d1f">GB</text>
+  <text x="680" y="432" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#6e6e73">28</text>
+  <rect x="720" y="418" width="360" height="20" rx="6" fill="#f5f5f7"/>
+  <rect x="720" y="418" width="224" height="20" rx="6" fill="#0071e3" opacity="0.5"/>
+
+  <!-- US bar -->
+  <text x="652" y="472" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#1d1d1f">US</text>
+  <text x="680" y="472" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#6e6e73">21</text>
+  <rect x="720" y="458" width="360" height="20" rx="6" fill="#f5f5f7"/>
+  <rect x="720" y="458" width="168" height="20" rx="6" fill="#0071e3" opacity="0.4"/>
+
+  <!-- Anomalies Section -->
+  <rect x="40" y="556" width="1120" height="200" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+  <text x="72" y="592" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="15" font-weight="600" fill="#1d1d1f">Anomalies</text>
+  <!-- Badge -->
+  <rect x="156" y="578" width="20" height="20" rx="10" fill="#ffeef0"/>
+  <text x="162" y="592" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="11" font-weight="600" fill="#cf222e">2</text>
+
+  <!-- Anomaly Row 1 -->
+  <circle cx="84" cy="634" r="5" fill="#9a6700"/>
+  <text x="100" y="638" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#1d1d1f">Dublin IB — 85% fewer records vs. prior year</text>
+  <rect x="1020" y="622" width="60" height="24" rx="6" fill="#ffeef0"/>
+  <text x="1034" y="638" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="11" font-weight="600" fill="#cf222e">HIGH</text>
+
+  <line x1="72" y1="660" x2="1128" y2="660" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Anomaly Row 2 -->
+  <circle cx="84" cy="690" r="5" fill="#9a6700"/>
+  <text x="100" y="694" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#1d1d1f">Thames Capital — Filed 45 days past deadline</text>
+  <rect x="1000" y="678" width="80" height="24" rx="6" fill="#fff8e6"/>
+  <text x="1012" y="694" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="11" font-weight="600" fill="#9a6700">MEDIUM</text>
+</svg>
