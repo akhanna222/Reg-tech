@@ -10,7 +10,7 @@
 
   <!-- Header -->
   <rect width="1200" height="64" fill="#1a365d"/>
-  <text x="40" y="38" fill="white" font-size="18" font-weight="700">Bermuda Tax Information Reporting Portal</text>
+  <text x="40" y="38" fill="white" font-size="18" font-weight="700">OECD AEOI Tax Information Reporting Portal — Analytics</text>
   <!-- Administration marker -->
   <rect x="460" y="18" width="110" height="30" rx="4" fill="#2d4a7a"/>
   <text x="472" y="38" fill="white" font-size="13" font-weight="500">Administration</text>

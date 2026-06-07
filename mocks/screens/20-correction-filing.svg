@@ -40,9 +40,9 @@
 
   <!-- Requirements list -->
   <text x="90" y="358" fill="#059669" font-size="12">✓</text>
-  <text x="110" y="358" fill="#374151" font-size="12">MessageTypeIndic must be CRS702</text>
+  <text x="110" y="358" fill="#374151" font-size="12">OECD MessageTypeIndic must be CRS702</text>
   <text x="90" y="382" fill="#059669" font-size="12">✓</text>
-  <text x="110" y="382" fill="#374151" font-size="12">DocTypeIndic must be OECD2 (corrected) or OECD3 (deleted)</text>
+  <text x="110" y="382" fill="#374151" font-size="12">OECD DocTypeIndic must be OECD2 (corrected) or OECD3 (deleted)</text>
   <text x="90" y="406" fill="#059669" font-size="12">✓</text>
   <text x="110" y="406" fill="#374151" font-size="12">CorrDocRefID must reference original record's DocRefID</text>
   <text x="90" y="430" fill="#059669" font-size="12">✓</text>

@@ -10,7 +10,7 @@
 
   <!-- Header -->
   <rect width="1200" height="64" fill="#1a365d"/>
-  <text x="40" y="38" fill="white" font-size="18" font-weight="700">Bermuda Tax Information Reporting Portal</text>
+  <text x="40" y="38" fill="white" font-size="18" font-weight="700">OECD AEOI Tax Information Reporting Portal</text>
   <rect x="520" y="18" width="80" height="30" rx="4" fill="#2d4a7a"/>
   <text x="540" y="38" fill="white" font-size="13" font-weight="500">Filings</text>
   <rect x="610" y="18" width="120" height="30" rx="4" fill="transparent"/>
