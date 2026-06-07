@@ -1,0 +1,72 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-opacity="0.04"/>
+    </filter>
+  </defs>
+
+  <!-- Page Background -->
+  <rect width="1200" height="700" fill="#fafafa"/>
+
+  <!-- Header -->
+  <rect width="1200" height="56" fill="#ffffff"/>
+  <line x1="0" y1="56" x2="1200" y2="56" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Logo -->
+  <text x="40" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="17" font-weight="700" fill="#1d1d1f">OECD AEOI</text>
+  <circle cx="120" cy="30" r="3.5" fill="#0071e3"/>
+
+  <!-- Nav -->
+  <text x="180" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#6e6e73">Dashboard</text>
+  <text x="270" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#6e6e73">Enrolments</text>
+  <text x="370" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="600" fill="#0071e3">Filings</text>
+  <text x="440" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#6e6e73">History</text>
+  <text x="510" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#6e6e73">Analytics</text>
+
+  <!-- Title -->
+  <text x="40" y="108" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="28" font-weight="700" fill="#1d1d1f">Submit Correction</text>
+  <text x="260" y="108" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="16" fill="#6e6e73">CRS Annual 2025</text>
+
+  <!-- Info Banner -->
+  <rect x="40" y="130" width="1120" height="44" rx="10" fill="#eff6ff"/>
+  <text x="72" y="157" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#0550ae">Correcting filing BM-2025-CRS-042 (MessageRefID: BM2025CRS042)</text>
+
+  <!-- Form Card -->
+  <rect x="40" y="196" width="1120" height="450" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+
+  <!-- Read-only field -->
+  <text x="72" y="236" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" font-weight="600" fill="#86868b" letter-spacing="0.3">MESSAGE TYPE</text>
+  <rect x="72" y="246" width="500" height="40" rx="10" fill="#f5f5f7"/>
+  <text x="88" y="271" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#6e6e73">OECD CRS702 — Corrected Data</text>
+
+  <!-- Checklist -->
+  <text x="72" y="318" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="600" fill="#1d1d1f">Filing Compliance Checklist</text>
+
+  <rect x="72" y="334" width="20" height="20" rx="4" fill="#e8faf0"/>
+  <text x="78" y="349" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#1a7f37">✓</text>
+  <text x="104" y="349" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#1d1d1f">OECD MessageTypeIndic = CRS702</text>
+
+  <rect x="72" y="366" width="20" height="20" rx="4" fill="#e8faf0"/>
+  <text x="78" y="381" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#1a7f37">✓</text>
+  <text x="104" y="381" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#1d1d1f">OECD DocTypeIndic = OECD2 (corrected) or OECD3 (deleted)</text>
+
+  <rect x="72" y="398" width="20" height="20" rx="4" fill="#e8faf0"/>
+  <text x="78" y="413" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#1a7f37">✓</text>
+  <text x="104" y="413" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#1d1d1f">CorrDocRefID references original record</text>
+
+  <rect x="72" y="430" width="20" height="20" rx="4" fill="#e8faf0"/>
+  <text x="78" y="445" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#1a7f37">✓</text>
+  <text x="104" y="445" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#1d1d1f">Full section re-submitted</text>
+
+  <!-- Upload Zone -->
+  <text x="72" y="488" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" font-weight="600" fill="#86868b" letter-spacing="0.3">UPLOAD CORRECTION FILE</text>
+  <rect x="72" y="500" width="1056" height="80" rx="12" fill="#fafafa" stroke="#e5e5e5" stroke-width="1" stroke-dasharray="6 4"/>
+  <text x="600" y="536" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#86868b" text-anchor="middle">Drop XML file here or click to browse</text>
+  <text x="600" y="558" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" fill="#86868b" text-anchor="middle">Accepts .xml (CRS702 schema)</text>
+
+  <!-- Buttons -->
+  <rect x="72" y="604" width="160" height="44" rx="10" fill="#0071e3"/>
+  <text x="100" y="631" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="600" fill="#ffffff">Upload &amp; Validate</text>
+  <rect x="248" y="604" width="100" height="44" rx="10" fill="#f5f5f7"/>
+  <text x="278" y="631" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="500" fill="#1d1d1f">Cancel</text>
+</svg>

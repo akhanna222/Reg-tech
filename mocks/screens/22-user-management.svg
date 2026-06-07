@@ -1,0 +1,88 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-opacity="0.04"/>
+    </filter>
+  </defs>
+
+  <!-- Page Background -->
+  <rect width="1200" height="700" fill="#fafafa"/>
+
+  <!-- Header -->
+  <rect width="1200" height="56" fill="#ffffff"/>
+  <line x1="0" y1="56" x2="1200" y2="56" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Logo -->
+  <text x="40" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="17" font-weight="700" fill="#1d1d1f">OECD AEOI</text>
+  <circle cx="120" cy="30" r="3.5" fill="#0071e3"/>
+
+  <!-- Nav -->
+  <text x="180" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#6e6e73">Dashboard</text>
+  <text x="270" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#6e6e73">Enrolments</text>
+  <text x="370" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#6e6e73">Filings</text>
+  <text x="440" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#6e6e73">History</text>
+  <text x="510" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="600" fill="#0071e3">Settings</text>
+
+  <!-- Title + Button -->
+  <text x="40" y="112" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="28" font-weight="700" fill="#1d1d1f">Team</text>
+  <rect x="1040" y="88" width="120" height="38" rx="10" fill="#0071e3"/>
+  <text x="1068" y="112" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="600" fill="#ffffff">Add User</text>
+
+  <!-- User Card 1 -->
+  <rect x="40" y="148" width="1120" height="88" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+  <!-- Avatar -->
+  <circle cx="92" cy="192" r="22" fill="#f5f5f7"/>
+  <text x="92" y="197" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="600" fill="#6e6e73" text-anchor="middle">SM</text>
+  <!-- Name & Email -->
+  <text x="130" y="184" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="15" font-weight="600" fill="#1d1d1f">Sean Murphy</text>
+  <text x="130" y="206" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#6e6e73">sean@celticfs.bm</text>
+  <!-- Role pill -->
+  <rect x="420" y="180" width="80" height="24" rx="12" fill="#f5f5f7"/>
+  <text x="436" y="196" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" font-weight="500" fill="#6e6e73">Secondary</text>
+  <!-- Status -->
+  <circle cx="550" cy="192" r="4" fill="#1a7f37"/>
+  <text x="560" y="196" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#1a7f37">Active</text>
+  <!-- Edit -->
+  <rect x="1060" y="178" width="60" height="28" rx="8" fill="#f5f5f7"/>
+  <text x="1078" y="196" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" font-weight="500" fill="#1d1d1f">Edit</text>
+
+  <!-- User Card 2 -->
+  <rect x="40" y="252" width="1120" height="88" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+  <!-- Avatar -->
+  <circle cx="92" cy="296" r="22" fill="#f5f5f7"/>
+  <text x="92" y="301" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="600" fill="#6e6e73" text-anchor="middle">FO</text>
+  <!-- Name & Email -->
+  <text x="130" y="288" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="15" font-weight="600" fill="#1d1d1f">Fiona O'Brien</text>
+  <text x="130" y="310" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#6e6e73">fiona@celticfs.bm</text>
+  <!-- Role pill -->
+  <rect x="420" y="284" width="80" height="24" rx="12" fill="#f5f5f7"/>
+  <text x="436" y="300" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" font-weight="500" fill="#6e6e73">Secondary</text>
+  <!-- Status -->
+  <circle cx="550" cy="296" r="4" fill="#1a7f37"/>
+  <text x="560" y="300" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#1a7f37">Active</text>
+  <!-- Edit -->
+  <rect x="1060" y="282" width="60" height="28" rx="8" fill="#f5f5f7"/>
+  <text x="1078" y="300" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" font-weight="500" fill="#1d1d1f">Edit</text>
+
+  <!-- User Card 3 -->
+  <rect x="40" y="356" width="1120" height="88" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+  <!-- Avatar -->
+  <circle cx="92" cy="400" r="22" fill="#f5f5f7"/>
+  <text x="92" y="405" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="600" fill="#6e6e73" text-anchor="middle">PK</text>
+  <!-- Name & Email -->
+  <text x="130" y="392" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="15" font-weight="600" fill="#1d1d1f">Patrick Kelly</text>
+  <text x="130" y="414" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#6e6e73">patrick@celticfs.bm</text>
+  <!-- Role pill -->
+  <rect x="420" y="388" width="80" height="24" rx="12" fill="#f5f5f7"/>
+  <text x="436" y="404" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" font-weight="500" fill="#6e6e73">Secondary</text>
+  <!-- Status -->
+  <circle cx="550" cy="400" r="4" fill="#86868b"/>
+  <text x="560" y="404" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#86868b">Inactive</text>
+  <!-- Reactivate -->
+  <rect x="1030" y="386" width="96" height="28" rx="8" fill="#f5f5f7"/>
+  <text x="1044" y="404" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" font-weight="500" fill="#1d1d1f">Reactivate</text>
+
+  <!-- Info Note -->
+  <rect x="40" y="476" width="1120" height="48" rx="12" fill="#f5f5f7"/>
+  <text x="72" y="505" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#6e6e73">Primary Users can add up to 2 Secondary Users with filing permissions.</text>
+</svg>

@@ -1,0 +1,95 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, SF Pro Display, Inter, sans-serif">
+  <defs>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-opacity="0.04"/>
+    </filter>
+  </defs>
+
+  <!-- Page background -->
+  <rect width="1200" height="800" fill="#fafafa"/>
+
+  <!-- Header -->
+  <rect width="1200" height="56" fill="#ffffff"/>
+  <line x1="0" y1="56" x2="1200" y2="56" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Logo -->
+  <text x="40" y="35" font-size="17" font-weight="600" fill="#1d1d1f">OECD AEOI</text>
+  <circle cx="108" cy="30" r="4" fill="#0071e3"/>
+
+  <!-- Nav pills -->
+  <rect x="380" y="14" width="100" height="28" rx="14" fill="#0071e3"/>
+  <text x="430" y="33" font-size="13" fill="#ffffff" text-anchor="middle">Submissions</text>
+  <rect x="490" y="14" width="92" height="28" rx="14" fill="#f5f5f7"/>
+  <text x="536" y="33" font-size="13" fill="#1d1d1f" text-anchor="middle">Enrolments</text>
+  <rect x="592" y="14" width="104" height="28" rx="14" fill="#f5f5f7"/>
+  <text x="644" y="33" font-size="13" fill="#1d1d1f" text-anchor="middle">Transmission</text>
+  <rect x="706" y="14" width="80" height="28" rx="14" fill="#f5f5f7"/>
+  <text x="746" y="33" font-size="13" fill="#1d1d1f" text-anchor="middle">Analytics</text>
+
+  <!-- Avatar -->
+  <circle cx="1140" cy="28" r="16" fill="#f5f5f7"/>
+  <text x="1140" y="33" font-size="11" font-weight="500" fill="#6e6e73" text-anchor="middle">AR</text>
+
+  <!-- Back arrow + title -->
+  <text x="40" y="100" font-size="14" fill="#0071e3">← Back</text>
+  <text x="40" y="140" font-size="24" font-weight="600" fill="#1d1d1f">BM-2025-CRS-042</text>
+  <!-- Green validated pill -->
+  <rect x="260" y="122" width="82" height="24" rx="12" fill="#e8faf0"/>
+  <circle cx="276" cy="134" r="3" fill="#1a7f37"/>
+  <text x="288" y="139" font-size="12" fill="#1a7f37">Validated</text>
+
+  <!-- Entity info line -->
+  <text x="40" y="170" font-size="14" fill="#6e6e73">Celtic Financial Services Ltd · CRS · 31 Dec 2025 · 47 accounts</text>
+
+  <!-- Tabs -->
+  <rect x="40" y="196" width="88" height="32" rx="10" fill="#0071e3"/>
+  <text x="84" y="216" font-size="13" fill="#ffffff" text-anchor="middle">Overview</text>
+  <rect x="136" y="196" width="88" height="32" rx="10" fill="#f5f5f7"/>
+  <text x="180" y="216" font-size="13" fill="#1d1d1f" text-anchor="middle">Validation</text>
+  <rect x="232" y="196" width="72" height="32" rx="10" fill="#f5f5f7"/>
+  <text x="268" y="216" font-size="13" fill="#1d1d1f" text-anchor="middle">History</text>
+
+  <!-- Validation pipeline card -->
+  <rect x="40" y="252" width="1120" height="120" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+  <text x="72" y="284" font-size="13" font-weight="500" fill="#86868b">VALIDATION PIPELINE</text>
+
+  <!-- Pipeline steps -->
+  <!-- Connecting line -->
+  <line x1="140" y1="330" x2="960" y2="330" stroke="#e8faf0" stroke-width="2"/>
+
+  <!-- Step 1: OECD XSD -->
+  <circle cx="140" cy="330" r="16" fill="#e8faf0" stroke="#1a7f37" stroke-width="1.5"/>
+  <path d="M133 330 L138 335 L148 325" stroke="#1a7f37" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="140" y="358" font-size="11" fill="#1d1d1f" text-anchor="middle">OECD XSD</text>
+
+  <!-- Step 2: CRS Rules -->
+  <circle cx="400" cy="330" r="16" fill="#e8faf0" stroke="#1a7f37" stroke-width="1.5"/>
+  <path d="M393 330 L398 335 L408 325" stroke="#1a7f37" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="400" y="358" font-size="11" fill="#1d1d1f" text-anchor="middle">CRS Rules</text>
+
+  <!-- Step 3: Cross-Record -->
+  <circle cx="660" cy="330" r="16" fill="#e8faf0" stroke="#1a7f37" stroke-width="1.5"/>
+  <path d="M653 330 L658 335 L668 325" stroke="#1a7f37" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="660" y="358" font-size="11" fill="#1d1d1f" text-anchor="middle">Cross-Record</text>
+
+  <!-- Step 4: Jurisdiction -->
+  <circle cx="920" cy="330" r="16" fill="#e8faf0" stroke="#1a7f37" stroke-width="1.5"/>
+  <path d="M913 330 L918 335 L928 325" stroke="#1a7f37" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="920" y="358" font-size="11" fill="#1d1d1f" text-anchor="middle">Jurisdiction</text>
+
+  <!-- Info card -->
+  <rect x="40" y="396" width="1120" height="60" rx="12" fill="#ffffff" filter="url(#cardShadow)"/>
+  <text x="72" y="432" font-size="14" fill="#6e6e73">Submitted by</text>
+  <text x="166" y="432" font-size="14" fill="#1d1d1f">compliance@celticfs.bm</text>
+  <text x="380" y="432" font-size="14" fill="#6e6e73">on 15 Mar 2026</text>
+
+  <!-- Action buttons (right-aligned) -->
+  <rect x="700" y="490" width="172" height="40" rx="10" fill="#1a7f37"/>
+  <text x="786" y="515" font-size="14" font-weight="500" fill="#ffffff" text-anchor="middle">Approve &amp; Transmit</text>
+
+  <rect x="888" y="490" width="80" height="40" rx="10" fill="none" stroke="#cf222e" stroke-width="1.5"/>
+  <text x="928" y="515" font-size="14" font-weight="500" fill="#cf222e" text-anchor="middle">Reject</text>
+
+  <rect x="984" y="490" width="176" height="40" rx="10" fill="#f5f5f7"/>
+  <text x="1072" y="515" font-size="14" font-weight="500" fill="#1d1d1f" text-anchor="middle">Return for Correction</text>
+</svg>

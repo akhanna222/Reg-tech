@@ -1,0 +1,107 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, SF Pro Display, Inter, sans-serif">
+  <defs>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-opacity="0.04"/>
+    </filter>
+  </defs>
+
+  <!-- Page background -->
+  <rect width="1200" height="800" fill="#fafafa"/>
+
+  <!-- Header -->
+  <rect width="1200" height="56" fill="#ffffff"/>
+  <line x1="0" y1="56" x2="1200" y2="56" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Logo -->
+  <text x="40" y="35" font-size="17" font-weight="600" fill="#1d1d1f">OECD AEOI</text>
+  <circle cx="108" cy="30" r="4" fill="#0071e3"/>
+
+  <!-- Nav pills -->
+  <rect x="380" y="14" width="100" height="28" rx="14" fill="#f5f5f7"/>
+  <text x="430" y="33" font-size="13" fill="#1d1d1f" text-anchor="middle">Submissions</text>
+  <rect x="490" y="14" width="92" height="28" rx="14" fill="#f5f5f7"/>
+  <text x="536" y="33" font-size="13" fill="#1d1d1f" text-anchor="middle">Enrolments</text>
+  <rect x="592" y="14" width="108" height="28" rx="14" fill="#0071e3"/>
+  <text x="646" y="33" font-size="13" fill="#ffffff" text-anchor="middle">Transmission</text>
+  <rect x="710" y="14" width="80" height="28" rx="14" fill="#f5f5f7"/>
+  <text x="750" y="33" font-size="13" fill="#1d1d1f" text-anchor="middle">Analytics</text>
+
+  <!-- Avatar -->
+  <circle cx="1140" cy="28" r="16" fill="#f5f5f7"/>
+  <text x="1140" y="33" font-size="11" font-weight="500" fill="#6e6e73" text-anchor="middle">AR</text>
+
+  <!-- Title -->
+  <text x="40" y="110" font-size="28" font-weight="600" fill="#1d1d1f">OECD CTS Transmissions</text>
+
+  <!-- Metric cards row -->
+  <!-- Dispatched -->
+  <rect x="40" y="136" width="260" height="80" rx="14" fill="#ffffff" filter="url(#cardShadow)"/>
+  <text x="64" y="166" font-size="28" font-weight="600" fill="#0550ae">4</text>
+  <text x="64" y="192" font-size="14" fill="#6e6e73">Dispatched</text>
+
+  <!-- Acknowledged -->
+  <rect x="316" y="136" width="260" height="80" rx="14" fill="#ffffff" filter="url(#cardShadow)"/>
+  <text x="340" y="166" font-size="28" font-weight="600" fill="#1a7f37">12</text>
+  <text x="340" y="192" font-size="14" fill="#6e6e73">Acknowledged</text>
+
+  <!-- Rejected -->
+  <rect x="592" y="136" width="260" height="80" rx="14" fill="#ffffff" filter="url(#cardShadow)"/>
+  <text x="616" y="166" font-size="28" font-weight="600" fill="#cf222e">1</text>
+  <text x="616" y="192" font-size="14" fill="#6e6e73">Rejected</text>
+
+  <!-- Pending -->
+  <rect x="868" y="136" width="260" height="80" rx="14" fill="#ffffff" filter="url(#cardShadow)"/>
+  <text x="892" y="166" font-size="28" font-weight="600" fill="#86868b">2</text>
+  <text x="892" y="192" font-size="14" fill="#6e6e73">Pending</text>
+
+  <!-- Table card -->
+  <rect x="40" y="240" width="1120" height="440" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+
+  <!-- Table header -->
+  <text x="72" y="278" font-size="11" fill="#86868b" font-weight="500">REFERENCE</text>
+  <text x="256" y="278" font-size="11" fill="#86868b" font-weight="500">ENTITY</text>
+  <text x="500" y="278" font-size="11" fill="#86868b" font-weight="500">DESTINATION</text>
+  <text x="620" y="278" font-size="11" fill="#86868b" font-weight="500">SENT</text>
+  <text x="800" y="278" font-size="11" fill="#86868b" font-weight="500">STATUS</text>
+  <line x1="72" y1="294" x2="1128" y2="294" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Row 1 -->
+  <text x="72" y="334" font-size="13" fill="#1d1d1f" font-family="SF Mono, monospace">BM-2025-CRS-042</text>
+  <text x="256" y="334" font-size="13" fill="#1d1d1f">Celtic FS</text>
+  <text x="500" y="334" font-size="13" fill="#6e6e73">DE</text>
+  <text x="620" y="334" font-size="13" fill="#6e6e73">15 Mar 14:35</text>
+  <rect x="800" y="320" width="56" height="22" rx="11" fill="#e8faf0"/>
+  <circle cx="812" cy="331" r="3" fill="#1a7f37"/>
+  <text x="822" y="336" font-size="12" fill="#1a7f37">ACK</text>
+  <line x1="72" y1="358" x2="1128" y2="358" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Row 2 -->
+  <text x="72" y="398" font-size="13" fill="#1d1d1f" font-family="SF Mono, monospace">BM-2025-CRS-043</text>
+  <text x="256" y="398" font-size="13" fill="#1d1d1f">Dublin IB</text>
+  <text x="500" y="398" font-size="13" fill="#6e6e73">FR</text>
+  <text x="620" y="398" font-size="13" fill="#6e6e73">16 Mar 10:20</text>
+  <rect x="800" y="384" width="56" height="22" rx="11" fill="#e8faf0"/>
+  <circle cx="812" cy="395" r="3" fill="#1a7f37"/>
+  <text x="822" y="400" font-size="12" fill="#1a7f37">ACK</text>
+  <line x1="72" y1="422" x2="1128" y2="422" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Row 3 -->
+  <text x="72" y="462" font-size="13" fill="#1d1d1f" font-family="SF Mono, monospace">BM-2025-CBC-009</text>
+  <text x="256" y="462" font-size="13" fill="#1d1d1f">Schneider</text>
+  <text x="500" y="462" font-size="13" fill="#6e6e73">DE</text>
+  <text x="620" y="462" font-size="13" fill="#6e6e73">14 Mar 11:00</text>
+  <rect x="800" y="448" width="64" height="22" rx="11" fill="#ffeef0"/>
+  <circle cx="812" cy="459" r="3" fill="#cf222e"/>
+  <text x="822" y="464" font-size="12" fill="#cf222e">NACK</text>
+  <text x="1000" y="462" font-size="13" fill="#0071e3">Details →</text>
+  <line x1="72" y1="486" x2="1128" y2="486" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Row 4 -->
+  <text x="72" y="526" font-size="13" fill="#1d1d1f" font-family="SF Mono, monospace">BM-2025-CRS-045</text>
+  <text x="256" y="526" font-size="13" fill="#1d1d1f">Thames</text>
+  <text x="500" y="526" font-size="13" fill="#6e6e73">GB</text>
+  <text x="620" y="526" font-size="13" fill="#6e6e73">17 Mar 16:00</text>
+  <rect x="800" y="512" width="88" height="22" rx="11" fill="#eef6ff"/>
+  <circle cx="812" cy="523" r="3" fill="#0550ae"/>
+  <text x="822" y="528" font-size="12" fill="#0550ae">Dispatched</text>
+</svg>

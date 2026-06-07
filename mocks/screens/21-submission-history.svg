@@ -1,0 +1,104 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-opacity="0.04"/>
+    </filter>
+  </defs>
+
+  <!-- Page Background -->
+  <rect width="1200" height="700" fill="#fafafa"/>
+
+  <!-- Header -->
+  <rect width="1200" height="56" fill="#ffffff"/>
+  <line x1="0" y1="56" x2="1200" y2="56" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Logo -->
+  <text x="40" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="17" font-weight="700" fill="#1d1d1f">OECD AEOI</text>
+  <circle cx="120" cy="30" r="3.5" fill="#0071e3"/>
+
+  <!-- Nav -->
+  <text x="180" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#6e6e73">Dashboard</text>
+  <text x="270" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#6e6e73">Enrolments</text>
+  <text x="370" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#6e6e73">Filings</text>
+  <text x="440" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="600" fill="#0071e3">History</text>
+  <text x="510" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#6e6e73">Analytics</text>
+
+  <!-- Title -->
+  <text x="40" y="112" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="28" font-weight="700" fill="#1d1d1f">Submission History</text>
+
+  <!-- Filter Pills -->
+  <rect x="40" y="132" width="44" height="30" rx="15" fill="#1d1d1f"/>
+  <text x="52" y="151" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" font-weight="600" fill="#ffffff">All</text>
+  <rect x="96" y="132" width="50" height="30" rx="15" fill="#f5f5f7"/>
+  <text x="108" y="151" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" font-weight="500" fill="#6e6e73">CRS</text>
+  <rect x="158" y="132" width="50" height="30" rx="15" fill="#f5f5f7"/>
+  <text x="170" y="151" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" font-weight="500" fill="#6e6e73">CbC</text>
+  <rect x="220" y="132" width="64" height="30" rx="15" fill="#f5f5f7"/>
+  <text x="232" y="151" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" font-weight="500" fill="#6e6e73">FATCA</text>
+
+  <!-- Table Card -->
+  <rect x="40" y="184" width="1120" height="460" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+
+  <!-- Table Header -->
+  <text x="72" y="224" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" font-weight="600" fill="#86868b" letter-spacing="0.3">NAME</text>
+  <text x="360" y="224" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" font-weight="600" fill="#86868b" letter-spacing="0.3">TYPE</text>
+  <text x="500" y="224" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" font-weight="600" fill="#86868b" letter-spacing="0.3">PERIOD</text>
+  <text x="600" y="224" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" font-weight="600" fill="#86868b" letter-spacing="0.3">STATUS</text>
+  <text x="800" y="224" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" font-weight="600" fill="#86868b" letter-spacing="0.3">SUBMITTED</text>
+  <text x="1080" y="224" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" font-weight="600" fill="#86868b" letter-spacing="0.3"></text>
+
+  <line x1="72" y1="240" x2="1128" y2="240" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Row 1 -->
+  <text x="72" y="280" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="500" fill="#1d1d1f">CRS Annual 2025</text>
+  <text x="360" y="280" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#6e6e73">CRS</text>
+  <text x="500" y="280" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#6e6e73">2025</text>
+  <circle cx="610" cy="276" r="4" fill="#1a7f37"/>
+  <text x="620" y="280" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#1a7f37">Transmitted</text>
+  <text x="800" y="280" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#6e6e73">15 Mar 2026</text>
+  <text x="1080" y="280" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#0071e3">↓</text>
+
+  <line x1="72" y1="296" x2="1128" y2="296" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Row 2 -->
+  <text x="72" y="336" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="500" fill="#1d1d1f">CRS Correction 2025</text>
+  <text x="360" y="336" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#6e6e73">CRS</text>
+  <text x="500" y="336" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#6e6e73">2025</text>
+  <circle cx="610" cy="332" r="4" fill="#0550ae"/>
+  <text x="620" y="336" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#0550ae">Submitted</text>
+  <text x="800" y="336" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#6e6e73">20 Mar 2026</text>
+  <text x="1080" y="336" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#86868b">—</text>
+
+  <line x1="72" y1="352" x2="1128" y2="352" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Row 3 -->
+  <text x="72" y="392" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="500" fill="#1d1d1f">CRS Annual 2024</text>
+  <text x="360" y="392" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#6e6e73">CRS</text>
+  <text x="500" y="392" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#6e6e73">2024</text>
+  <circle cx="610" cy="388" r="4" fill="#1a7f37"/>
+  <text x="620" y="392" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#1a7f37">Transmitted</text>
+  <text x="800" y="392" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#6e6e73">28 Mar 2025</text>
+  <text x="1080" y="392" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#0071e3">↓</text>
+
+  <line x1="72" y1="408" x2="1128" y2="408" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Row 4 -->
+  <text x="72" y="448" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="500" fill="#1d1d1f">CbC Report FY2024</text>
+  <text x="360" y="448" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#6e6e73">CbC</text>
+  <text x="500" y="448" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#6e6e73">2024</text>
+  <circle cx="610" cy="444" r="4" fill="#1a7f37"/>
+  <text x="620" y="448" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#1a7f37">Transmitted</text>
+  <text x="800" y="448" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#6e6e73">15 Apr 2025</text>
+  <text x="1080" y="448" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#0071e3">↓</text>
+
+  <line x1="72" y1="464" x2="1128" y2="464" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Row 5 -->
+  <text x="72" y="504" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="500" fill="#1d1d1f">CRS Nil 2023</text>
+  <text x="360" y="504" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#6e6e73">CRS (Nil)</text>
+  <text x="500" y="504" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#6e6e73">2023</text>
+  <circle cx="610" cy="500" r="4" fill="#1a7f37"/>
+  <text x="620" y="504" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#1a7f37">Transmitted</text>
+  <text x="800" y="504" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#6e6e73">30 Mar 2024</text>
+  <text x="1080" y="504" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#0071e3">↓</text>
+</svg>
