@@ -1,135 +1,102 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Page Background -->
+  <rect width="1200" height="700" fill="#fafafa"/>
+
+  <!-- Header -->
+  <rect width="1200" height="64" fill="#ffffff"/>
+  <line x1="0" y1="64" x2="1200" y2="64" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Logo -->
+  <text x="40" y="38" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="18" font-weight="700" fill="#1d1d1f">OECD AEOI</text>
+  <circle cx="127" cy="33" r="3" fill="#0071e3"/>
+  <text x="145" y="38" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#86868b">Tax Reporting Portal</text>
+
+  <!-- Card Shadow Filter -->
   <defs>
-    <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
-      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-opacity="0.1"/>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-opacity="0.04" flood-color="#000000"/>
     </filter>
   </defs>
 
-  <!-- Background -->
-  <rect width="1200" height="700" fill="#f8fafc"/>
+  <!-- Centered Card -->
+  <rect x="360" y="100" width="480" height="555" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
 
-  <!-- Header Bar -->
-  <rect width="1200" height="64" fill="#1a365d"/>
-  <text x="40" y="38" font-family="Inter, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#ffffff">OECD AEOI Tax Information Reporting Portal</text>
-  <text x="40" y="54" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#94a3b8">OECD Automatic Exchange of Information</text>
-  <circle cx="1140" cy="32" r="18" fill="none" stroke="#4a7ab5" stroke-width="1.5"/>
-  <text x="1140" y="36" font-family="Inter, -apple-system, sans-serif" font-size="9" fill="#4a7ab5" text-anchor="middle">GOV</text>
+  <!-- Shield Icon -->
+  <g transform="translate(576, 135)">
+    <path d="M24 4L6 10V20C6 30 14 38 24 42C34 38 42 30 42 20V10L24 4Z" stroke="#1d1d1f" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+    <path d="M18 22L22 26L30 18" stroke="#0071e3" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
 
-  <!-- 2FA Setup Card -->
-  <rect x="300" y="100" width="600" height="530" rx="12" fill="#ffffff" filter="url(#shadow)"/>
-
-  <!-- Card Title -->
-  <text x="600" y="148" font-family="Inter, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#1a365d" text-anchor="middle">Configure Two-Factor Authentication</text>
-  <text x="600" y="172" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#64748b" text-anchor="middle">Scan the QR code below with your authenticator app</text>
-
-  <line x1="340" y1="190" x2="860" y2="190" stroke="#e2e8f0" stroke-width="1"/>
+  <!-- Title -->
+  <text x="600" y="205" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="22" font-weight="600" fill="#1d1d1f" text-anchor="middle">Set up two-factor authentication</text>
+  <text x="600" y="232" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#6e6e73" text-anchor="middle">Scan this QR code with your authenticator app</text>
 
   <!-- QR Code Placeholder -->
-  <rect x="480" y="210" width="160" height="160" rx="8" fill="#f1f5f9" stroke="#d1d5db" stroke-width="1"/>
-  <!-- QR pattern simulation -->
-  <rect x="495" y="225" width="12" height="12" fill="#1a365d"/>
-  <rect x="511" y="225" width="12" height="12" fill="#1a365d"/>
-  <rect x="527" y="225" width="12" height="12" fill="#1a365d"/>
-  <rect x="543" y="225" width="8" height="8" fill="#1a365d"/>
-  <rect x="575" y="225" width="12" height="12" fill="#1a365d"/>
-  <rect x="591" y="225" width="12" height="12" fill="#1a365d"/>
-  <rect x="607" y="225" width="12" height="12" fill="#1a365d"/>
+  <rect x="530" y="255" width="140" height="140" rx="12" fill="#f5f5f7" stroke="#e8e8ed" stroke-width="1"/>
+  <!-- QR pattern dots -->
+  <g fill="#1d1d1f" opacity="0.7">
+    <rect x="545" y="270" width="10" height="10" rx="1"/>
+    <rect x="557" y="270" width="10" height="10" rx="1"/>
+    <rect x="569" y="270" width="10" height="10" rx="1"/>
+    <rect x="545" y="282" width="10" height="10" rx="1"/>
+    <rect x="569" y="282" width="10" height="10" rx="1"/>
+    <rect x="545" y="294" width="10" height="10" rx="1"/>
+    <rect x="557" y="294" width="10" height="10" rx="1"/>
+    <rect x="569" y="294" width="10" height="10" rx="1"/>
 
-  <rect x="495" y="241" width="12" height="12" fill="#1a365d"/>
-  <rect x="527" y="241" width="12" height="12" fill="#1a365d"/>
-  <rect x="551" y="241" width="8" height="8" fill="#1a365d"/>
-  <rect x="575" y="241" width="12" height="12" fill="#1a365d"/>
-  <rect x="607" y="241" width="12" height="12" fill="#1a365d"/>
+    <rect x="593" y="270" width="6" height="6" rx="1"/>
+    <rect x="601" y="278" width="6" height="6" rx="1"/>
+    <rect x="609" y="270" width="6" height="6" rx="1"/>
+    <rect x="593" y="286" width="6" height="6" rx="1"/>
+    <rect x="609" y="286" width="6" height="6" rx="1"/>
 
-  <rect x="495" y="257" width="12" height="12" fill="#1a365d"/>
-  <rect x="511" y="257" width="12" height="12" fill="#1a365d"/>
-  <rect x="527" y="257" width="12" height="12" fill="#1a365d"/>
-  <rect x="551" y="257" width="8" height="8" fill="#1a365d"/>
-  <rect x="567" y="257" width="8" height="8" fill="#1a365d"/>
-  <rect x="575" y="257" width="12" height="12" fill="#1a365d"/>
-  <rect x="591" y="257" width="12" height="12" fill="#1a365d"/>
-  <rect x="607" y="257" width="12" height="12" fill="#1a365d"/>
+    <rect x="621" y="270" width="10" height="10" rx="1"/>
+    <rect x="633" y="270" width="10" height="10" rx="1"/>
+    <rect x="645" y="270" width="10" height="10" rx="1"/>
+    <rect x="621" y="282" width="10" height="10" rx="1"/>
+    <rect x="645" y="282" width="10" height="10" rx="1"/>
+    <rect x="621" y="294" width="10" height="10" rx="1"/>
+    <rect x="633" y="294" width="10" height="10" rx="1"/>
+    <rect x="645" y="294" width="10" height="10" rx="1"/>
 
-  <rect x="495" y="273" width="12" height="12" fill="#1a365d"/>
-  <rect x="527" y="273" width="12" height="12" fill="#1a365d"/>
-  <rect x="543" y="273" width="8" height="8" fill="#1a365d"/>
-  <rect x="559" y="273" width="8" height="8" fill="#1a365d"/>
-  <rect x="575" y="273" width="12" height="12" fill="#1a365d"/>
-  <rect x="607" y="273" width="12" height="12" fill="#1a365d"/>
+    <rect x="545" y="318" width="6" height="6" rx="1"/>
+    <rect x="557" y="325" width="6" height="6" rx="1"/>
+    <rect x="569" y="318" width="6" height="6" rx="1"/>
+    <rect x="581" y="325" width="6" height="6" rx="1"/>
+    <rect x="593" y="318" width="6" height="6" rx="1"/>
+    <rect x="605" y="325" width="6" height="6" rx="1"/>
+    <rect x="617" y="318" width="6" height="6" rx="1"/>
+    <rect x="629" y="325" width="6" height="6" rx="1"/>
+    <rect x="641" y="318" width="6" height="6" rx="1"/>
 
-  <rect x="495" y="289" width="12" height="12" fill="#1a365d"/>
-  <rect x="511" y="289" width="12" height="12" fill="#1a365d"/>
-  <rect x="527" y="289" width="12" height="12" fill="#1a365d"/>
-  <rect x="559" y="289" width="8" height="8" fill="#1a365d"/>
-  <rect x="575" y="289" width="12" height="12" fill="#1a365d"/>
-  <rect x="591" y="289" width="12" height="12" fill="#1a365d"/>
-  <rect x="607" y="289" width="12" height="12" fill="#1a365d"/>
+    <rect x="545" y="345" width="10" height="10" rx="1"/>
+    <rect x="557" y="345" width="10" height="10" rx="1"/>
+    <rect x="569" y="345" width="10" height="10" rx="1"/>
+    <rect x="545" y="357" width="10" height="10" rx="1"/>
+    <rect x="569" y="357" width="10" height="10" rx="1"/>
+    <rect x="545" y="369" width="10" height="10" rx="1"/>
+    <rect x="557" y="369" width="10" height="10" rx="1"/>
+    <rect x="569" y="369" width="10" height="10" rx="1"/>
+  </g>
 
-  <rect x="543" y="305" width="8" height="8" fill="#1a365d"/>
-  <rect x="559" y="305" width="8" height="8" fill="#1a365d"/>
-  <rect x="511" y="305" width="8" height="8" fill="#1a365d"/>
+  <!-- Manual entry -->
+  <text x="600" y="425" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#86868b" text-anchor="middle">Or enter manually:</text>
 
-  <rect x="495" y="321" width="12" height="12" fill="#1a365d"/>
-  <rect x="511" y="321" width="12" height="12" fill="#1a365d"/>
-  <rect x="527" y="321" width="12" height="12" fill="#1a365d"/>
-  <rect x="543" y="321" width="12" height="12" fill="#1a365d"/>
-  <rect x="559" y="321" width="8" height="8" fill="#1a365d"/>
-  <rect x="575" y="321" width="12" height="12" fill="#1a365d"/>
-  <rect x="591" y="321" width="12" height="12" fill="#1a365d"/>
-  <rect x="607" y="321" width="12" height="12" fill="#1a365d"/>
+  <!-- Code box -->
+  <rect x="450" y="440" width="300" height="40" rx="8" fill="#f5f5f7"/>
+  <text x="600" y="465" font-family="SF Mono, Menlo, monospace" font-size="14" font-weight="500" fill="#1d1d1f" text-anchor="middle">JBSWY3DPEHPK3PXP</text>
 
-  <rect x="495" y="337" width="12" height="12" fill="#1a365d"/>
-  <rect x="527" y="337" width="8" height="8" fill="#1a365d"/>
-  <rect x="543" y="337" width="8" height="8" fill="#1a365d"/>
-  <rect x="575" y="337" width="12" height="12" fill="#1a365d"/>
-  <rect x="607" y="337" width="12" height="12" fill="#1a365d"/>
-
-  <rect x="495" y="353" width="12" height="12" fill="#1a365d"/>
-  <rect x="511" y="353" width="12" height="12" fill="#1a365d"/>
-  <rect x="527" y="353" width="12" height="12" fill="#1a365d"/>
-  <rect x="559" y="349" width="8" height="8" fill="#1a365d"/>
-  <rect x="575" y="353" width="12" height="12" fill="#1a365d"/>
-  <rect x="591" y="353" width="12" height="12" fill="#1a365d"/>
-  <rect x="607" y="353" width="12" height="12" fill="#1a365d"/>
-
-  <text x="560" y="385" font-family="Inter, -apple-system, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Scan with authenticator app</text>
-
-  <!-- Manual Entry Code -->
-  <text x="600" y="415" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">Or enter this code manually:</text>
-  <rect x="440" y="425" width="240" height="36" rx="6" fill="#f1f5f9" stroke="#d1d5db" stroke-width="1"/>
-  <text x="560" y="449" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1a365d" text-anchor="middle" letter-spacing="2">JBSWY3DPEHPK3PXP</text>
-
-  <!-- 6-digit code input -->
-  <text x="600" y="490" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#374151" text-anchor="middle">Enter 6-digit verification code</text>
-
-  <!-- Individual digit boxes -->
-  <rect x="420" y="500" width="44" height="52" rx="6" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1.5"/>
-  <rect x="474" y="500" width="44" height="52" rx="6" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1.5"/>
-  <rect x="528" y="500" width="44" height="52" rx="6" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1.5"/>
-  <!-- Separator -->
-  <rect x="580" y="522" width="8" height="4" rx="2" fill="#d1d5db"/>
-  <rect x="592" y="522" width="8" height="4" rx="2" fill="#d1d5db"/>
-  <rect x="610" y="500" width="44" height="52" rx="6" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1.5"/>
-  <rect x="664" y="500" width="44" height="52" rx="6" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1.5"/>
-  <rect x="718" y="500" width="44" height="52" rx="6" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1.5"/>
-
-  <!-- Underscore placeholders -->
-  <text x="442" y="534" font-family="Inter, -apple-system, sans-serif" font-size="22" fill="#9ca3af" text-anchor="middle">_</text>
-  <text x="496" y="534" font-family="Inter, -apple-system, sans-serif" font-size="22" fill="#9ca3af" text-anchor="middle">_</text>
-  <text x="550" y="534" font-family="Inter, -apple-system, sans-serif" font-size="22" fill="#9ca3af" text-anchor="middle">_</text>
-  <text x="632" y="534" font-family="Inter, -apple-system, sans-serif" font-size="22" fill="#9ca3af" text-anchor="middle">_</text>
-  <text x="686" y="534" font-family="Inter, -apple-system, sans-serif" font-size="22" fill="#9ca3af" text-anchor="middle">_</text>
-  <text x="740" y="534" font-family="Inter, -apple-system, sans-serif" font-size="22" fill="#9ca3af" text-anchor="middle">_</text>
+  <!-- 6 Digit Input Boxes -->
+  <g transform="translate(405, 500)">
+    <rect x="0" y="0" width="48" height="56" rx="10" fill="#f5f5f7"/>
+    <rect x="62" y="0" width="48" height="56" rx="10" fill="#f5f5f7"/>
+    <rect x="124" y="0" width="48" height="56" rx="10" fill="#f5f5f7"/>
+    <rect x="196" y="0" width="48" height="56" rx="10" fill="#f5f5f7"/>
+    <rect x="258" y="0" width="48" height="56" rx="10" fill="#f5f5f7"/>
+    <rect x="320" y="0" width="48" height="56" rx="10" fill="#f5f5f7"/>
+  </g>
 
   <!-- Verify Button -->
-  <rect x="450" y="570" width="220" height="44" rx="8" fill="#2563eb"/>
-  <text x="560" y="597" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#ffffff" text-anchor="middle">Verify &amp; Enable</text>
-
-  <!-- Helper text -->
-  <text x="600" y="640" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">Enter the 6-digit code from your authenticator app</text>
-
-  <!-- Footer -->
-  <rect x="0" y="660" width="1200" height="40" fill="#f1f5f9"/>
-  <line x1="0" y1="660" x2="1200" y2="660" stroke="#e2e8f0" stroke-width="1"/>
-  <text x="600" y="685" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">OECD Automatic Exchange of Information (AEOI)</text>
+  <rect x="430" y="590" width="340" height="50" rx="10" fill="#0071e3"/>
+  <text x="600" y="621" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="16" font-weight="500" fill="#ffffff" text-anchor="middle">Verify &amp; Enable</text>
 </svg>

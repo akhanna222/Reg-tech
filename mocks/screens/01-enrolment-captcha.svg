@@ -1,61 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Page Background -->
+  <rect width="1200" height="800" fill="#fafafa"/>
+
+  <!-- Header -->
+  <rect width="1200" height="64" fill="#ffffff"/>
+  <line x1="0" y1="64" x2="1200" y2="64" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Logo -->
+  <text x="40" y="38" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="18" font-weight="700" fill="#1d1d1f">OECD AEOI</text>
+  <circle cx="127" cy="33" r="3" fill="#0071e3"/>
+  <text x="145" y="38" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#86868b">Tax Reporting Portal</text>
+
+  <!-- Card Shadow Filter -->
   <defs>
-    <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.1"/>
-    </filter>
-    <filter id="shadow-sm" x="-1%" y="-1%" width="102%" height="102%">
-      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-opacity="0.08"/>
+    <filter id="cardShadow" x="-20" y="-20" width="calc(100% + 40)" height="calc(100% + 40)">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-opacity="0.04" flood-color="#000000"/>
     </filter>
   </defs>
 
-  <!-- Background -->
-  <rect width="1200" height="800" fill="#f8fafc"/>
+  <!-- Centered Card -->
+  <rect x="360" y="180" width="480" height="460" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
 
-  <!-- Header Bar -->
-  <rect width="1200" height="64" fill="#1a365d"/>
-  <text x="40" y="38" font-family="Inter, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#ffffff">OECD AEOI Tax Information Reporting Portal</text>
-  <text x="40" y="54" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#94a3b8">OECD Common Reporting Standard (CRS) · Common Transmission System (CTS)</text>
+  <!-- Lock Icon (line art) -->
+  <g transform="translate(576, 220)">
+    <rect x="8" y="20" width="32" height="24" rx="4" stroke="#86868b" stroke-width="1.5" fill="none"/>
+    <path d="M14 20V14C14 8.477 18.477 4 24 4C29.523 4 34 8.477 34 14V20" stroke="#86868b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <circle cx="24" cy="33" r="2.5" fill="#86868b"/>
+  </g>
 
-  <!-- Coat of Arms placeholder -->
-  <circle cx="1140" cy="32" r="18" fill="none" stroke="#4a7ab5" stroke-width="1.5"/>
-  <text x="1140" y="36" font-family="Inter, -apple-system, sans-serif" font-size="9" fill="#4a7ab5" text-anchor="middle">GOV</text>
+  <!-- Title -->
+  <text x="600" y="295" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="24" font-weight="600" fill="#1d1d1f" text-anchor="middle">Verify your identity</text>
 
-  <!-- Main Content Card -->
-  <rect x="350" y="200" width="500" height="380" rx="12" fill="#ffffff" filter="url(#shadow)"/>
-
-  <!-- Card Header -->
-  <text x="600" y="260" font-family="Inter, -apple-system, sans-serif" font-size="24" font-weight="600" fill="#1a365d" text-anchor="middle">Security Verification</text>
-  <text x="600" y="290" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#64748b" text-anchor="middle">Please complete the verification below to continue</text>
-
-  <!-- Divider -->
-  <line x1="390" y1="310" x2="810" y2="310" stroke="#e2e8f0" stroke-width="1"/>
+  <!-- Subtitle -->
+  <text x="600" y="325" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="15" fill="#6e6e73" text-anchor="middle">Complete the security check to begin enrolment</text>
 
   <!-- reCAPTCHA Box -->
-  <rect x="420" y="340" width="360" height="80" rx="4" fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+  <rect x="410" y="365" width="380" height="76" rx="12" fill="#f5f5f7" stroke="#e8e8ed" stroke-width="1"/>
 
   <!-- Checkbox -->
-  <rect x="445" y="367" width="24" height="24" rx="3" fill="#ffffff" stroke="#c4c4c4" stroke-width="2"/>
+  <rect x="434" y="391" width="24" height="24" rx="4" fill="#ffffff" stroke="#d1d1d6" stroke-width="1.5"/>
 
-  <!-- "I'm not a robot" text -->
-  <text x="485" y="384" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#374151">I'm not a robot</text>
+  <!-- Checkbox label -->
+  <text x="472" y="408" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#1d1d1f">I'm not a robot</text>
 
-  <!-- reCAPTCHA logo area -->
-  <rect x="700" y="350" width="60" height="60" rx="4" fill="none"/>
-  <path d="M720 370 L740 370 L740 390 L720 390 Z" fill="none" stroke="#4285f4" stroke-width="2"/>
-  <path d="M730 375 L735 380 L725 390" fill="none" stroke="#4285f4" stroke-width="2"/>
-  <text x="730" y="405" font-family="Inter, -apple-system, sans-serif" font-size="8" fill="#9ca3af" text-anchor="middle">reCAPTCHA</text>
-  <text x="730" y="413" font-family="Inter, -apple-system, sans-serif" font-size="7" fill="#bdbdbd" text-anchor="middle">Privacy - Terms</text>
+  <!-- reCAPTCHA logo placeholder -->
+  <g transform="translate(720, 385)">
+    <rect width="48" height="48" rx="4" fill="none"/>
+    <path d="M24 8L24 20M24 20L32 14M24 20L16 14" stroke="#86868b" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <text x="24" y="42" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="8" fill="#86868b" text-anchor="middle">reCAPTCHA</text>
+  </g>
 
-  <!-- Next Button (disabled state) -->
-  <rect x="450" y="460" width="300" height="48" rx="8" fill="#93b4e8" opacity="0.7"/>
-  <text x="600" y="490" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="500" fill="#ffffff" text-anchor="middle">Next</text>
-
-  <!-- Helper text -->
-  <text x="600" y="535" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Complete the CAPTCHA to proceed to enrolment</text>
+  <!-- Continue Button -->
+  <rect x="410" y="475" width="380" height="50" rx="10" fill="#0071e3"/>
+  <text x="600" y="505" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="16" font-weight="500" fill="#ffffff" text-anchor="middle">Continue</text>
 
   <!-- Footer -->
-  <rect x="0" y="740" width="1200" height="60" fill="#f1f5f9"/>
-  <line x1="0" y1="740" x2="1200" y2="740" stroke="#e2e8f0" stroke-width="1"/>
-  <text x="600" y="770" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">OECD Automatic Exchange of Information (AEOI) | CRS · CbC · FATCA</text>
-  <text x="600" y="788" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Powered by OECD Common Transmission System (CTS)</text>
+  <text x="600" y="760" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" fill="#c7c7cc" text-anchor="middle">OECD Common Reporting Standard</text>
 </svg>

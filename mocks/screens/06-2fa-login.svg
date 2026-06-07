@@ -1,66 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+<svg width="1200" height="600" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Page Background -->
+  <rect width="1200" height="600" fill="#fafafa"/>
+
+  <!-- Header -->
+  <rect width="1200" height="64" fill="#ffffff"/>
+  <line x1="0" y1="64" x2="1200" y2="64" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Logo -->
+  <text x="40" y="38" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="18" font-weight="700" fill="#1d1d1f">OECD AEOI</text>
+  <circle cx="127" cy="33" r="3" fill="#0071e3"/>
+  <text x="145" y="38" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#86868b">Tax Reporting Portal</text>
+
+  <!-- Card Shadow Filter -->
   <defs>
-    <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
-      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-opacity="0.1"/>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-opacity="0.04" flood-color="#000000"/>
     </filter>
   </defs>
 
-  <!-- Background -->
-  <rect width="1200" height="600" fill="#f8fafc"/>
+  <!-- Centered Card -->
+  <rect x="390" y="110" width="420" height="400" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
 
-  <!-- Header Bar -->
-  <rect width="1200" height="64" fill="#1a365d"/>
-  <text x="40" y="38" font-family="Inter, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#ffffff">OECD AEOI Tax Information Reporting Portal</text>
-  <text x="40" y="54" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#94a3b8">OECD Automatic Exchange of Information</text>
-  <circle cx="1140" cy="32" r="18" fill="none" stroke="#4a7ab5" stroke-width="1.5"/>
-  <text x="1140" y="36" font-family="Inter, -apple-system, sans-serif" font-size="9" fill="#4a7ab5" text-anchor="middle">GOV</text>
-
-  <!-- 2FA Verification Card -->
-  <rect x="375" y="120" width="450" height="380" rx="12" fill="#ffffff" filter="url(#shadow)"/>
-
-  <!-- Shield Icon -->
-  <circle cx="600" cy="180" r="32" fill="#eff6ff"/>
-  <!-- Shield shape -->
-  <path d="M600 158 L620 165 L620 183 C620 195 612 205 600 210 C588 205 580 195 580 183 L580 165 Z" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linejoin="round"/>
-  <!-- Checkmark inside shield -->
-  <path d="M591 182 L597 188 L610 175" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Shield/Lock Icon -->
+  <g transform="translate(581, 145)">
+    <rect x="6" y="16" width="26" height="20" rx="3" stroke="#1d1d1f" stroke-width="1.5" fill="none"/>
+    <path d="M11 16V11C11 6.582 14.582 3 19 3C23.418 3 27 6.582 27 11V16" stroke="#1d1d1f" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <circle cx="19" cy="27" r="2" fill="#0071e3"/>
+  </g>
 
   <!-- Title -->
-  <text x="600" y="240" font-family="Inter, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#1a365d" text-anchor="middle">Two-Factor Verification</text>
-  <text x="600" y="268" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#64748b" text-anchor="middle">Enter the code from your authenticator app</text>
+  <text x="600" y="210" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="22" font-weight="600" fill="#1d1d1f" text-anchor="middle">Enter verification code</text>
+  <text x="600" y="238" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#6e6e73" text-anchor="middle">Open your authenticator app and enter the 6-digit code</text>
 
-  <!-- 6-digit code input -->
-  <rect x="430" y="295" width="44" height="52" rx="6" fill="#f7f8fa" stroke="#2563eb" stroke-width="2"/>
-  <rect x="482" y="295" width="44" height="52" rx="6" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1.5"/>
-  <rect x="534" y="295" width="44" height="52" rx="6" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1.5"/>
-  <!-- Separator dots -->
-  <circle cx="590" cy="321" r="3" fill="#d1d5db"/>
-  <rect x="602" y="295" width="44" height="52" rx="6" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1.5"/>
-  <rect x="654" y="295" width="44" height="52" rx="6" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1.5"/>
-  <rect x="706" y="295" width="44" height="52" rx="6" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1.5"/>
+  <!-- 6 Digit Input Boxes -->
+  <g transform="translate(412, 270)">
+    <rect x="0" y="0" width="48" height="56" rx="10" fill="#f5f5f7"/>
+    <rect x="60" y="0" width="48" height="56" rx="10" fill="#f5f5f7"/>
+    <rect x="120" y="0" width="48" height="56" rx="10" fill="#ffffff" stroke="#0071e3" stroke-width="2"/>
+    <rect x="180" y="0" width="48" height="56" rx="10" fill="#f5f5f7"/>
+    <rect x="240" y="0" width="48" height="56" rx="10" fill="#f5f5f7"/>
+    <rect x="300" y="0" width="48" height="56" rx="10" fill="#f5f5f7"/>
+  </g>
 
-  <!-- Cursor in first box -->
-  <line x1="452" y1="308" x2="452" y2="335" stroke="#2563eb" stroke-width="2" opacity="0.7"/>
-
-  <!-- Underscore placeholders -->
-  <text x="504" y="329" font-family="Inter, -apple-system, sans-serif" font-size="22" fill="#9ca3af" text-anchor="middle">_</text>
-  <text x="556" y="329" font-family="Inter, -apple-system, sans-serif" font-size="22" fill="#9ca3af" text-anchor="middle">_</text>
-  <text x="624" y="329" font-family="Inter, -apple-system, sans-serif" font-size="22" fill="#9ca3af" text-anchor="middle">_</text>
-  <text x="676" y="329" font-family="Inter, -apple-system, sans-serif" font-size="22" fill="#9ca3af" text-anchor="middle">_</text>
-  <text x="728" y="329" font-family="Inter, -apple-system, sans-serif" font-size="22" fill="#9ca3af" text-anchor="middle">_</text>
+  <!-- Cursor in active box -->
+  <rect x="546" y="286" width="2" height="24" rx="1" fill="#0071e3" opacity="0.8"/>
 
   <!-- Verify Button -->
-  <rect x="430" y="375" width="320" height="48" rx="8" fill="#2563eb"/>
-  <text x="590" y="405" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">Verify</text>
+  <rect x="430" y="370" width="340" height="50" rx="10" fill="#0071e3"/>
+  <text x="600" y="401" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="16" font-weight="500" fill="#ffffff" text-anchor="middle">Verify</text>
 
-  <!-- Having trouble link -->
-  <text x="600" y="455" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#2563eb" text-anchor="middle" text-decoration="underline">Having trouble?</text>
-
-  <!-- Helper text -->
-  <text x="600" y="480" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#9ca3af" text-anchor="middle">Code expires in 30 seconds</text>
-
-  <!-- Footer -->
-  <rect x="0" y="555" width="1200" height="45" fill="#f1f5f9"/>
-  <line x1="0" y1="555" x2="1200" y2="555" stroke="#e2e8f0" stroke-width="1"/>
-  <text x="600" y="582" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">OECD Automatic Exchange of Information (AEOI)</text>
+  <!-- Backup code link -->
+  <text x="600" y="450" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#86868b" text-anchor="middle">Use backup code</text>
 </svg>

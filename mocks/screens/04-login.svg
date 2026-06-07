@@ -1,66 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Page Background -->
+  <rect width="1200" height="700" fill="#fafafa"/>
+
+  <!-- Header -->
+  <rect width="1200" height="64" fill="#ffffff"/>
+  <line x1="0" y1="64" x2="1200" y2="64" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Logo -->
+  <text x="40" y="38" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="18" font-weight="700" fill="#1d1d1f">OECD AEOI</text>
+  <circle cx="127" cy="33" r="3" fill="#0071e3"/>
+  <text x="145" y="38" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#86868b">Tax Reporting Portal</text>
+
+  <!-- Card Shadow Filter -->
   <defs>
-    <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
-      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-opacity="0.1"/>
-    </filter>
-    <filter id="shadow-lg" x="-3%" y="-3%" width="106%" height="106%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.12"/>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-opacity="0.04" flood-color="#000000"/>
     </filter>
   </defs>
 
-  <!-- Background -->
-  <rect width="1200" height="700" fill="#f8fafc"/>
+  <!-- Centered Card -->
+  <rect x="390" y="120" width="420" height="490" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
 
-  <!-- Header Bar -->
-  <rect width="1200" height="64" fill="#1a365d"/>
-  <text x="40" y="38" font-family="Inter, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#ffffff">OECD AEOI Tax Information Reporting Portal</text>
-  <text x="40" y="54" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#94a3b8">OECD Automatic Exchange of Information</text>
-  <circle cx="1140" cy="32" r="18" fill="none" stroke="#4a7ab5" stroke-width="1.5"/>
-  <text x="1140" y="36" font-family="Inter, -apple-system, sans-serif" font-size="9" fill="#4a7ab5" text-anchor="middle">GOV</text>
+  <!-- Title -->
+  <text x="600" y="180" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="28" font-weight="700" fill="#1d1d1f" text-anchor="middle">Welcome back</text>
+  <text x="600" y="208" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="15" fill="#6e6e73" text-anchor="middle">Sign in to OECD Tax Reporting Portal</text>
 
-  <!-- Login Card -->
-  <rect x="400" y="150" width="400" height="430" rx="12" fill="#ffffff" filter="url(#shadow-lg)"/>
+  <!-- Email Input -->
+  <text x="430" y="255" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#1d1d1f">Email</text>
+  <rect x="430" y="265" width="340" height="48" rx="10" fill="#f5f5f7"/>
+  <text x="450" y="295" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#86868b">name@company.com</text>
 
-  <!-- Lock Icon -->
-  <circle cx="600" cy="210" r="28" fill="#eff6ff"/>
-  <rect x="588" y="200" width="24" height="20" rx="4" fill="none" stroke="#2563eb" stroke-width="2.5"/>
-  <path d="M592 200 L592 193 C592 187 596 183 600 183 C604 183 608 187 608 193 L608 200" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
-  <circle cx="600" cy="212" r="3" fill="#2563eb"/>
+  <!-- Password Input -->
+  <text x="430" y="340" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#1d1d1f">Password</text>
+  <rect x="430" y="350" width="340" height="48" rx="10" fill="#f5f5f7"/>
+  <text x="450" y="380" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#86868b">Enter your password</text>
 
-  <!-- Sign In Heading -->
-  <text x="600" y="270" font-family="Inter, -apple-system, sans-serif" font-size="22" font-weight="600" fill="#1a365d" text-anchor="middle">Sign In</text>
-  <text x="600" y="295" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#64748b" text-anchor="middle">OECD Common Reporting Standard Portal</text>
-
-  <!-- Email Field -->
-  <text x="440" y="335" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#374151">Email Address</text>
-  <rect x="440" y="345" width="320" height="44" rx="6" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1"/>
-  <text x="460" y="372" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#9ca3af">name@company.com</text>
-
-  <!-- Password Field -->
-  <text x="440" y="415" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#374151">Password</text>
-  <rect x="440" y="425" width="320" height="44" rx="6" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1"/>
-  <text x="460" y="452" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#9ca3af">Enter your password</text>
-  <!-- Eye icon -->
-  <circle cx="735" cy="447" r="6" fill="none" stroke="#9ca3af" stroke-width="1.5"/>
-  <line x1="725" y1="447" x2="745" y2="447" stroke="none"/>
-  <ellipse cx="735" cy="447" rx="10" ry="7" fill="none" stroke="#9ca3af" stroke-width="1.5"/>
-
-  <!-- Forgot Password Link -->
-  <text x="760" y="490" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#2563eb" text-anchor="end" text-decoration="underline">Forgot Password?</text>
+  <!-- Forgot Password -->
+  <text x="770" y="418" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#0071e3" text-anchor="end">Forgot password?</text>
 
   <!-- Sign In Button -->
-  <rect x="440" y="505" width="320" height="48" rx="8" fill="#2563eb"/>
-  <text x="600" y="535" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">Sign In</text>
+  <rect x="430" y="435" width="340" height="50" rx="10" fill="#0071e3"/>
+  <text x="600" y="466" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="16" font-weight="500" fill="#ffffff" text-anchor="middle">Sign In</text>
 
   <!-- Divider -->
-  <line x1="440" y1="570" x2="760" y2="570" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="430" y1="512" x2="565" y2="512" stroke="#f0f0f0" stroke-width="1"/>
+  <text x="600" y="516" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" fill="#86868b" text-anchor="middle">or</text>
+  <line x1="635" y1="512" x2="770" y2="512" stroke="#f0f0f0" stroke-width="1"/>
 
-  <!-- New user link -->
-  <text x="600" y="560" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">
-  </text>
-
-  <!-- Footer -->
-  <rect x="0" y="650" width="1200" height="50" fill="#f1f5f9"/>
-  <line x1="0" y1="650" x2="1200" y2="650" stroke="#e2e8f0" stroke-width="1"/>
-  <text x="600" y="680" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">OECD Automatic Exchange of Information (AEOI)</text>
+  <!-- SSO Button -->
+  <rect x="430" y="535" width="340" height="50" rx="10" fill="#f5f5f7"/>
+  <text x="600" y="566" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="15" font-weight="500" fill="#1d1d1f" text-anchor="middle">Sign in with SSO</text>
 </svg>

@@ -1,140 +1,93 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1400" viewBox="0 0 1200 1400">
+<svg width="1200" height="1400" viewBox="0 0 1200 1400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Page Background -->
+  <rect width="1200" height="1400" fill="#fafafa"/>
+
+  <!-- Header -->
+  <rect width="1200" height="64" fill="#ffffff"/>
+  <line x1="0" y1="64" x2="1200" y2="64" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Logo -->
+  <text x="40" y="38" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="18" font-weight="700" fill="#1d1d1f">OECD AEOI</text>
+  <circle cx="127" cy="33" r="3" fill="#0071e3"/>
+  <text x="145" y="38" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#86868b">Tax Reporting Portal</text>
+
+  <!-- Card Shadow Filter -->
   <defs>
-    <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.1"/>
-    </filter>
-    <filter id="shadow-sm" x="-1%" y="-1%" width="102%" height="102%">
-      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-opacity="0.06"/>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-opacity="0.04" flood-color="#000000"/>
     </filter>
   </defs>
 
-  <!-- Background -->
-  <rect width="1200" height="1400" fill="#f8fafc"/>
-
-  <!-- Header Bar -->
-  <rect width="1200" height="64" fill="#1a365d"/>
-  <text x="40" y="38" font-family="Inter, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#ffffff">OECD AEOI Tax Information Reporting Portal</text>
-  <text x="40" y="54" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#94a3b8">OECD Common Reporting Standard (CRS) · Common Transmission System (CTS)</text>
-  <circle cx="1140" cy="32" r="18" fill="none" stroke="#4a7ab5" stroke-width="1.5"/>
-  <text x="1140" y="36" font-family="Inter, -apple-system, sans-serif" font-size="9" fill="#4a7ab5" text-anchor="middle">GOV</text>
-
   <!-- Page Title -->
-  <text x="120" y="110" font-family="Inter, -apple-system, sans-serif" font-size="26" font-weight="700" fill="#1a365d">Reporting Entity &amp; Primary User Enrolment</text>
-  <text x="120" y="135" font-family="Inter, -apple-system, sans-serif" font-size="14" fill="#64748b">Complete all required fields to enrol your entity for tax information reporting</text>
+  <text x="240" y="130" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="32" font-weight="700" fill="#1d1d1f">Enrol your entity</text>
+  <text x="240" y="158" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="15" fill="#6e6e73">Register under OECD CRS / CbC framework</text>
 
-  <!-- Main Form Card -->
-  <rect x="100" y="155" width="1000" height="1200" rx="12" fill="#ffffff" filter="url(#shadow)"/>
+  <!-- Form Card -->
+  <rect x="240" y="190" width="720" height="1150" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
 
-  <!-- ====== Section 1: Reporting Entity Information ====== -->
-  <rect x="120" y="175" width="960" height="36" rx="6" fill="#f0f4f8"/>
-  <text x="140" y="199" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#1a365d">Section 1: Reporting Entity Information</text>
+  <!-- Section 1: Entity Information -->
+  <text x="280" y="240" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="11" font-weight="600" fill="#86868b" letter-spacing="1">ENTITY INFORMATION</text>
 
-  <!-- Reporting Entity Name -->
-  <text x="140" y="245" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#374151">Reporting Entity Name</text>
-  <text x="298" y="245" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#ef4444">*</text>
-  <rect x="140" y="255" width="540" height="40" rx="6" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1"/>
-  <text x="155" y="280" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#9ca3af">Enter legal name of entity</text>
-  <text x="140" y="310" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#9ca3af">Legal name of entity as registered</text>
+  <!-- Entity Name -->
+  <text x="280" y="280" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="500" fill="#1d1d1f">Entity Name</text>
+  <rect x="280" y="290" width="640" height="48" rx="10" fill="#f5f5f7"/>
+  <text x="300" y="320" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#86868b">Enter your entity's legal name</text>
 
   <!-- Entity Type -->
-  <text x="140" y="340" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#374151">Entity Type</text>
-  <text x="210" y="340" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#ef4444">*</text>
-  <rect x="140" y="350" width="540" height="40" rx="6" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1"/>
-  <text x="155" y="375" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#374151">OECD CRS Reporting Financial Institution</text>
-  <text x="655" y="375" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#6b7280">&#9662;</text>
+  <text x="280" y="368" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="500" fill="#1d1d1f">Entity Type</text>
+  <rect x="280" y="378" width="640" height="48" rx="10" fill="#f5f5f7"/>
+  <text x="300" y="408" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#6e6e73">Select entity type</text>
+  <!-- Chevron -->
+  <path d="M896 400L900 405L904 400" stroke="#86868b" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 
-  <!-- Reporting Type -->
-  <text x="140" y="415" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#374151">OECD Reporting Type</text>
-  <text x="229" y="415" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#ef4444">*</text>
-  <rect x="140" y="425" width="540" height="40" rx="6" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1"/>
-  <text x="155" y="450" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#374151">CRS</text>
-  <text x="655" y="450" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#6b7280">&#9662;</text>
-  <text x="140" y="480" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#9ca3af">Options: CRS, CbC, CRS &amp; CbC</text>
+  <!-- OECD Reporting Type -->
+  <text x="280" y="456" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="500" fill="#1d1d1f">OECD Reporting Type</text>
+  <rect x="280" y="466" width="640" height="48" rx="10" fill="#f5f5f7"/>
+  <text x="300" y="496" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#6e6e73">CRS / CbC / CRS &amp; CbC</text>
+  <path d="M896 488L900 493L904 488" stroke="#86868b" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 
   <!-- GIIN -->
-  <text x="140" y="510" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#374151">GIIN</text>
-  <text x="168" y="510" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#9ca3af">(optional)</text>
-  <rect x="140" y="520" width="540" height="40" rx="6" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1"/>
-  <text x="155" y="545" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#9ca3af">e.g. A1B2C3.00000.LE.060</text>
+  <text x="280" y="544" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="500" fill="#1d1d1f">GIIN</text>
+  <rect x="280" y="554" width="640" height="48" rx="10" fill="#f5f5f7"/>
+  <text x="300" y="584" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#86868b">Global Intermediary Identification Number</text>
 
-  <!-- Bermuda Registration Number -->
-  <text x="140" y="585" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#374151">Bermuda Registration Number</text>
-  <text x="357" y="585" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#ef4444">*</text>
-  <rect x="140" y="595" width="540" height="40" rx="6" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1"/>
-  <text x="155" y="620" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#9ca3af">Entity registration number</text>
+  <!-- Section 2: Primary Contact -->
+  <text x="280" y="650" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="11" font-weight="600" fill="#86868b" letter-spacing="1">PRIMARY CONTACT</text>
 
-  <!-- Address Fields -->
-  <text x="140" y="660" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#374151">Street Address</text>
-  <text x="243" y="660" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#ef4444">*</text>
-  <rect x="140" y="670" width="540" height="40" rx="6" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1"/>
+  <!-- Full Name -->
+  <text x="280" y="690" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="500" fill="#1d1d1f">Full Name</text>
+  <rect x="280" y="700" width="640" height="48" rx="10" fill="#f5f5f7"/>
+  <text x="300" y="730" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#86868b">Contact person's full name</text>
 
-  <!-- City and Postcode row -->
-  <text x="140" y="735" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#374151">City</text>
-  <text x="162" y="735" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#ef4444">*</text>
-  <rect x="140" y="745" width="260" height="40" rx="6" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1"/>
+  <!-- Email -->
+  <text x="280" y="778" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="500" fill="#1d1d1f">Email</text>
+  <rect x="280" y="788" width="640" height="48" rx="10" fill="#f5f5f7"/>
+  <text x="300" y="818" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#86868b">email@example.com</text>
 
-  <text x="420" y="735" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#374151">Postcode</text>
-  <rect x="420" y="745" width="130" height="40" rx="6" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1"/>
+  <!-- Position -->
+  <text x="280" y="866" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="500" fill="#1d1d1f">Position</text>
+  <rect x="280" y="876" width="308" height="48" rx="10" fill="#f5f5f7"/>
+  <text x="300" y="906" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#86868b">Job title</text>
 
-  <text x="570" y="735" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#374151">Country</text>
-  <text x="620" y="735" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#ef4444">*</text>
-  <rect x="570" y="745" width="200" height="40" rx="6" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1"/>
-  <text x="585" y="770" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#374151">Bermuda</text>
-  <text x="745" y="770" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#6b7280">&#9662;</text>
+  <!-- Phone -->
+  <text x="612" y="866" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="500" fill="#1d1d1f">Phone</text>
+  <rect x="612" y="876" width="308" height="48" rx="10" fill="#f5f5f7"/>
+  <text x="632" y="906" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#86868b">+1 (000) 000-0000</text>
 
-  <!-- ====== Section 2: Primary User Details ====== -->
-  <rect x="120" y="810" width="960" height="36" rx="6" fill="#f0f4f8"/>
-  <text x="140" y="834" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#1a365d">Section 2: Primary User Details</text>
+  <!-- Section 3: Documents -->
+  <text x="280" y="975" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="11" font-weight="600" fill="#86868b" letter-spacing="1">DOCUMENTS</text>
 
-  <!-- First Name / Last Name row -->
-  <text x="140" y="875" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#374151">First Name</text>
-  <text x="217" y="875" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#ef4444">*</text>
-  <rect x="140" y="885" width="260" height="40" rx="6" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1"/>
+  <!-- Upload Zone 1 -->
+  <rect x="280" y="995" width="308" height="120" rx="12" fill="none" stroke="#e0e0e5" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="434" y="1050" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="22" fill="#c7c7cc" text-anchor="middle">+</text>
+  <text x="434" y="1080" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#86868b" text-anchor="middle">Passport scan</text>
 
-  <text x="420" y="875" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#374151">Last Name</text>
-  <text x="496" y="875" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#ef4444">*</text>
-  <rect x="420" y="885" width="260" height="40" rx="6" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1"/>
-
-  <!-- Email Address -->
-  <text x="140" y="950" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#374151">Email Address</text>
-  <text x="237" y="950" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#ef4444">*</text>
-  <rect x="140" y="960" width="540" height="40" rx="6" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1"/>
-  <text x="155" y="985" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#9ca3af">name@company.com</text>
-
-  <!-- Position/Title -->
-  <text x="140" y="1025" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#374151">Position / Title</text>
-  <text x="245" y="1025" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#ef4444">*</text>
-  <rect x="140" y="1035" width="540" height="40" rx="6" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1"/>
-  <text x="155" y="1060" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#9ca3af">e.g. Compliance Officer</text>
-
-  <!-- Telephone Number -->
-  <text x="140" y="1100" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#374151">Telephone Number</text>
-  <text x="268" y="1100" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#ef4444">*</text>
-  <rect x="140" y="1110" width="540" height="40" rx="6" fill="#f7f8fa" stroke="#d1d5db" stroke-width="1"/>
-  <text x="155" y="1135" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#9ca3af">+1 (441) 000-0000</text>
-
-  <!-- ====== Section 3: Document Upload ====== -->
-  <rect x="120" y="1170" width="960" height="36" rx="6" fill="#f0f4f8"/>
-  <text x="140" y="1194" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#1a365d">Section 3: Document Upload</text>
-
-  <!-- Passport Scan Upload -->
-  <text x="140" y="1232" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#374151">Passport Scan</text>
-  <text x="232" y="1232" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#ef4444">*</text>
-  <rect x="140" y="1242" width="420" height="60" rx="8" fill="#fafbfc" stroke="#d1d5db" stroke-width="1" stroke-dasharray="6,3"/>
-  <text x="350" y="1270" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">Drag &amp; drop file here or click to browse</text>
-  <text x="350" y="1288" font-family="Inter, -apple-system, sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">PDF, JPG, PNG (max 5MB)</text>
-
-  <!-- Director Authorization Letter Upload -->
-  <text x="140" y="1325" font-family="Inter, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#374151">Director Authorization Letter</text>
-  <text x="347" y="1325" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#ef4444">*</text>
-  <rect x="140" y="1335" width="420" height="60" rx="8" fill="#fafbfc" stroke="#d1d5db" stroke-width="1" stroke-dasharray="6,3"/>
-  <text x="350" y="1363" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">Drag &amp; drop file here or click to browse</text>
-  <text x="350" y="1381" font-family="Inter, -apple-system, sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">PDF, JPG, PNG (max 5MB)</text>
-
-  <!-- Required field note -->
-  <text x="820" y="1232" font-family="Inter, -apple-system, sans-serif" font-size="11" fill="#ef4444">* Required fields</text>
+  <!-- Upload Zone 2 -->
+  <rect x="612" y="995" width="308" height="120" rx="12" fill="none" stroke="#e0e0e5" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="766" y="1050" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="22" fill="#c7c7cc" text-anchor="middle">+</text>
+  <text x="766" y="1080" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#86868b" text-anchor="middle">Authorization letter</text>
 
   <!-- Submit Button -->
-  <rect x="780" y="1300" width="240" height="48" rx="8" fill="#2563eb"/>
-  <text x="900" y="1330" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">Submit Enrolment</text>
+  <rect x="430" y="1170" width="340" height="52" rx="10" fill="#0071e3"/>
+  <text x="600" y="1202" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="16" font-weight="500" fill="#ffffff" text-anchor="middle">Submit Enrolment</text>
 </svg>
