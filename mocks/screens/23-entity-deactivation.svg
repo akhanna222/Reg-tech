@@ -1,0 +1,83 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-opacity="0.04"/>
+    </filter>
+  </defs>
+
+  <!-- Page Background -->
+  <rect width="1200" height="900" fill="#fafafa"/>
+
+  <!-- Header -->
+  <rect width="1200" height="56" fill="#ffffff"/>
+  <line x1="0" y1="56" x2="1200" y2="56" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Logo -->
+  <text x="40" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="17" font-weight="700" fill="#1d1d1f">OECD AEOI</text>
+  <circle cx="120" cy="30" r="3.5" fill="#0071e3"/>
+
+  <!-- Nav -->
+  <text x="180" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#6e6e73">Dashboard</text>
+  <text x="270" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#6e6e73">Enrolments</text>
+  <text x="370" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#6e6e73">Filings</text>
+  <text x="440" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="600" fill="#0071e3">Settings</text>
+  <text x="510" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#6e6e73">Analytics</text>
+
+  <!-- Title -->
+  <text x="40" y="112" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="28" font-weight="700" fill="#1d1d1f">Deactivate Entity</text>
+
+  <!-- Warning Banner -->
+  <rect x="40" y="132" width="1120" height="48" rx="10" fill="#fffbeb"/>
+  <text x="72" y="161" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="500" fill="#9a6700">This action will permanently deactivate your entity's reporting account.</text>
+
+  <!-- Form Card -->
+  <rect x="40" y="204" width="1120" height="640" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+
+  <!-- Reason Dropdown -->
+  <text x="72" y="244" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" font-weight="600" fill="#86868b" letter-spacing="0.3">REASON FOR DEACTIVATION</text>
+  <rect x="72" y="256" width="500" height="44" rx="10" fill="#f5f5f7"/>
+  <text x="88" y="283" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#1d1d1f">Dissolution of Company</text>
+  <text x="540" y="283" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#86868b">▾</text>
+
+  <!-- Date -->
+  <text x="72" y="330" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" font-weight="600" fill="#86868b" letter-spacing="0.3">EFFECTIVE DATE</text>
+  <rect x="72" y="342" width="240" height="44" rx="10" fill="#f5f5f7"/>
+  <text x="88" y="369" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#1d1d1f">15 March 2026</text>
+
+  <!-- Contact Information Section -->
+  <text x="72" y="420" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="15" font-weight="600" fill="#1d1d1f">Contact Information</text>
+  <rect x="72" y="436" width="500" height="40" rx="10" fill="#f5f5f7" opacity="0.7"/>
+  <text x="88" y="461" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#86868b">compliance@newdublinfinance.bm</text>
+  <rect x="72" y="486" width="500" height="40" rx="10" fill="#f5f5f7" opacity="0.7"/>
+  <text x="88" y="511" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#86868b">+1 441 555 0142</text>
+
+  <!-- Evidence Section -->
+  <text x="72" y="560" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="15" font-weight="600" fill="#1d1d1f">Evidence</text>
+  <text x="72" y="584" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" font-weight="600" fill="#86868b" letter-spacing="0.3">DOCUMENT TYPE</text>
+  <rect x="72" y="596" width="500" height="44" rx="10" fill="#f5f5f7"/>
+  <text x="88" y="623" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#1d1d1f">Certificate of Dissolution</text>
+  <text x="540" y="623" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#86868b">▾</text>
+
+  <!-- Upload zone -->
+  <rect x="72" y="656" width="500" height="60" rx="10" fill="#fafafa" stroke="#e5e5e5" stroke-width="1" stroke-dasharray="6 4"/>
+  <text x="322" y="690" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#86868b" text-anchor="middle">Drop file here or click to browse</text>
+
+  <!-- Checkboxes -->
+  <rect x="72" y="736" width="18" height="18" rx="4" fill="#0071e3"/>
+  <text x="77" y="750" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" fill="#ffffff">✓</text>
+  <text x="100" y="750" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#1d1d1f">All filing obligations fulfilled</text>
+
+  <rect x="72" y="766" width="18" height="18" rx="4" fill="#0071e3"/>
+  <text x="77" y="780" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" fill="#ffffff">✓</text>
+  <text x="100" y="780" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#1d1d1f">All CTS error notifications addressed</text>
+
+  <rect x="72" y="796" width="18" height="18" rx="4" fill="#0071e3"/>
+  <text x="77" y="810" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" fill="#ffffff">✓</text>
+  <text x="100" y="810" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#1d1d1f">Information is accurate</text>
+
+  <!-- Buttons -->
+  <rect x="72" y="844" width="240" height="44" rx="10" fill="#cf222e"/>
+  <text x="98" y="871" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="600" fill="#ffffff">Submit Deactivation Request</text>
+  <rect x="328" y="844" width="100" height="44" rx="10" fill="#f5f5f7"/>
+  <text x="358" y="871" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="500" fill="#1d1d1f">Cancel</text>
+</svg>
