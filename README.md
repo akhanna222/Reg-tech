@@ -81,7 +81,7 @@ If the partner sends back a **NACK** (rejection with OECD error codes like 80001
 
 ## Platform Features — Complete Capability Matrix
 
-Our platform combines the **government-to-government transmission pipeline** (like Regnology/Vizor) with **intelligent validation and onboarding** capabilities — delivering a single end-to-end solution.
+Our platform combines the **government-to-government transmission pipeline** with **intelligent validation and onboarding** capabilities — delivering a single end-to-end solution.
 
 ### Core Portals
 
