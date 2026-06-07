@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+  <defs>
+    <style>
+      text { font-family: Inter, -apple-system, sans-serif; }
+      .header-text { fill: #ffffff; font-size: 16px; font-weight: 600; }
+      .nav-text { fill: #cbd5e1; font-size: 13px; }
+      .nav-active { fill: #ffffff; font-weight: 600; }
+      .title { fill: #1e293b; font-size: 20px; font-weight: 700; }
+      .subtitle { fill: #64748b; font-size: 14px; }
+      .th { fill: #64748b; font-size: 11px; font-weight: 600; }
+      .cell { fill: #334155; font-size: 12px; }
+      .cell-bold { fill: #1e293b; font-size: 12px; font-weight: 600; }
+      .btn-text-sm { fill: #ffffff; font-size: 11px; font-weight: 600; }
+      .link { fill: #2563eb; font-size: 11px; text-decoration: underline; }
+      .section-title { fill: #64748b; font-size: 13px; font-weight: 600; }
+    </style>
+    <filter id="card-shadow" x="-2%" y="-5%" width="104%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="700" fill="#f8fafc"/>
+
+  <!-- Header -->
+  <rect width="1200" height="56" fill="#1a365d"/>
+  <text x="24" y="34" class="header-text">Bermuda Tax Information Reporting Portal — Administration</text>
+
+  <!-- Navigation -->
+  <rect x="0" y="56" width="1200" height="40" fill="#1e3a5f"/>
+  <text x="40" y="80" class="nav-text">Submissions</text>
+  <rect x="126" y="62" width="100" height="28" rx="4" fill="#2563eb"/>
+  <text x="144" y="80" class="nav-active" font-size="12">Enrolments</text>
+  <text x="252" y="80" class="nav-text">Transmission</text>
+  <text x="352" y="80" class="nav-text">Analytics</text>
+
+  <!-- Page Title -->
+  <text x="40" y="134" class="title">Pending Enrolment Reviews</text>
+  <text x="40" y="156" class="subtitle">Review and approve new entity registrations</text>
+
+  <!-- Stats -->
+  <rect x="40" y="172" width="140" height="50" rx="8" fill="#ffffff" filter="url(#card-shadow)"/>
+  <text x="64" y="198" fill="#1e293b" font-size="20" font-weight="700" font-family="Inter, -apple-system, sans-serif">2</text>
+  <text x="64" y="213" fill="#64748b" font-size="11" font-family="Inter, -apple-system, sans-serif">Pending Review</text>
+
+  <rect x="200" y="172" width="140" height="50" rx="8" fill="#ffffff" filter="url(#card-shadow)"/>
+  <text x="224" y="198" fill="#059669" font-size="20" font-weight="700" font-family="Inter, -apple-system, sans-serif">34</text>
+  <text x="224" y="213" fill="#64748b" font-size="11" font-family="Inter, -apple-system, sans-serif">Approved</text>
+
+  <rect x="360" y="172" width="140" height="50" rx="8" fill="#ffffff" filter="url(#card-shadow)"/>
+  <text x="384" y="198" fill="#dc2626" font-size="20" font-weight="700" font-family="Inter, -apple-system, sans-serif">3</text>
+  <text x="384" y="213" fill="#64748b" font-size="11" font-family="Inter, -apple-system, sans-serif">Rejected</text>
+
+  <!-- Table -->
+  <rect x="40" y="244" width="1120" height="36" rx="6" fill="#f1f5f9"/>
+  <text x="60" y="267" class="th">ENTITY NAME</text>
+  <text x="290" y="267" class="th">TYPE</text>
+  <text x="390" y="267" class="th">REPORTING</text>
+  <text x="490" y="267" class="th">SUBMITTED</text>
+  <text x="620" y="267" class="th">DOCUMENTS</text>
+  <text x="850" y="267" class="th">ACTIONS</text>
+
+  <!-- Row 1 -->
+  <rect x="40" y="280" width="1120" height="56" fill="#ffffff"/>
+  <line x1="40" y1="336" x2="1160" y2="336" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="60" y="313" class="cell-bold">New Dublin Finance Ltd</text>
+  <text x="290" y="313" class="cell">FI</text>
+  <text x="390" y="313" class="cell">CRS</text>
+  <text x="490" y="313" class="cell">12 Mar 2026</text>
+
+  <!-- Document links -->
+  <rect x="620" y="300" width="80" height="24" rx="4" fill="#eff6ff" stroke="#2563eb" stroke-width="0.5"/>
+  <text x="632" y="316" class="link">Passport ↓</text>
+  <rect x="710" y="300" width="70" height="24" rx="4" fill="#eff6ff" stroke="#2563eb" stroke-width="0.5"/>
+  <text x="722" y="316" class="link">Letter ↓</text>
+
+  <!-- Action buttons -->
+  <rect x="850" y="298" width="80" height="28" rx="4" fill="#059669"/>
+  <text x="862" y="316" class="btn-text-sm">Approve ✓</text>
+  <rect x="940" y="298" width="72" height="28" rx="4" fill="none" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="955" y="316" fill="#dc2626" font-size="11" font-weight="600" font-family="Inter, -apple-system, sans-serif">Reject ✗</text>
+
+  <!-- Row 2 -->
+  <rect x="40" y="336" width="1120" height="56" fill="#f8fafc"/>
+  <line x1="40" y1="392" x2="1160" y2="392" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="60" y="369" class="cell-bold">Bermuda Reinsurance (UPE)</text>
+  <text x="290" y="369" class="cell">Multinational</text>
+  <text x="390" y="369" class="cell">CbC</text>
+  <text x="490" y="369" class="cell">13 Mar 2026</text>
+
+  <!-- Document links -->
+  <rect x="620" y="356" width="80" height="24" rx="4" fill="#eff6ff" stroke="#2563eb" stroke-width="0.5"/>
+  <text x="632" y="372" class="link">Passport ↓</text>
+  <rect x="710" y="356" width="70" height="24" rx="4" fill="#eff6ff" stroke="#2563eb" stroke-width="0.5"/>
+  <text x="722" y="372" class="link">Letter ↓</text>
+
+  <!-- Action buttons -->
+  <rect x="850" y="354" width="80" height="28" rx="4" fill="#059669"/>
+  <text x="862" y="372" class="btn-text-sm">Approve ✓</text>
+  <rect x="940" y="354" width="72" height="28" rx="4" fill="none" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="955" y="372" fill="#dc2626" font-size="11" font-weight="600" font-family="Inter, -apple-system, sans-serif">Reject ✗</text>
+
+  <!-- History Section (Collapsed) -->
+  <rect x="40" y="420" width="1120" height="50" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="64" y="450" class="section-title">▶ Approved / Rejected History (37 entries)</text>
+
+  <!-- Recently Approved preview -->
+  <rect x="40" y="490" width="1120" height="160" rx="8" fill="#ffffff" filter="url(#card-shadow)"/>
+  <text x="64" y="518" fill="#1e293b" font-size="14" font-weight="600" font-family="Inter, -apple-system, sans-serif">Recent Activity</text>
+  <line x1="64" y1="530" x2="1136" y2="530" stroke="#e2e8f0" stroke-width="1"/>
+
+  <circle cx="80" cy="554" r="6" fill="#d1fae5"/>
+  <text x="96" y="558" fill="#334155" font-size="12" font-family="Inter, -apple-system, sans-serif">Celtic Financial Services — Approved on 10 Mar 2026 by admin@bma.bm</text>
+
+  <circle cx="80" cy="582" r="6" fill="#d1fae5"/>
+  <text x="96" y="586" fill="#334155" font-size="12" font-family="Inter, -apple-system, sans-serif">Hamilton Reinsurance Corp — Approved on 8 Mar 2026 by admin@bma.bm</text>
+
+  <circle cx="80" cy="610" r="6" fill="#fee2e2"/>
+  <text x="96" y="614" fill="#334155" font-size="12" font-family="Inter, -apple-system, sans-serif">Acme Holdings Ltd — Rejected on 5 Mar 2026 (incomplete documentation)</text>
+
+  <circle cx="80" cy="638" r="6" fill="#d1fae5"/>
+  <text x="96" y="642" fill="#334155" font-size="12" font-family="Inter, -apple-system, sans-serif">Schneider Finanz AG — Approved on 3 Mar 2026 by admin@bma.bm</text>
+</svg>

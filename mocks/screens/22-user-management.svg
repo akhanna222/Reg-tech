@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+  <defs>
+    <style>
+      text { font-family: Inter, -apple-system, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="700" fill="#f8fafc"/>
+
+  <!-- Header -->
+  <rect width="1200" height="64" fill="#1a365d"/>
+  <text x="40" y="38" fill="white" font-size="18" font-weight="700">Bermuda Tax Information Reporting Portal</text>
+  <rect x="520" y="18" width="80" height="30" rx="4" fill="transparent"/>
+  <text x="540" y="38" fill="#94a3b8" font-size="13" font-weight="500">Filings</text>
+  <rect x="610" y="18" width="120" height="30" rx="4" fill="#2d4a7a"/>
+  <text x="622" y="38" fill="white" font-size="13" font-weight="500">Administration</text>
+
+  <!-- Page Title + Create Button -->
+  <text x="40" y="116" fill="#1e293b" font-size="22" font-weight="700">Manage Users</text>
+  <rect x="1020" y="92" width="130" height="38" rx="6" fill="#2563eb"/>
+  <text x="1050" y="116" fill="white" font-size="13" font-weight="600">+ Create User</text>
+
+  <!-- Table Header -->
+  <rect x="40" y="150" width="1120" height="40" rx="6" fill="#f1f5f9"/>
+  <text x="60" y="175" fill="#475569" font-size="12" font-weight="700">Name</text>
+  <text x="220" y="175" fill="#475569" font-size="12" font-weight="700">Email</text>
+  <text x="430" y="175" fill="#475569" font-size="12" font-weight="700">Role</text>
+  <text x="600" y="175" fill="#475569" font-size="12" font-weight="700">Status</text>
+  <text x="730" y="175" fill="#475569" font-size="12" font-weight="700">Last Login</text>
+  <text x="890" y="175" fill="#475569" font-size="12" font-weight="700">Actions</text>
+
+  <!-- Row 1 -->
+  <rect x="40" y="190" width="1120" height="55" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="60" y="222" fill="#1e293b" font-size="13" font-weight="600">Sean Murphy</text>
+  <text x="220" y="222" fill="#475569" font-size="12">sean@celticfs.bm</text>
+  <text x="430" y="222" fill="#475569" font-size="12">Secondary User</text>
+  <circle cx="610" cy="218" r="5" fill="#059669"/>
+  <text x="622" y="222" fill="#059669" font-size="12" font-weight="500">Active</text>
+  <text x="730" y="222" fill="#475569" font-size="12">14 Mar 2026</text>
+  <rect x="880" y="208" width="50" height="26" rx="4" fill="white" stroke="#2563eb" stroke-width="1"/>
+  <text x="893" y="226" fill="#2563eb" font-size="11" font-weight="500">Edit</text>
+  <rect x="940" y="208" width="90" height="26" rx="4" fill="white" stroke="#dc2626" stroke-width="1"/>
+  <text x="952" y="226" fill="#dc2626" font-size="11" font-weight="500">Deactivate</text>
+
+  <!-- Row 2 -->
+  <rect x="40" y="245" width="1120" height="55" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="60" y="277" fill="#1e293b" font-size="13" font-weight="600">Fiona O'Brien</text>
+  <text x="220" y="277" fill="#475569" font-size="12">fiona@celticfs.bm</text>
+  <text x="430" y="277" fill="#475569" font-size="12">Secondary User</text>
+  <circle cx="610" cy="273" r="5" fill="#059669"/>
+  <text x="622" y="277" fill="#059669" font-size="12" font-weight="500">Active</text>
+  <text x="730" y="277" fill="#475569" font-size="12">10 Mar 2026</text>
+  <rect x="880" y="263" width="50" height="26" rx="4" fill="white" stroke="#2563eb" stroke-width="1"/>
+  <text x="893" y="281" fill="#2563eb" font-size="11" font-weight="500">Edit</text>
+  <rect x="940" y="263" width="90" height="26" rx="4" fill="white" stroke="#dc2626" stroke-width="1"/>
+  <text x="952" y="281" fill="#dc2626" font-size="11" font-weight="500">Deactivate</text>
+
+  <!-- Row 3 -->
+  <rect x="40" y="300" width="1120" height="55" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="60" y="332" fill="#1e293b" font-size="13" font-weight="600">Patrick Kelly</text>
+  <text x="220" y="332" fill="#475569" font-size="12">patrick@celticfs.bm</text>
+  <text x="430" y="332" fill="#475569" font-size="12">Secondary User</text>
+  <circle cx="610" cy="328" r="5" fill="#9ca3af"/>
+  <text x="622" y="332" fill="#6b7280" font-size="12" font-weight="500">Inactive</text>
+  <text x="730" y="332" fill="#475569" font-size="12">22 Jan 2026</text>
+  <rect x="880" y="318" width="50" height="26" rx="4" fill="white" stroke="#2563eb" stroke-width="1"/>
+  <text x="893" y="336" fill="#2563eb" font-size="11" font-weight="500">Edit</text>
+  <rect x="940" y="318" width="90" height="26" rx="4" fill="white" stroke="#059669" stroke-width="1"/>
+  <text x="952" y="336" fill="#059669" font-size="11" font-weight="500">Reactivate</text>
+
+  <!-- Note Banner -->
+  <rect x="40" y="390" width="1120" height="48" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <rect x="40" y="390" width="4" height="48" fill="#2563eb"/>
+  <text x="70" y="410" fill="#1e40af" font-size="12" font-weight="600">Note</text>
+  <text x="70" y="428" fill="#1e40af" font-size="12">Primary Users can create up to 2 Secondary Users. Secondary Users have the same permissions except user management.</text>
+</svg>
