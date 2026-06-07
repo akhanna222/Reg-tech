@@ -79,6 +79,152 @@ If the partner sends back a **NACK** (rejection with OECD error codes like 80001
 
 ---
 
+## Platform Features — Complete Capability Matrix
+
+Our platform combines the **government-to-government transmission pipeline** (like Regnology/Vizor) with **intelligent validation and onboarding** capabilities (like TAINA Tech) — delivering a single end-to-end solution.
+
+### Core Portals
+
+| Portal | Users | Purpose |
+|--------|-------|---------|
+| **Customer & Investor Portal** | Account holders, investors | Self-service tax form completion (W-series, CRS self-certifications) with guided journeys |
+| **FI Reporting Portal** | FI compliance teams | Enrol, create filings, upload XML, manual entry, track submissions, correct errors |
+| **Tax Authority Portal** | Government reviewers/approvers | Browse submissions, validate, approve, transmit via OECD CTS, monitor ACK/NACK |
+| **Analytics Dashboard** | TA enforcement teams | Cross-jurisdiction intelligence, anomaly detection, investigation queues |
+
+### Onboarding & Form Collection (Upstream)
+
+| Feature | Description | Metric Target |
+|---------|-------------|---------------|
+| **Smart Form Journeys** | "No tax form" questionnaire mode — interview-style questions instead of raw IRS/OECD forms | 63% faster completion |
+| **Mobile-Responsive Forms** | Complete W-8BEN, W-8BEN-E, W-9, CRS self-certs on any device | — |
+| **Real-Time Validation** | Instant error alerts before submission, built-in guidance from IRS/OECD rules | 85% fewer rejections |
+| **OCR & Scanned Forms** | Read handwritten/scanned forms, digitize and validate automatically | 99.8% typed accuracy |
+| **Side-by-Side Review** | Original PDF vs. digitized data comparison for back-office staff | — |
+| **Multi-Level Workflow** | 2-eye and 4-eye checks, expert reviewer assignment, override with justification | 75% faster validation |
+| **Supporting Doc Upload** | Inline document collection (passport, authorization letters, certificates) | — |
+| **Pre-Qualifying Logic** | Determine correct form type based on entity classification answers | — |
+| **Authentication** | Reference codes + 2FA for customer portal access | — |
+
+### Validation Engine (Core Processing)
+
+| Feature | Description | Metric Target |
+|---------|-------------|---------------|
+| **OECD XSD Schema Validation** | CRS v2.0, FATCA v2.0, CbC v1.0.1 structural compliance | — |
+| **Business Rules Engine** | TIN format validation (30+ jurisdictions), country codes, date ranges, mandatory fields | — |
+| **Cross-Record Validation** | Duplicate detection, aggregation checks, referential integrity | — |
+| **Jurisdiction-Specific Rules** | Hot-reloadable rules per country without platform redeployment | — |
+| **DocRefID Validation** | Format checks, CorrDocRefID reference integrity, no duplicates in same message | — |
+| **Warning Override Log** | Non-blocking warnings with acknowledgement trail | — |
+| **GIIN Validation** | Cross-check against IRS GIIN database for FATCA | — |
+| **Withholding Tax Calculator** | Automated rate determination across 28 income types | — |
+| **QI Logic** | Qualified Intermediary rules engine for complex reporting chains | — |
+| **IMY Multi-Tier Manager** | Intermediary entity chain visualization and allocation statements | — |
+
+### Filing & Submission (Downstream)
+
+| Feature | Description |
+|---------|-------------|
+| **XML Upload** | Drag-and-drop OECD CRS/FATCA/CbC XML with instant validation |
+| **Manual Entry** | Form-based account-by-account data entry with inline validation |
+| **Nil Filing** | Report "no reportable accounts" compliantly |
+| **Correction Filing** | CRS702/CBC402/FATCA704 flows with CorrDocRefID referencing |
+| **Save-as-Draft** | Preserve incomplete work, resume later |
+| **Filing Wizard** | Guided multi-step filing creation |
+| **Batch Upload** | Multiple filings in one session |
+| **Upload History** | Full version history of uploaded XML files |
+| **Submission History** | Archive of all submitted filings with download |
+
+### Transmission Pipeline (Government-to-Government)
+
+| Feature | Description |
+|---------|-------------|
+| **7-Step CTS Pipeline** | Validate → Lock → Package → Encrypt → Sign → SFTP → ACK/NACK |
+| **Per-Jurisdiction Encryption** | RSA-OAEP + AES-256-CBC hybrid, unique key per partner country |
+| **XMLDSig Digital Signing** | RSA-SHA256 signatures proving authenticity and non-repudiation |
+| **SFTP Transport** | Secure file transfer to OECD CTS with retry and exponential backoff |
+| **Batch Transmission** | Select and transmit multiple validated filings at once |
+| **ACK/NACK Processing** | Parse partner responses, update filing status, notify FIs |
+| **CTS Inbox Polling** | Scheduled monitoring (configurable interval) + manual poll trigger |
+| **Inbound Reception** | Decrypt, verify signature, validate XSD, ingest partner data |
+| **Status Response** | Generate and send ACK/NACK back to source jurisdictions |
+| **CTS Health Monitoring** | Real-time connectivity checks per jurisdiction |
+
+### Ongoing Monitoring & Compliance
+
+| Feature | Description |
+|---------|-------------|
+| **Change-in-Circumstance Detection** | Flag when entity status changes require re-classification |
+| **Form Expiration Tracking** | Alert when W-8 forms approach 3-year expiry |
+| **Ongoing Monitoring Rules** | Detect triggers requiring updated documentation |
+| **60-Day Correction Deadline** | Track and enforce OECD correction timeframes |
+| **Annual Compliance Certification** | CRS compliance certification form (jurisdiction-specific) |
+| **Entity Deactivation Workflow** | Structured process with evidence requirements and TA approval |
+
+### Analytics & Intelligence
+
+| Feature | Description |
+|---------|-------------|
+| **Submission Trend Dashboards** | Volume, entity, jurisdiction over time |
+| **Country-by-Country Comparison** | Side-by-side reporting across partner jurisdictions |
+| **FI Performance Metrics** | Timeliness, error rates, correction frequency per entity |
+| **Anomaly Detection** | Statistical outlier identification, sudden drops, late filings |
+| **Investigation Queue** | Prioritized anomaly list for enforcement teams |
+| **Cross-Jurisdiction Analysis** | Discrepancy identification between correspondent countries |
+| **Full-Text Search** | Search across normalized records by entity, TIN, account |
+| **Export & Reporting** | CSV/PDF generation for policy publication |
+| **Management Information** | Operational KPIs for portal administrators |
+
+### Security & Audit
+
+| Feature | Description |
+|---------|-------------|
+| **Mandatory 2FA (TOTP)** | Authenticator app requirement for all portal users |
+| **CAPTCHA** | Bot protection on public-facing forms |
+| **RBAC** | Role-based access (Primary User, Secondary User, TA Admin, TA Reviewer, TA Approver) |
+| **Immutable Audit Log** | Append-only WORM table — every action logged with actor, timestamp, IP, payload hash |
+| **End-to-End Encryption** | TLS 1.3 in transit, AES-256 at rest |
+| **Data Residency** | Configurable per jurisdiction |
+| **Session Management** | JWT with rotation, lockout after failures |
+| **Rate Limiting** | Per-IP and per-user throttling |
+| **AV Scanning** | Malware scan on all uploaded files |
+
+### Administration
+
+| Feature | Description |
+|---------|-------------|
+| **FI Enrolment & Approval** | Self-registration with TA review workflow |
+| **Secondary User Management** | Create, edit, deactivate (up to 2 per entity) |
+| **Primary User Change** | Formal change notice with TA approval |
+| **Entity Deactivation** | Evidence-based deactivation with 30-day review |
+| **Update Entity Details** | Change of Reporting Entity Information form |
+| **Credential Issuance** | Automated temp password + activation email on approval |
+| **Password Reset** | Self-service with policy enforcement |
+| **2FA Reset Paths** | Self-reset, primary-resets-secondary, multi-entity guard |
+
+### Integration & API
+
+| Feature | Description |
+|---------|-------------|
+| **Tax Form API** | Programmatic validation — embed into any system via REST API |
+| **Presigned Upload URLs** | Direct-to-storage uploads bypassing API server |
+| **Webhook Support** | CTS inbound notifications, status change callbacks |
+| **Email Notifications** | SMTP/SES for enrolment, submission, validation, transmission events |
+| **OECD Schema Registry** | Vendored XSD schemas (CRS v2.0, FATCA v2.0, CbC v1.0.1) |
+| **Configurable Rules** | JSON/YAML rule definitions hot-reloadable from database |
+
+### Future Roadmap
+
+| Feature | Standard | Timeline |
+|---------|----------|----------|
+| **CARF** | Crypto-Asset Reporting Framework (OECD) | 2026 reporting year |
+| **DAC8** | EU Directive for crypto reporting | 2026 first year |
+| **CRS 2.0** | Enhanced CRS with broader scope | Rolling implementation |
+| **AI-Powered Classification** | Auto-determine entity type from documents | Planned |
+| **Agentic Validation** | AI agents for complex multi-form review | Planned |
+
+---
+
 ## Jurisdictions
 
 | Jurisdiction | Reporting Regimes | Tax Authority |
