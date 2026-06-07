@@ -1,0 +1,103 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-opacity="0.04"/>
+    </filter>
+  </defs>
+
+  <!-- Page Background -->
+  <rect width="1200" height="800" fill="#fafafa"/>
+
+  <!-- Header -->
+  <rect width="1200" height="56" fill="#ffffff"/>
+  <line x1="0" y1="56" x2="1200" y2="56" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Logo -->
+  <text x="40" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="17" font-weight="700" fill="#1d1d1f">OECD AEOI</text>
+  <circle cx="120" cy="30" r="3.5" fill="#0071e3"/>
+
+  <!-- Nav -->
+  <text x="180" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#6e6e73">Dashboard</text>
+  <text x="270" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#6e6e73">Enrolments</text>
+  <text x="370" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="600" fill="#0071e3">Inbound</text>
+  <text x="440" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#6e6e73">Filings</text>
+  <text x="510" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#6e6e73">History</text>
+
+  <!-- Title -->
+  <text x="40" y="112" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="28" font-weight="700" fill="#1d1d1f">OECD CTS Inbound</text>
+
+  <!-- Top Row Cards -->
+  <!-- Card 1: Polling Status -->
+  <rect x="40" y="140" width="540" height="130" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+  <text x="72" y="172" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="600" fill="#86868b" letter-spacing="0.5">POLLING STATUS</text>
+  <circle cx="72" cy="200" r="4" fill="#1a7f37"/>
+  <text x="84" y="205" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="15" font-weight="500" fill="#1d1d1f">Active · Every 4 hours</text>
+  <text x="72" y="228" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#6e6e73">Last: 15 Mar, 16:00</text>
+  <rect x="440" y="198" width="100" height="34" rx="10" fill="#0071e3"/>
+  <text x="462" y="220" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Poll Now</text>
+
+  <!-- Card 2: CTS Health -->
+  <rect x="600" y="140" width="560" height="130" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+  <text x="632" y="172" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="600" fill="#86868b" letter-spacing="0.5">CTS HEALTH</text>
+  <!-- DE -->
+  <circle cx="644" cy="204" r="5" fill="#1a7f37"/>
+  <text x="658" y="209" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="500" fill="#1d1d1f">DE</text>
+  <text x="682" y="209" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#6e6e73">Connected</text>
+  <!-- FR -->
+  <circle cx="644" cy="232" r="5" fill="#1a7f37"/>
+  <text x="658" y="237" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="500" fill="#1d1d1f">FR</text>
+  <text x="682" y="237" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#6e6e73">Connected</text>
+  <!-- GB -->
+  <circle cx="800" cy="204" r="5" fill="#1a7f37"/>
+  <text x="814" y="209" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="500" fill="#1d1d1f">GB</text>
+  <text x="838" y="209" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#6e6e73">Connected</text>
+
+  <!-- Table Section -->
+  <rect x="40" y="300" width="1120" height="440" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+  <text x="72" y="340" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="17" font-weight="600" fill="#1d1d1f">Recent Inbound</text>
+
+  <!-- Table Header -->
+  <text x="72" y="385" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" font-weight="600" fill="#86868b" letter-spacing="0.3">SOURCE</text>
+  <text x="180" y="385" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" font-weight="600" fill="#86868b" letter-spacing="0.3">REFERENCE</text>
+  <text x="420" y="385" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" font-weight="600" fill="#86868b" letter-spacing="0.3">RECEIVED</text>
+  <text x="600" y="385" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" font-weight="600" fill="#86868b" letter-spacing="0.3">PIPELINE</text>
+  <text x="900" y="385" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" font-weight="600" fill="#86868b" letter-spacing="0.3">STATUS</text>
+
+  <line x1="72" y1="400" x2="1128" y2="400" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Row 1 -->
+  <text x="72" y="437" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="600" fill="#1d1d1f">DE</text>
+  <text x="180" y="437" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#1d1d1f">DE-BM-2025-001</text>
+  <text x="420" y="437" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#6e6e73">15 Mar 14:20</text>
+  <!-- Pipeline checks (4 green) -->
+  <text x="600" y="437" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#1a7f37">✓ ✓ ✓ ✓</text>
+  <!-- Status -->
+  <circle cx="910" cy="433" r="4" fill="#1a7f37"/>
+  <text x="920" y="437" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#1a7f37">Ingested</text>
+
+  <line x1="72" y1="456" x2="1128" y2="456" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Row 2 -->
+  <text x="72" y="493" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="600" fill="#1d1d1f">FR</text>
+  <text x="180" y="493" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#1d1d1f">FR-BM-2025-003</text>
+  <text x="420" y="493" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#6e6e73">15 Mar 16:45</text>
+  <!-- Pipeline checks (2 green, 1 red, 1 gray) -->
+  <text x="600" y="493" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#1a7f37">✓ ✓</text>
+  <text x="636" y="493" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#cf222e">✗</text>
+  <text x="652" y="493" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#86868b">○</text>
+  <!-- Status -->
+  <circle cx="910" cy="489" r="4" fill="#cf222e"/>
+  <text x="920" y="493" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#cf222e">Error</text>
+
+  <line x1="72" y1="512" x2="1128" y2="512" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Row 3 -->
+  <text x="72" y="549" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="600" fill="#1d1d1f">GB</text>
+  <text x="180" y="549" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#1d1d1f">GB-BM-2025-007</text>
+  <text x="420" y="549" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#6e6e73">15 Mar 17:00</text>
+  <!-- Pipeline checks (all gray) -->
+  <text x="600" y="549" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#86868b">○ ○ ○ ○</text>
+  <!-- Status -->
+  <circle cx="910" cy="545" r="4" fill="#0550ae"/>
+  <text x="920" y="549" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#0550ae">Received</text>
+</svg>

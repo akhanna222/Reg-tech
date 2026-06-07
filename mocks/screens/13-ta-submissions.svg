@@ -1,0 +1,120 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, SF Pro Display, Inter, sans-serif">
+  <defs>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-opacity="0.04"/>
+    </filter>
+    <filter id="bottomBarShadow">
+      <feDropShadow dx="0" dy="-4" stdDeviation="12" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Page background -->
+  <rect width="1200" height="800" fill="#fafafa"/>
+
+  <!-- Header -->
+  <rect width="1200" height="56" fill="#ffffff"/>
+  <line x1="0" y1="56" x2="1200" y2="56" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Logo -->
+  <text x="40" y="35" font-size="17" font-weight="600" fill="#1d1d1f">OECD AEOI</text>
+  <circle cx="108" cy="30" r="4" fill="#0071e3"/>
+
+  <!-- Nav pills -->
+  <rect x="380" y="14" width="100" height="28" rx="14" fill="#0071e3"/>
+  <text x="430" y="33" font-size="13" fill="#ffffff" text-anchor="middle">Submissions</text>
+  <rect x="490" y="14" width="92" height="28" rx="14" fill="#f5f5f7"/>
+  <text x="536" y="33" font-size="13" fill="#1d1d1f" text-anchor="middle">Enrolments</text>
+  <rect x="592" y="14" width="104" height="28" rx="14" fill="#f5f5f7"/>
+  <text x="644" y="33" font-size="13" fill="#1d1d1f" text-anchor="middle">Transmission</text>
+  <rect x="706" y="14" width="80" height="28" rx="14" fill="#f5f5f7"/>
+  <text x="746" y="33" font-size="13" fill="#1d1d1f" text-anchor="middle">Analytics</text>
+
+  <!-- Avatar -->
+  <circle cx="1140" cy="28" r="16" fill="#f5f5f7"/>
+  <text x="1140" y="33" font-size="11" font-weight="500" fill="#6e6e73" text-anchor="middle">AR</text>
+
+  <!-- Title -->
+  <text x="40" y="110" font-size="28" font-weight="600" fill="#1d1d1f">Submissions</text>
+
+  <!-- Filter row -->
+  <rect x="40" y="130" width="40" height="28" rx="8" fill="#f5f5f7"/>
+  <text x="60" y="149" font-size="12" fill="#1d1d1f" text-anchor="middle">All</text>
+  <rect x="90" y="130" width="82" height="28" rx="8" fill="#0071e3"/>
+  <text x="131" y="149" font-size="12" fill="#ffffff" text-anchor="middle">Validated</text>
+  <rect x="182" y="130" width="80" height="28" rx="8" fill="#f5f5f7"/>
+  <text x="222" y="149" font-size="12" fill="#1d1d1f" text-anchor="middle">Submitted</text>
+  <rect x="272" y="130" width="76" height="28" rx="8" fill="#f5f5f7"/>
+  <text x="310" y="149" font-size="12" fill="#1d1d1f" text-anchor="middle">Rejected</text>
+
+  <!-- Search input -->
+  <rect x="980" y="130" width="180" height="32" rx="10" fill="#f5f5f7"/>
+  <!-- Magnifying glass icon -->
+  <circle cx="998" cy="146" r="6" fill="none" stroke="#86868b" stroke-width="1.5"/>
+  <line x1="1003" y1="151" x2="1007" y2="155" stroke="#86868b" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="1016" y="151" font-size="13" fill="#86868b">Search...</text>
+
+  <!-- Table card -->
+  <rect x="40" y="182" width="1120" height="480" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+
+  <!-- Table header -->
+  <text x="88" y="218" font-size="11" fill="#86868b" font-weight="500">REFERENCE</text>
+  <text x="272" y="218" font-size="11" fill="#86868b" font-weight="500">ENTITY</text>
+  <text x="560" y="218" font-size="11" fill="#86868b" font-weight="500">TYPE</text>
+  <text x="640" y="218" font-size="11" fill="#86868b" font-weight="500">PERIOD</text>
+  <text x="740" y="218" font-size="11" fill="#86868b" font-weight="500">STATUS</text>
+  <text x="880" y="218" font-size="11" fill="#86868b" font-weight="500">DATE</text>
+  <line x1="64" y1="232" x2="1136" y2="232" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Row 1 -->
+  <circle cx="64" cy="268" r="9" fill="none" stroke="#d0d0d0" stroke-width="1.5"/>
+  <text x="88" y="273" font-size="13" fill="#1d1d1f" font-family="SF Mono, monospace">BM-2025-CRS-042</text>
+  <text x="272" y="273" font-size="13" fill="#1d1d1f">Celtic Financial Services</text>
+  <text x="560" y="273" font-size="13" fill="#6e6e73">CRS</text>
+  <text x="640" y="273" font-size="13" fill="#6e6e73">2025</text>
+  <rect x="740" y="257" width="76" height="22" rx="11" fill="#e8faf0"/>
+  <circle cx="752" cy="268" r="3" fill="#1a7f37"/>
+  <text x="762" y="273" font-size="12" fill="#1a7f37">Validated</text>
+  <text x="880" y="273" font-size="13" fill="#6e6e73">15 Mar</text>
+  <line x1="64" y1="296" x2="1136" y2="296" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Row 2 -->
+  <circle cx="64" cy="332" r="9" fill="none" stroke="#d0d0d0" stroke-width="1.5"/>
+  <text x="88" y="337" font-size="13" fill="#1d1d1f" font-family="SF Mono, monospace">BM-2025-CRS-043</text>
+  <text x="272" y="337" font-size="13" fill="#1d1d1f">Dublin Investment Bank</text>
+  <text x="560" y="337" font-size="13" fill="#6e6e73">CRS</text>
+  <text x="640" y="337" font-size="13" fill="#6e6e73">2025</text>
+  <rect x="740" y="321" width="76" height="22" rx="11" fill="#e8faf0"/>
+  <circle cx="752" cy="332" r="3" fill="#1a7f37"/>
+  <text x="762" y="337" font-size="12" fill="#1a7f37">Validated</text>
+  <text x="880" y="337" font-size="13" fill="#6e6e73">16 Mar</text>
+  <line x1="64" y1="360" x2="1136" y2="360" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Row 3 -->
+  <circle cx="64" cy="396" r="9" fill="none" stroke="#d0d0d0" stroke-width="1.5"/>
+  <text x="88" y="401" font-size="13" fill="#1d1d1f" font-family="SF Mono, monospace">BM-2025-CRS-044</text>
+  <text x="272" y="401" font-size="13" fill="#1d1d1f">Thames Capital</text>
+  <text x="560" y="401" font-size="13" fill="#6e6e73">CRS</text>
+  <text x="640" y="401" font-size="13" fill="#6e6e73">2025</text>
+  <rect x="740" y="385" width="82" height="22" rx="11" fill="#eef6ff"/>
+  <circle cx="752" cy="396" r="3" fill="#0550ae"/>
+  <text x="762" y="401" font-size="12" fill="#0550ae">Submitted</text>
+  <text x="880" y="401" font-size="13" fill="#6e6e73">17 Mar</text>
+  <line x1="64" y1="424" x2="1136" y2="424" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Row 4 -->
+  <circle cx="64" cy="460" r="9" fill="none" stroke="#d0d0d0" stroke-width="1.5"/>
+  <text x="88" y="465" font-size="13" fill="#1d1d1f" font-family="SF Mono, monospace">BM-2025-CBC-011</text>
+  <text x="272" y="465" font-size="13" fill="#1d1d1f">Schneider Finanz (UPE)</text>
+  <text x="560" y="465" font-size="13" fill="#6e6e73">CbC</text>
+  <text x="640" y="465" font-size="13" fill="#6e6e73">2025</text>
+  <rect x="740" y="449" width="72" height="22" rx="11" fill="#ffeef0"/>
+  <circle cx="752" cy="460" r="3" fill="#cf222e"/>
+  <text x="762" y="465" font-size="12" fill="#cf222e">Rejected</text>
+  <text x="880" y="465" font-size="13" fill="#6e6e73">14 Mar</text>
+
+  <!-- Bottom floating bar -->
+  <rect x="350" y="730" width="500" height="48" rx="24" fill="#1d1d1f" filter="url(#bottomBarShadow)"/>
+  <text x="480" y="759" font-size="14" fill="#ffffff" text-anchor="middle">2 selected</text>
+  <rect x="600" y="740" width="120" height="28" rx="8" fill="#0071e3"/>
+  <text x="660" y="759" font-size="13" font-weight="500" fill="#ffffff" text-anchor="middle">Transmit →</text>
+</svg>

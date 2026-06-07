@@ -1,0 +1,81 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Page Background -->
+  <rect width="1200" height="600" fill="#fafafa"/>
+
+  <!-- Header -->
+  <rect width="1200" height="64" fill="#ffffff"/>
+  <line x1="0" y1="64" x2="1200" y2="64" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Logo -->
+  <text x="40" y="38" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="18" font-weight="700" fill="#1d1d1f">OECD AEOI</text>
+  <circle cx="127" cy="33" r="3" fill="#0071e3"/>
+
+  <!-- Nav Pills -->
+  <rect x="180" y="18" width="72" height="30" rx="8" fill="#f5f5f7"/>
+  <text x="216" y="38" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="600" fill="#1d1d1f" text-anchor="middle">Filings</text>
+
+  <text x="290" y="38" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="400" fill="#6e6e73">History</text>
+
+  <text x="365" y="38" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="400" fill="#6e6e73">Settings</text>
+
+  <!-- Right side: bell + avatar -->
+  <g transform="translate(1090, 24)">
+    <path d="M8 2C4.5 2 2 5 2 8V12L0 14H16L14 12V8C14 5 11.5 2 8 2Z" stroke="#6e6e73" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M6 14C6 15.1 6.9 16 8 16C9.1 16 10 15.1 10 14" stroke="#6e6e73" stroke-width="1.3" fill="none"/>
+  </g>
+
+  <!-- Avatar -->
+  <circle cx="1145" cy="32" r="16" fill="#f5f5f7"/>
+  <text x="1145" y="37" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="12" font-weight="600" fill="#1d1d1f" text-anchor="middle">CM</text>
+
+  <!-- Card Shadow Filter -->
+  <defs>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-opacity="0.04" flood-color="#000000"/>
+    </filter>
+  </defs>
+
+  <!-- Centered Card -->
+  <rect x="320" y="105" width="560" height="430" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+
+  <!-- Title -->
+  <text x="600" y="160" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="24" font-weight="600" fill="#1d1d1f" text-anchor="middle">Create a new filing</text>
+  <text x="600" y="188" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#6e6e73" text-anchor="middle">Configure your OECD reporting submission</text>
+
+  <!-- Filing Name Input -->
+  <text x="370" y="235" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#1d1d1f">Filing Name</text>
+  <rect x="370" y="245" width="460" height="48" rx="10" fill="#f5f5f7"/>
+  <text x="390" y="275" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#86868b">Enter a name for this filing</text>
+
+  <!-- Filing Type -->
+  <text x="370" y="325" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#1d1d1f">Filing Type</text>
+
+  <!-- Segmented Control -->
+  <rect x="370" y="337" width="460" height="44" rx="10" fill="#f5f5f7"/>
+  <!-- Active segment: CRS -->
+  <rect x="374" y="341" width="148" height="36" rx="8" fill="#0071e3"/>
+  <text x="448" y="364" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="500" fill="#ffffff" text-anchor="middle">CRS</text>
+  <!-- Inactive: CbC -->
+  <text x="527" y="364" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="500" fill="#6e6e73" text-anchor="middle">CbC</text>
+  <!-- Inactive: FATCA -->
+  <text x="680" y="364" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="500" fill="#6e6e73" text-anchor="middle">FATCA</text>
+
+  <!-- Period End Date -->
+  <text x="370" y="420" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#1d1d1f">Period End Date</text>
+  <rect x="370" y="430" width="460" height="48" rx="10" fill="#f5f5f7"/>
+  <text x="390" y="460" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#1d1d1f">31 December 2025</text>
+  <!-- Calendar icon -->
+  <g transform="translate(796, 444)">
+    <rect x="2" y="3" width="16" height="15" rx="2" stroke="#86868b" stroke-width="1.2" fill="none"/>
+    <line x1="2" y1="8" x2="18" y2="8" stroke="#86868b" stroke-width="1.2"/>
+    <line x1="6" y1="1" x2="6" y2="5" stroke="#86868b" stroke-width="1.2" stroke-linecap="round"/>
+    <line x1="14" y1="1" x2="14" y2="5" stroke="#86868b" stroke-width="1.2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Buttons -->
+  <rect x="510" y="505" width="160" height="48" rx="10" fill="#0071e3"/>
+  <text x="590" y="534" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="15" font-weight="500" fill="#ffffff" text-anchor="middle">Create Filing</text>
+
+  <rect x="685" y="505" width="120" height="48" rx="10" fill="#f5f5f7"/>
+  <text x="745" y="534" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="15" font-weight="500" fill="#1d1d1f" text-anchor="middle">Cancel</text>
+</svg>

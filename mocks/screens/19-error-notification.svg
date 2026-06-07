@@ -1,0 +1,85 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-opacity="0.04"/>
+    </filter>
+  </defs>
+
+  <!-- Page Background -->
+  <rect width="1200" height="800" fill="#fafafa"/>
+
+  <!-- Header -->
+  <rect width="1200" height="56" fill="#ffffff"/>
+  <line x1="0" y1="56" x2="1200" y2="56" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Logo -->
+  <text x="40" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="17" font-weight="700" fill="#1d1d1f">OECD AEOI</text>
+  <circle cx="120" cy="30" r="3.5" fill="#0071e3"/>
+
+  <!-- Nav -->
+  <text x="180" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#6e6e73">Dashboard</text>
+  <text x="270" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#6e6e73">Enrolments</text>
+  <text x="370" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="600" fill="#0071e3">Filings</text>
+  <text x="440" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#6e6e73">History</text>
+  <text x="510" y="35" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#6e6e73">Analytics</text>
+
+  <!-- Back + Title -->
+  <text x="40" y="104" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" fill="#0071e3">← Back</text>
+  <text x="40" y="138" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="28" font-weight="700" fill="#1d1d1f">CRS Annual 2025</text>
+
+  <!-- Status Timeline -->
+  <rect x="40" y="162" width="1120" height="60" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+  <!-- Dots and lines -->
+  <circle cx="150" cy="192" r="6" fill="#1a7f37"/>
+  <text x="130" y="212" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="10" fill="#1a7f37" font-weight="500">Submitted</text>
+  <line x1="156" y1="192" x2="350" y2="192" stroke="#1a7f37" stroke-width="2"/>
+  <circle cx="350" cy="192" r="6" fill="#1a7f37"/>
+  <text x="330" y="212" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="10" fill="#1a7f37" font-weight="500">Validated</text>
+  <line x1="356" y1="192" x2="550" y2="192" stroke="#1a7f37" stroke-width="2"/>
+  <circle cx="550" cy="192" r="6" fill="#1a7f37"/>
+  <text x="524" y="212" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="10" fill="#1a7f37" font-weight="500">Transmitted</text>
+  <line x1="556" y1="192" x2="750" y2="192" stroke="#cf222e" stroke-width="2"/>
+  <circle cx="750" cy="192" r="8" fill="#cf222e"/>
+  <circle cx="750" cy="192" r="12" fill="none" stroke="#cf222e" stroke-width="1.5" stroke-opacity="0.3"/>
+  <text x="738" y="212" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="10" fill="#cf222e" font-weight="600">Errors</text>
+
+  <!-- Alert Card -->
+  <rect x="40" y="244" width="1120" height="120" rx="16" fill="#fef2f2"/>
+  <!-- Warning icon -->
+  <path d="M72 278 L82 298 L62 298 Z" fill="none" stroke="#cf222e" stroke-width="1.5" stroke-linejoin="round"/>
+  <text x="72" y="291" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="8" font-weight="700" fill="#cf222e" text-anchor="middle">!</text>
+  <text x="96" y="290" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="16" font-weight="600" fill="#1d1d1f">3 record errors received from Germany (DE)</text>
+  <text x="96" y="314" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" fill="#6e6e73">via OECD Common Transmission System · 16 March 2026</text>
+  <text x="96" y="340" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="13" font-weight="500" fill="#cf222e">Correction required within 60 days (by 15 May 2026)</text>
+
+  <!-- Error List -->
+  <!-- Error Card 1 -->
+  <rect x="40" y="388" width="1120" height="68" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+  <rect x="72" y="410" width="52" height="24" rx="6" fill="#ffeef0"/>
+  <text x="82" y="426" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="11" font-weight="600" fill="#cf222e">80001</text>
+  <text x="140" y="426" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="500" fill="#1d1d1f">DocRefID format invalid</text>
+  <rect x="360" y="410" width="140" height="24" rx="6" fill="#f5f5f7"/>
+  <text x="372" y="426" font-family="SF Mono, Menlo, monospace" font-size="11" fill="#6e6e73">DocSpec.DocRefID</text>
+
+  <!-- Error Card 2 -->
+  <rect x="40" y="472" width="1120" height="68" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+  <rect x="72" y="494" width="52" height="24" rx="6" fill="#ffeef0"/>
+  <text x="82" y="510" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="11" font-weight="600" fill="#cf222e">80002</text>
+  <text x="140" y="510" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="500" fill="#1d1d1f">CorrDocRefId unknown</text>
+  <rect x="360" y="494" width="168" height="24" rx="6" fill="#f5f5f7"/>
+  <text x="372" y="510" font-family="SF Mono, Menlo, monospace" font-size="11" fill="#6e6e73">DocSpec.CorrDocRefID</text>
+
+  <!-- Error Card 3 -->
+  <rect x="40" y="556" width="1120" height="68" rx="16" fill="#ffffff" filter="url(#cardShadow)"/>
+  <rect x="72" y="578" width="52" height="24" rx="6" fill="#ffeef0"/>
+  <text x="82" y="594" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="11" font-weight="600" fill="#cf222e">80005</text>
+  <text x="140" y="594" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="500" fill="#1d1d1f">Missing CorrDocRefId</text>
+  <rect x="360" y="578" width="168" height="24" rx="6" fill="#f5f5f7"/>
+  <text x="372" y="594" font-family="SF Mono, Menlo, monospace" font-size="11" fill="#6e6e73">DocSpec.CorrDocRefID</text>
+
+  <!-- Action Buttons -->
+  <rect x="40" y="650" width="160" height="44" rx="10" fill="#0071e3"/>
+  <text x="72" y="677" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="600" fill="#ffffff">Create Correction</text>
+  <rect x="220" y="650" width="150" height="44" rx="10" fill="#f5f5f7"/>
+  <text x="248" y="677" font-family="-apple-system, SF Pro Display, Inter, sans-serif" font-size="14" font-weight="500" fill="#1d1d1f">Download Report</text>
+</svg>

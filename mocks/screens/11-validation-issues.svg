@@ -1,0 +1,92 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, SF Pro Display, Inter, sans-serif">
+  <defs>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-opacity="0.04"/>
+    </filter>
+  </defs>
+
+  <!-- Page background -->
+  <rect width="1200" height="800" fill="#fafafa"/>
+
+  <!-- Header -->
+  <rect width="1200" height="56" fill="#ffffff"/>
+  <line x1="0" y1="56" x2="1200" y2="56" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- Logo -->
+  <text x="40" y="35" font-size="17" font-weight="600" fill="#1d1d1f">OECD AEOI</text>
+  <circle cx="108" cy="30" r="4" fill="#0071e3"/>
+
+  <!-- Nav pills -->
+  <rect x="420" y="14" width="80" height="28" rx="14" fill="#f5f5f7"/>
+  <text x="460" y="33" font-size="13" fill="#1d1d1f" text-anchor="middle">Dashboard</text>
+  <rect x="510" y="14" width="72" height="28" rx="14" fill="#0071e3"/>
+  <text x="546" y="33" font-size="13" fill="#ffffff" text-anchor="middle">Filings</text>
+  <rect x="592" y="14" width="80" height="28" rx="14" fill="#f5f5f7"/>
+  <text x="632" y="33" font-size="13" fill="#1d1d1f" text-anchor="middle">Entities</text>
+  <rect x="682" y="14" width="72" height="28" rx="14" fill="#f5f5f7"/>
+  <text x="718" y="33" font-size="13" fill="#1d1d1f" text-anchor="middle">Reports</text>
+
+  <!-- Avatar -->
+  <circle cx="1140" cy="28" r="16" fill="#f5f5f7"/>
+  <text x="1140" y="33" font-size="11" font-weight="500" fill="#6e6e73" text-anchor="middle">JD</text>
+
+  <!-- Breadcrumb -->
+  <text x="40" y="92" font-size="13" fill="#6e6e73">Filings</text>
+  <text x="80" y="92" font-size="13" fill="#86868b">/</text>
+  <text x="92" y="92" font-size="13" fill="#1d1d1f">CRS Annual 2025</text>
+
+  <!-- Title + status -->
+  <text x="40" y="130" font-size="28" font-weight="600" fill="#1d1d1f">CRS Annual 2025</text>
+  <rect x="250" y="112" width="52" height="24" rx="12" fill="#f5f5f7"/>
+  <text x="276" y="128" font-size="12" fill="#86868b" text-anchor="middle">Draft</text>
+
+  <!-- Tab bar -->
+  <rect x="40" y="156" width="104" height="32" rx="10" fill="#f5f5f7"/>
+  <text x="92" y="176" font-size="13" fill="#1d1d1f" text-anchor="middle">Upload XML</text>
+  <rect x="152" y="156" width="112" height="32" rx="10" fill="#f5f5f7"/>
+  <text x="208" y="176" font-size="13" fill="#1d1d1f" text-anchor="middle">Manual Entry</text>
+  <rect x="272" y="156" width="92" height="32" rx="10" fill="#0071e3"/>
+  <text x="318" y="176" font-size="13" fill="#ffffff" text-anchor="middle">Validation</text>
+  <!-- Red dot indicator -->
+  <circle cx="350" cy="162" r="8" fill="#cf222e"/>
+  <text x="350" y="166" font-size="9" fill="#ffffff" text-anchor="middle">2</text>
+
+  <!-- Summary bar -->
+  <rect x="40" y="210" width="1120" height="44" rx="10" fill="#ffffff" filter="url(#cardShadow)"/>
+  <circle cx="72" cy="232" r="5" fill="#cf222e"/>
+  <text x="86" y="237" font-size="14" fill="#1d1d1f">2 errors</text>
+  <text x="152" y="237" font-size="14" fill="#86868b">·</text>
+  <circle cx="172" cy="232" r="5" fill="#9a6700"/>
+  <text x="186" y="237" font-size="14" fill="#1d1d1f">1 warning</text>
+
+  <!-- Error card 1 -->
+  <rect x="40" y="276" width="1120" height="120" rx="12" fill="#ffffff" filter="url(#cardShadow)"/>
+  <rect x="40" y="276" width="3" height="120" rx="1.5" fill="#cf222e"/>
+  <text x="72" y="312" font-size="14" font-weight="600" fill="#1d1d1f">Invalid TIN format</text>
+  <text x="72" y="336" font-size="13" fill="#6e6e73">Expected 11 digits for jurisdiction DE, received 5</text>
+  <!-- Field badge -->
+  <rect x="72" y="352" width="120" height="22" rx="6" fill="#f5f5f7"/>
+  <text x="82" y="367" font-size="11" fill="#86868b" font-family="SF Mono, monospace">Account[3].TIN</text>
+  <!-- Fix link -->
+  <text x="1088" y="312" font-size="13" fill="#0071e3" text-anchor="end">Fix →</text>
+
+  <!-- Error card 2 -->
+  <rect x="40" y="416" width="1120" height="120" rx="12" fill="#ffffff" filter="url(#cardShadow)"/>
+  <rect x="40" y="416" width="3" height="120" rx="1.5" fill="#cf222e"/>
+  <text x="72" y="452" font-size="14" font-weight="600" fill="#1d1d1f">OECD DocRefID format invalid</text>
+  <text x="72" y="476" font-size="13" fill="#6e6e73">Must start with jurisdiction prefix 'BM'</text>
+  <!-- Field badge -->
+  <rect x="72" y="492" width="130" height="22" rx="6" fill="#f5f5f7"/>
+  <text x="82" y="507" font-size="11" fill="#86868b" font-family="SF Mono, monospace">DocSpec.DocRefID</text>
+  <!-- Fix link -->
+  <text x="1088" y="452" font-size="13" fill="#0071e3" text-anchor="end">Fix →</text>
+
+  <!-- Warning card -->
+  <rect x="40" y="556" width="1120" height="120" rx="12" fill="#ffffff" filter="url(#cardShadow)"/>
+  <rect x="40" y="556" width="3" height="120" rx="1.5" fill="#9a6700"/>
+  <text x="72" y="592" font-size="14" font-weight="600" fill="#1d1d1f">Zero balance account</text>
+  <text x="72" y="616" font-size="13" fill="#6e6e73">Please confirm this account has no reportable balance</text>
+  <!-- Acknowledge button -->
+  <rect x="72" y="634" width="120" height="28" rx="8" fill="#f5f5f7"/>
+  <text x="132" y="653" font-size="12" font-weight="500" fill="#1d1d1f" text-anchor="middle">Acknowledge ✓</text>
+</svg>
